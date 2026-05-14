@@ -1009,5 +1009,53 @@ button {
     .icon-3 { bottom: 2%; left: 2%; }
     .icon-4 { bottom: 2%; right: 2%; }
     .icon-7 { margin-left: -25px; top: -8%; }
-    .app-buttons { flex-direction: column; }
+    .app-buttons { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 800px) {
+    /* Navbar fixes for mobile */
+    .glass-nav {
+        padding: 0 15px;
+        height: 60px;
+    }
+    
+    .glass-nav .nav-links, .glass-nav .primary-btn {
+        display: none; /* Hide text links and Waitlist button on mobile to save space */
+    }
+    
+    .nav-actions {
+        gap: 10px;
+    }
+    
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+    
+    /* App buttons fixes for mobile */
+    .app-buttons {
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .store-btn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .store-btn i {
+        font-size: 1.5rem;
+    }
+    
+    .dark-heading {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+    }
+    
+    .heavy-glass {
+        padding: 50px 20px;
+    }
 }
