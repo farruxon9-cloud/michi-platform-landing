@@ -1075,3 +1075,34 @@ button {
         padding: 50px 20px;
     }
 }
+
+/* Michi App Mockup Styles */
+.phone-mockup-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: softFloat 6s ease-in-out infinite;
+}
+
+.phone-mockup-img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    filter: drop-shadow(0 20px 40px rgba(0, 102, 204, 0.15));
+}
+
+@keyframes softFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .phone-mockup-container {
+        max-width: 320px;
+    }
+}
