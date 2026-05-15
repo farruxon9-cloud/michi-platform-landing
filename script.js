@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // This URL is now connected to your Google Sheet
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbzUW8uLUGGvQ4iFTvwgJYcPhNckBRY_j3ixkH4Is5HmTAALPx60Wnqu2Fny2WDDRilseA/exec';
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwRWVFT53dvaLrvs4JhOQzeX1f5M-4NyieKiXtZfhbaT6jM6nJC5jqqjjrIgka1V1LqdQ/exec';
                 
                 const response = await fetch(scriptURL, {
                     method: 'POST',
