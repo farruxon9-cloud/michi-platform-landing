@@ -173,9 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const response = await fetch(scriptURL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    cache: 'no-cache',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email, timestamp: new Date().toISOString() })
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams({ email: email })
                 });
 
                 formMessage.innerText = 'Thank you! You are on the waitlist. ✓';
