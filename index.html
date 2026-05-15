@@ -31,7 +31,7 @@
         <div class="nav-actions">
             <div class="lang-switcher">
                 <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="ja">JA</button>
+                <button class="lang-btn" data-lang="ja">日本語</button>
             </div>
             <button class="primary-btn" data-i18n="nav_join">Join Waitlist</button>
         </div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="mockup-body">
                     <div class="mockup-card">
-                        <div class="card-icon gradient-bg">🚚</div>
+                        <div class="card-icon gradient-bg"><i class="fa-solid fa-truck"></i></div>
                         <div class="card-text">
                             <h4 data-i18n="mockup_company_1">Tokyo Logistics Co.</h4>
                             <p data-i18n="mockup_salary_1">¥350,000 - ¥450,000 / month</p>
@@ -83,7 +83,7 @@
                         <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
                     </div>
                     <div class="mockup-card">
-                        <div class="card-icon gradient-bg">📦</div>
+                        <div class="card-icon gradient-bg"><i class="fa-solid fa-box"></i></div>
                         <div class="card-text">
                             <h4 data-i18n="mockup_company_2">Osaka Express</h4>
                             <p data-i18n="mockup_salary_2">¥300,000 - ¥400,000 / month</p>
@@ -91,7 +91,7 @@
                         <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
                     </div>
                     <div class="mockup-card">
-                        <div class="card-icon gradient-bg">🚛</div>
+                        <div class="card-icon gradient-bg"><i class="fa-solid fa-truck-moving"></i></div>
                         <div class="card-text">
                             <h4 data-i18n="mockup_company_3">Nagoya Freight</h4>
                             <p data-i18n="mockup_salary_3">¥400,000+ / month</p>
@@ -183,18 +183,22 @@
         <h2 data-i18n="investor_title">Why Invest in Michi?</h2>
         <div class="investor-grid">
             <div class="investor-card">
+                <div class="investor-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
                 <h3 data-i18n="investor1_title">The 2024 Problem</h3>
                 <p data-i18n="investor1_desc">Japan is facing a severe driver shortage due to new strict overtime regulations. Michi optimizes the workforce, providing a digital solution to a trillion-yen national crisis.</p>
             </div>
             <div class="investor-card">
+                <div class="investor-icon"><i class="fa-solid fa-eye"></i></div>
                 <h3 data-i18n="investor2_title">Super App Vision</h3>
                 <p data-i18n="investor2_desc">Starting with seamless job matching, Michi will scale into a full ecosystem offering insurance, vehicle maintenance, and auto parts directly to drivers and fleets.</p>
             </div>
             <div class="investor-card">
+                <div class="investor-icon"><i class="fa-solid fa-chart-line"></i></div>
                 <h3 data-i18n="investor3_title">Scalable & High Margin</h3>
                 <p data-i18n="investor3_desc">A pure software platform with low acquisition costs. Our unified ecosystem serves both independent drivers and massive enterprise logistics networks simultaneously.</p>
             </div>
             <div class="investor-card">
+                <div class="investor-icon"><i class="fa-solid fa-building-shield"></i></div>
                 <h3 data-i18n="investor4_title">Backed by Solid Assets</h3>
                 <p data-i18n="investor4_desc">Michi is financially backed by <a href="https://halalcapitalgroup.com/" target="_blank" class="parent-company-link"><strong>International Halal Capital Group</strong></a>'s real estate portfolio. This cross-border foundation provides operational stability and minimizes risk for new investors.</p>
             </div>
@@ -204,9 +208,16 @@
     <section class="waitlist-section glass-container heavy-glass" id="download">
         <h2 class="dark-heading" data-i18n="download_title">Start Your Journey Today</h2>
         <p class="dark-text large-text" data-i18n="download_desc">Download the Michi app now and connect with Japan's top logistics companies instantly.</p>
+        
+        <form id="waitlist-form" class="waitlist-form-container">
+            <input type="email" name="email" placeholder="Enter your email" required class="waitlist-input">
+            <button type="submit" class="primary-btn large">Join Waitlist</button>
+        </form>
+        <div id="form-message" class="form-message"></div>
+
         <div class="app-buttons">
-            <button class="store-btn"><i class="fa-brands fa-apple"></i> <span data-i18n="download_apple">App Store</span></button>
-            <button class="store-btn"><i class="fa-brands fa-google-play"></i> <span data-i18n="download_google">Google Play</span></button>
+            <button type="button" class="store-btn coming-soon"><i class="fa-brands fa-apple"></i> <span data-i18n="download_apple">App Store</span></button>
+            <button type="button" class="store-btn coming-soon"><i class="fa-brands fa-google-play"></i> <span data-i18n="download_google">Google Play</span></button>
         </div>
     </section>
 

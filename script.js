@@ -93,15 +93,15 @@ const translations = {
         feature2_desc: "複雑な履歴書は不要です。一度プロフィールを作成すれば、ワンタップでトップ企業に応募できます。",
         feature3_title: "3. すぐに働き始める",
         feature3_desc: "マッチング後、簡単な手続きを済ませて、新しい道を歩み始めましょう。",
-        investor_title: "なぜMichiに投資するのか？",
-        investor1_title: "2024年問題",
+        investor_title: "Michiへの投資価値",
+        investor1_title: "2024年問題の解決",
         investor1_desc: "新しい残業規制により、日本は深刻なドライバー不足に直面しています。Michiは労働力を最適化し、数兆円規模の国家的危機にデジタルな解決策を提供します。",
-        investor2_title: "スーパーアプリ構想",
+        investor2_title: "次世代スーパーアプリ構想",
         investor2_desc: "シームレスな求人マッチングから始まり、保険、車両メンテナンス、自動車部品などをドライバーに直接提供する完全なエコシステムへと拡張します。",
-        investor3_title: "スケーラブルで高利益率",
+        investor3_title: "高い拡張性と収益性",
         investor3_desc: "顧客獲得コストが低い純粋なソフトウェアプラットフォーム。独立したドライバーと大規模な物流企業ネットワークの両方に同時にサービスを提供します。",
-        investor4_title: "強固な資産による裏付け",
-        investor4_desc: "Michiは、<a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a>の不動産事業によって財政的に裏付けられています。この強固な基盤により運営の安定性が確保され、投資家のリスクが最小限に抑えられます。",
+        investor4_title: "強固な資産基盤",
+        investor4_desc: "Michiは、<a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a>の資産によって財政的に裏付けられています。この強固な基盤により、投資家のリスクを最小限に抑え、安定した成長を実現します。",
         download_title: "今日から新しい道を始めましょう",
         download_desc: "今すぐMichiアプリをダウンロードして、日本のトップ物流企業とすぐにつながりましょう。",
         download_apple: "App Store",
@@ -151,20 +151,65 @@ document.addEventListener('DOMContentLoaded', () => {
         setLanguage(savedLang);
     }
 
-    const applyBtns = document.querySelectorAll('.apply-btn');
-    applyBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const originalText = this.innerText;
-            const currentLang = document.querySelector('.lang-btn.active').dataset.lang;
-            const appliedText = currentLang === 'ja' ? '応募完了 ✓' : 'Applied ✓';
-            
-            this.innerText = appliedText;
-            this.style.background = '#27c93f';
-            
-            setTimeout(() => {
-                this.innerText = originalText;
-                this.style.background = 'var(--text-main)';
-            }, 2000);
+    // Handle Waitlist Form Submission
+    const waitlistForm = document.getElementById('waitlist-form');
+    const formMessage = document.getElementById('form-message');
+
+    if(waitlistForm) {
+        waitlistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = waitlistForm.email.value;
+            const submitBtn = waitlistForm.querySelector('button');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+            formMessage.innerText = '';
+
+            try {
+                // This URL is now connected to your Google Sheet
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzUW8uLUGGvQ4iFTvwgJYcPhNckBRY_j3ixkH4Is5HmTAALPx60Wnqu2Fny2WDDRilseA/exec';
+                
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email, timestamp: new Date().toISOString() })
+                });
+
+                formMessage.innerText = 'Thank you! You are on the waitlist. ✓';
+                formMessage.className = 'form-message success';
+                waitlistForm.reset();
+            } catch (error) {
+                formMessage.innerText = 'Something went wrong. Please try again.';
+                formMessage.className = 'form-message error';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            }
+        });
+    }
+
+    // Redirect all interactive buttons to Waitlist
+    const ctaButtons = document.querySelectorAll('.primary-btn, .secondary-btn, .apply-btn, .store-btn');
+    ctaButtons.forEach(btn => {
+        // Skip the actual submit button in the form
+        if(btn.type === 'submit') return;
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.getElementById('download');
+            if(target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                // Highlight the input
+                setTimeout(() => {
+                    const input = waitlistForm.querySelector('input');
+                    input.focus();
+                    input.style.boxShadow = '0 0 0 3px rgba(0, 102, 204, 0.3)';
+                    setTimeout(() => input.style.boxShadow = '', 2000);
+                }, 800);
+            }
         });
     });
 });
