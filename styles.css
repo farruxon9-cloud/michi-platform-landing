@@ -2404,3 +2404,139 @@ body.dark-mode .checklist-card:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* Contact Hub split grid */
+.contact-hub-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.contact-form-side {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-channels-side {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-left: 1px solid var(--glass-border);
+    padding-left: 40px;
+}
+
+.channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.channel-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0, 102, 204, 0.03);
+    border: 1px solid rgba(0, 102, 204, 0.05);
+    border-radius: 16px;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    color: var(--text-main);
+}
+
+body.dark-mode .channel-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.channel-card:hover {
+    transform: translateX(5px);
+    background: rgba(0, 102, 204, 0.08);
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .channel-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.channel-card.highlight-channel {
+    background: rgba(0, 102, 204, 0.06);
+    border-color: rgba(0, 102, 204, 0.15);
+}
+
+.channel-card.highlight-channel:hover {
+    background: rgba(0, 102, 204, 0.12);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+}
+
+.channel-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.channel-card:hover .channel-icon {
+    background: var(--primary-color);
+    color: white;
+}
+
+.channel-card.highlight-channel .channel-icon {
+    background: var(--primary-color);
+    color: white;
+}
+
+.channel-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-text strong {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.channel-text span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 1px;
+}
+
+.channel-arrow {
+    margin-left: auto;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.channel-card:hover .channel-arrow {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Responsive fixes for Contact Hub */
+@media (max-width: 800px) {
+    .contact-hub-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .contact-channels-side {
+        border-left: none;
+        border-top: 1px solid var(--glass-border);
+        padding-left: 0;
+        padding-top: 30px;
+    }
+}

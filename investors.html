@@ -25,6 +25,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -542,18 +543,80 @@
 
     <!-- Contact Us Modal -->
     <div id="contact-modal" class="modal-overlay">
-        <div class="modal-content glass-container heavy-glass">
+        <div class="modal-content glass-container heavy-glass" style="max-width: 850px; width: 95%;">
             <button class="modal-close" id="contact-modal-close" aria-label="Close Modal">&times;</button>
-            <h2 data-i18n="footer_contact">Contact Us</h2>
-            <p style="text-align: center; margin-bottom: 25px; color: var(--text-secondary);" data-i18n="modal_hire_desc">Get in touch with our team for general inquiries or support.</p>
             
-            <form id="contact-form" class="modal-form">
-                <input type="text" name="name" placeholder="Full Name" required class="modal-input" data-i18n="placeholder_name">
-                <input type="email" name="email" placeholder="Business Email" required class="modal-input" data-i18n="placeholder_email">
-                <textarea name="message" placeholder="Optional Message / Questions" required class="modal-input" style="min-height: 120px; font-family: inherit; resize: vertical;" data-i18n="placeholder_message"></textarea>
-                <button type="submit" class="primary-btn large" style="width: 100%; margin-top: 10px;" data-i18n="modal_submit_btn">Submit Request</button>
-            </form>
-            <div id="contact-form-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+            <div class="contact-hub-grid">
+                <div class="contact-form-side">
+                    <h2 data-i18n="footer_contact">Contact Us</h2>
+                    <p style="margin-bottom: 25px; color: var(--text-secondary);" data-i18n="contact_modal_desc">Get in touch with our team for general inquiries or support.</p>
+                    
+                    <form id="contact-form" class="modal-form">
+                        <input type="text" name="name" placeholder="Full Name" required class="modal-input" data-i18n="placeholder_name">
+                        <input type="email" name="email" placeholder="Business Email" required class="modal-input" data-i18n="placeholder_email">
+                        <textarea name="message" placeholder="Optional Message / Questions" required class="modal-input" style="min-height: 120px; font-family: inherit; resize: vertical;" data-i18n="placeholder_message"></textarea>
+                        <button type="submit" class="primary-btn large" style="width: 100%; margin-top: 10px;" data-i18n="modal_submit_btn">Submit Request</button>
+                    </form>
+                    <div id="contact-form-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+                </div>
+                
+                <div class="contact-channels-side">
+                    <h3 data-i18n="contact_channels_title" style="font-size: 1.3rem; font-weight:800; margin-bottom: 10px; color: var(--text-main);">Direct Channels</h3>
+                    <p style="margin-bottom: 25px; color: var(--text-secondary); font-size: 0.9rem;" data-i18n="contact_channels_desc">Send email directly to our specialized departments.</p>
+                    
+                    <div class="channels-list">
+                        <!-- Invest -->
+                        <a href="mailto:invest@michi.jp.net" class="channel-card highlight-channel">
+                            <div class="channel-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="channel-text">
+                                <strong data-i18n="channel_invest_title">Investor Relations</strong>
+                                <span>invest@michi.jp.net</span>
+                            </div>
+                            <div class="channel-arrow"><i class="fa-solid fa-envelope"></i></div>
+                        </a>
+                        
+                        <!-- Partners -->
+                        <a href="mailto:partners@michi.jp.net" class="channel-card">
+                            <div class="channel-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <div class="channel-text">
+                                <strong data-i18n="channel_partners_title">Partnership Queries</strong>
+                                <span>partners@michi.jp.net</span>
+                            </div>
+                            <div class="channel-arrow"><i class="fa-solid fa-envelope"></i></div>
+                        </a>
+                        
+                        <!-- HR -->
+                        <a href="mailto:hr@michi.jp.net" class="channel-card">
+                            <div class="channel-icon"><i class="fa-solid fa-user-tie"></i></div>
+                            <div class="channel-text">
+                                <strong data-i18n="channel_hr_title">Careers & HR</strong>
+                                <span>hr@michi.jp.net</span>
+                            </div>
+                            <div class="channel-arrow"><i class="fa-solid fa-envelope"></i></div>
+                        </a>
+                        
+                        <!-- Support -->
+                        <a href="mailto:support@michi.jp.net" class="channel-card">
+                            <div class="channel-icon"><i class="fa-solid fa-circle-question"></i></div>
+                            <div class="channel-text">
+                                <strong data-i18n="channel_support_title">Driver Support</strong>
+                                <span>support@michi.jp.net</span>
+                            </div>
+                            <div class="channel-arrow"><i class="fa-solid fa-envelope"></i></div>
+                        </a>
+                        
+                        <!-- Info -->
+                        <a href="mailto:info@michi.jp.net" class="channel-card">
+                            <div class="channel-icon"><i class="fa-solid fa-circle-info"></i></div>
+                            <div class="channel-text">
+                                <strong data-i18n="channel_info_title">General Inquiries</strong>
+                                <span>info@michi.jp.net</span>
+                            </div>
+                            <div class="channel-arrow"><i class="fa-solid fa-envelope"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
