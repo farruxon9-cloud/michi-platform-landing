@@ -53,7 +53,11 @@ const translations = {
         footer_copyright: "© 2026 Michi (道). A project by <a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a>.",
         footer_privacy: "Privacy Policy",
         footer_terms: "Terms of Service",
-        footer_contact: "Contact"
+        footer_contact: "Contact",
+        meta_desc: "Connect with top logistics companies or find reliable drivers in Japan. Drive your career forward with Michi (道) driver ecosystem.",
+        meta_keywords: "michi, driver jobs, logistics, truck driver, recruitment, Japan driver jobs, auto service booking, Japan, arubaito, driver part-time",
+        og_title: "Michi (道) - Premium Driver Ecosystem in Japan",
+        og_desc: "Connect with top logistics companies or find reliable drivers in Japan. Simple, fast, and transparent driver matching ecosystem."
     },
     ja: {
         page_title: "Michi (道) - 日本のプレミアムドライバーエコシステム",
@@ -109,7 +113,11 @@ const translations = {
         footer_copyright: "© 2026 Michi (道)。 <a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a> のプロジェクト。",
         footer_privacy: "プライバシーポリシー",
         footer_terms: "利用規約",
-        footer_contact: "お問い合わせ"
+        footer_contact: "お問い合わせ",
+        meta_desc: "日本のトップ物流企業と信頼できるドライバーをつなぐプラットフォーム。ドライバー求人、アルバイト、運転手募集、自動車整備・車検予約を簡単に行えます。",
+        meta_keywords: "michi, 道, ドライバー, 求人, アルバイト, 運転手, 自動車整備, 車検, 予約, 物流, トラック, arubaito, 日本",
+        og_title: "Michi (道) - 日本のプレミアムドライバーエコシステム",
+        og_desc: "日本のトップ物流企業と信頼できるドライバーをつなぐプラットフォーム。ドライバー求人、アルバイト募集、自動車整備・車検の簡単予約システムを提供。"
     }
 };
 
@@ -129,7 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
         i18nElements.forEach(el => {
             const key = el.dataset.i18n;
             if(translations[lang] && translations[lang][key]) {
-                el.innerHTML = translations[lang][key];
+                if(el.tagName === 'META') {
+                    el.setAttribute('content', translations[lang][key]);
+                } else {
+                    el.innerHTML = translations[lang][key];
+                }
             }
         });
         
