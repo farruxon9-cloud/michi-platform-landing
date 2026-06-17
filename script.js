@@ -264,23 +264,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Redirect all interactive buttons to Waitlist
+    // Redirect all interactive buttons to Waitlist (Only on pages where the download section exists)
     const ctaButtons = document.querySelectorAll('.primary-btn, .secondary-btn, .apply-btn, .store-btn');
     ctaButtons.forEach(btn => {
         // Skip the actual submit button in the form
         if(btn.type === 'submit') return;
 
+        // Skip anchor links pointing to page hashes
+        if(btn.tagName === 'A' && btn.getAttribute('href') && btn.getAttribute('href').startsWith('#') && btn.getAttribute('href') !== '#') return;
+
         btn.addEventListener('click', (e) => {
-            e.preventDefault();
             const target = document.getElementById('download');
             if(target) {
+                e.preventDefault();
                 target.scrollIntoView({ behavior: 'smooth' });
                 // Highlight the input
                 setTimeout(() => {
-                    const input = waitlistForm.querySelector('input');
-                    input.focus();
-                    input.style.boxShadow = '0 0 0 3px rgba(0, 102, 204, 0.3)';
-                    setTimeout(() => input.style.boxShadow = '', 2000);
+                    if (waitlistForm) {
+                        const input = waitlistForm.querySelector('input');
+                        if (input) {
+                            input.focus();
+                            input.style.boxShadow = '0 0 0 3px rgba(0, 102, 204, 0.3)';
+                            setTimeout(() => input.style.boxShadow = '', 2000);
+                        }
+                    }
                 }, 800);
             }
         });
