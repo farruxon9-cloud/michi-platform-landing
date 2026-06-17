@@ -57,15 +57,62 @@
 
     <!-- Hero Section -->
     <main class="hero-section" style="padding-top: 140px; min-height: auto;">
-        <div class="glass-container hero-content" style="max-width: 100%; margin-bottom: 20px;">
-            <span class="badge" data-i18n="inv_hero_badge">Exclusive Investment Opportunity</span>
-            <h1 data-i18n="inv_hero_title">Invest in the Future of <span class="gradient-text">Japan's Logistics</span></h1>
-            <p class="description" data-i18n="inv_hero_desc">
-                Michi is a low-risk, high-impact digital ecosystem designed for logistics companies and drivers in Japan. Backed by solid real estate assets providing unmatched financial stability.
-            </p>
-            <div class="cta-group">
-                <a href="#pitch-request" class="primary-btn large" data-i18n="inv_hero_btn_pitch">Request Pitch Deck</a>
-                <a href="#about-michi" class="secondary-btn large" data-i18n="inv_hero_btn_learn">Learn More</a>
+        <div class="hero-split-grid">
+            <div class="glass-container hero-content" style="max-width: 100%; margin-bottom: 0;">
+                <span class="badge" data-i18n="inv_hero_badge">Exclusive Investment Opportunity</span>
+                <h1 data-i18n="inv_hero_title">Invest in the Future of <span class="gradient-text">Japan's Logistics</span></h1>
+                <p class="description" data-i18n="inv_hero_desc">
+                    Michi is a low-risk, high-impact digital ecosystem designed for logistics companies and drivers in Japan. Backed by solid real estate assets providing unmatched financial stability.
+                </p>
+                <div class="cta-group" style="margin-bottom: 0;">
+                    <a href="#pitch-request" class="primary-btn large" data-i18n="inv_hero_btn_pitch">Request Pitch Deck</a>
+                    <a href="#about-michi" class="secondary-btn large" data-i18n="inv_hero_btn_learn">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="hero-dashboard-widget">
+                <div class="widget-header">
+                    <span class="widget-status"><span class="pulse-dot"></span> <span data-i18n="inv_hero_live">LIVE PROJECT</span></span>
+                    <span class="widget-code">MICHI-PRO-v2.6</span>
+                </div>
+                <div class="widget-main-metric">
+                    <span class="widget-label" data-i18n="inv_hero_irr_lbl">Expected IRR Yield</span>
+                    <span class="widget-value">18.4%</span>
+                    <div class="sparkline-container">
+                        <svg class="sparkline" viewBox="0 0 100 30" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="sparkline-grad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="var(--primary-color)" stop-opacity="0.35"></stop>
+                                    <stop offset="100%" stop-color="var(--primary-color)" stop-opacity="0"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path d="M0,25 Q15,20 30,12 T60,18 T90,5 L100,2 L100,30 L0,30 Z" fill="url(#sparkline-grad)"></path>
+                            <path class="sparkline-path" d="M0,25 Q15,20 30,12 T60,18 T90,5 L100,2" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round"></path>
+                            <circle cx="100" cy="2" r="3.5" fill="var(--primary-color)"></circle>
+                            <circle cx="100" cy="2" r="3.5" fill="var(--primary-color)" opacity="0.4" class="sparkline-ripple"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="widget-mini-grid">
+                    <div class="widget-mini-card">
+                        <span data-i18n="inv_hero_guar_lbl">Guaranteed Ratio</span>
+                        <strong>80%</strong>
+                        <div class="mini-progress-bar-container">
+                            <div class="mini-progress-bar blue-grad" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="widget-mini-card">
+                        <span data-i18n="inv_hero_scale_lbl">Target Scale</span>
+                        <strong>¥24T</strong>
+                        <div class="mini-progress-bar-container">
+                            <div class="mini-progress-bar purple-grad" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-footer-bar">
+                    <span data-i18n="inv_hero_backing">Asset Backing: IHCG Real Estate</span>
+                    <i class="fa-solid fa-circle-check" style="color: #10b981;"></i>
+                </div>
             </div>
         </div>
     </main>
@@ -82,35 +129,144 @@
                 <p style="color:var(--text-secondary); line-height:1.7; font-size:1.05rem;" data-i18n="inv_convenience_desc2">
                     By eliminating recruitment middlemen, we cut costs for fleets while maximizing daily earnings and flexibility for the active workforce.
                 </p>
+                <div class="platform-stats-row">
+                    <div class="p-stat">
+                        <strong>100%</strong>
+                        <span data-i18n="inv_stat_digital_lbl">Digital Super-App</span>
+                    </div>
+                    <div class="p-stat">
+                        <strong>0%</strong>
+                        <span data-i18n="inv_stat_fee_lbl">Middleman Fee</span>
+                    </div>
+                    <div class="p-stat">
+                        <strong>24/7</strong>
+                        <span data-i18n="inv_stat_ai_lbl">Voice AI Assistant</span>
+                    </div>
+                </div>
             </div>
-            <div class="glass-container" style="padding: 30px; border-radius: 24px; background: rgba(255,255,255,0.4); border: 1px solid var(--glass-border);">
-                <div style="display:flex; flex-direction:column; gap:20px;">
-                    <div style="display:flex; align-items:flex-start; gap:20px;">
-                        <div style="width:50px; height:50px; border-radius:12px; background:rgba(0, 102, 204, 0.1); display:flex; justify-content:center; align-items:center; color:var(--primary-color); font-size:1.3rem; flex-shrink: 0;"><i class="fa-solid fa-briefcase"></i></div>
-                        <div>
-                            <h4 style="font-weight:700; margin-bottom:2px;" data-i18n="inv_feat1_title">Job Ads & Arubaito</h4>
-                            <p style="font-size:0.9rem; color:var(--text-secondary);" data-i18n="inv_feat1_desc">Instant access to part-time and full-time driver listings across Japan.</p>
+            <div class="convenience-grid-showcase">
+                <div class="convenience-card">
+                    <div class="convenience-card-icon" style="background:rgba(0, 102, 204, 0.1); color:var(--primary-color);"><i class="fa-solid fa-briefcase"></i></div>
+                    <h4 data-i18n="inv_feat1_title">Job Ads & Arubaito</h4>
+                    <p data-i18n="inv_feat1_desc">Instant access to part-time and full-time driver listings across Japan.</p>
+                </div>
+                <div class="convenience-card">
+                    <div class="convenience-card-icon" style="background:rgba(139, 92, 246, 0.1); color:#8b5cf6;"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h4 data-i18n="inv_feat2_title">Auto Service Booking</h4>
+                    <p data-i18n="inv_feat2_desc">Pre-book vehicle inspections (Shaken) and maintenance to eliminate waiting times.</p>
+                </div>
+                <div class="convenience-card">
+                    <div class="convenience-card-icon" style="background:rgba(16, 185, 129, 0.1); color:#10b981;"><i class="fa-solid fa-microphone"></i></div>
+                    <h4 data-i18n="inv_feat3_title">Voice AI Assistant</h4>
+                    <p data-i18n="inv_feat3_desc">Drivers command all application features using safe, hands-free conversational dialogue.</p>
+                </div>
+                <div class="convenience-card">
+                    <div class="convenience-card-icon" style="background:rgba(245, 158, 11, 0.1); color:#f59e0b;"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h4 data-i18n="inv_feat4_title">Offline Navigation Maps</h4>
+                    <p data-i18n="inv_feat4_desc">Offline and online GPS maps optimized for various vehicle sizes and cargo loads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Highlights & Opportunity Section -->
+    <section class="investor-section glass-container" style="margin: 20px auto; max-width: 1200px; padding: 50px;">
+        <h2 style="text-align:center; margin-bottom: 10px; font-size: 2.5rem;" data-i18n="inv_highlights_title">Investment Highlights & Market Potential</h2>
+        <p style="text-align:center; color:var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;" data-i18n="inv_highlights_desc">Why Michi is the most attractive and secure tech opportunity in Japan's current economic landscape.</p>
+        
+        <div class="highlights-grid">
+            <!-- Deficit Gauge Card -->
+            <div class="highlight-card">
+                <div class="highlight-header">
+                    <span class="highlight-tag warning" data-i18n="tag_critical">Critical Market Need</span>
+                    <h3 data-i18n="card_deficit_title">The 2024 Driver Crisis</h3>
+                </div>
+                <div class="highlight-metric">
+                    <span class="metric-num">30%</span>
+                    <span class="metric-unit" data-i18n="unit_deficit">Undelivered Cargo by 2030</span>
+                </div>
+                <div class="infographic-bar-container">
+                    <div class="infographic-bar warning-bar" style="width: 30%;"></div>
+                </div>
+                <p class="highlight-text" data-i18n="card_deficit_desc">Strict overtime limits in Japan have created an unprecedented driver shortage. Logistics fleets are desperately seeking efficiency solutions.</p>
+            </div>
+            
+            <!-- Market Size Card -->
+            <div class="highlight-card">
+                <div class="highlight-header">
+                    <span class="highlight-tag primary" data-i18n="tag_growth">Market Potential</span>
+                    <h3 data-i18n="card_market_title">Japan Logistics Market</h3>
+                </div>
+                <div class="highlight-metric">
+                    <span class="metric-num">¥24T</span>
+                    <span class="metric-unit" data-i18n="unit_market">Trillion Yen Industry</span>
+                </div>
+                <div class="infographic-trend">
+                    <svg viewBox="0 0 100 30" class="trend-line-svg">
+                        <path class="sparkline-path" d="M0,25 Q25,20 50,15 T100,5" fill="none" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round"></path>
+                    </svg>
+                </div>
+                <p class="highlight-text" data-i18n="card_market_desc">Japan's delivery demand continues to expand rapidly with e-commerce, creating a massive addressable market for digital driver services.</p>
+            </div>
+            
+            <!-- Profit Margin Card -->
+            <div class="highlight-card">
+                <div class="highlight-header">
+                    <span class="highlight-tag success" data-i18n="tag_margin">Business Model</span>
+                    <h3 data-i18n="card_margin_title">Scalability & Margin</h3>
+                </div>
+                <div class="highlight-metric">
+                    <span class="metric-num">65%</span>
+                    <span class="metric-unit" data-i18n="unit_margin">Target EBITDA Margin</span>
+                </div>
+                <div class="infographic-bar-container">
+                    <div class="infographic-bar success-bar" style="width: 65%;"></div>
+                </div>
+                <p class="highlight-text" data-i18n="card_margin_desc">A pure digital super-app with low operational overhead, delivering high software margins and rapid compound scaling across Japan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capital Guarantee & Real Estate Security Section -->
+    <section class="investor-section glass-container guarantee-section" style="margin: 20px auto; max-width: 1200px; padding: 50px;">
+        <div class="guarantee-grid">
+            <div class="guarantee-text-side">
+                <div style="width:60px; height:60px; border-radius:50%; background:rgba(0, 102, 204, 0.1); display:flex; justify-content:center; align-items:center; color:var(--primary-color); margin-bottom: 20px;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 30px; height: 30px;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg></div>
+                <h2 style="font-size: 2.2rem; font-weight:800; text-align: left; margin-bottom: 20px; letter-spacing: -0.5px;" data-i18n="inv_guarantee_title">Low-Risk Investment with 80% Capital Guarantee</h2>
+                <p style="color:var(--text-secondary); line-height:1.7; font-size:1.05rem;" data-i18n="inv_guarantee_desc">
+                    Michi offers a highly secure investment model. The initial development and operational expenses are backed by solid rental revenues from the real estate assets of International Halal Capital Group. Because expenses are covered by stable cash flows, we guarantee that at least 80% of the investor's principal capital can be safely returned even in the case of project failure. This unique structure makes the platform completely unparalleled in terms of risk mitigation.
+                </p>
+            </div>
+            
+            <div class="guarantee-chart-side">
+                <div class="safety-chart-card glass-container">
+                    <h4 class="chart-card-title" data-i18n="chart_title">Capital Allocation & Safety Model</h4>
+                    
+                    <div class="safety-bar-wrapper">
+                        <div class="safety-bar-label">
+                            <span data-i18n="lbl_guaranteed">80% Principal Guaranteed</span>
+                            <span data-i18n="lbl_growth">20% Growth Capital</span>
+                        </div>
+                        <div class="safety-progress-bar">
+                            <div class="progress-segment guarantee-segment" style="width: 80%;"></div>
+                            <div class="progress-segment growth-segment" style="width: 20%;"></div>
                         </div>
                     </div>
-                    <div style="display:flex; align-items:flex-start; gap:20px;">
-                        <div style="width:50px; height:50px; border-radius:12px; background:rgba(139, 92, 246, 0.1); display:flex; justify-content:center; align-items:center; color:#8b5cf6; font-size:1.3rem; flex-shrink: 0;"><i class="fa-solid fa-calendar-check"></i></div>
-                        <div>
-                            <h4 style="font-weight:700; margin-bottom:2px;" data-i18n="inv_feat2_title">Auto Service Booking</h4>
-                            <p style="font-size:0.9rem; color:var(--text-secondary);" data-i18n="inv_feat2_desc">Pre-book vehicle inspections (Shaken) and maintenance to eliminate waiting times.</p>
+                    
+                    <div class="safety-legend">
+                        <div class="legend-item">
+                            <div class="legend-dot guarantee-dot"></div>
+                            <div>
+                                <strong data-i18n="leg_guaranteed_title">80% Asset-Backed Guarantee</strong>
+                                <p data-i18n="leg_guaranteed_desc">Secured by real estate rental yields. Principal capital is preserved and legally protected.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div style="display:flex; align-items:flex-start; gap:20px;">
-                        <div style="width:50px; height:50px; border-radius:12px; background:rgba(16, 185, 129, 0.1); display:flex; justify-content:center; align-items:center; color:#10b981; font-size:1.3rem; flex-shrink: 0;"><i class="fa-solid fa-microphone"></i></div>
-                        <div>
-                            <h4 style="font-weight:700; margin-bottom:2px;" data-i18n="inv_feat3_title">Voice AI Assistant</h4>
-                            <p style="font-size:0.9rem; color:var(--text-secondary);" data-i18n="inv_feat3_desc">Drivers command all application features using safe, hands-free conversational dialogue.</p>
-                        </div>
-                    </div>
-                    <div style="display:flex; align-items:flex-start; gap:20px;">
-                        <div style="width:50px; height:50px; border-radius:12px; background:rgba(245, 158, 11, 0.1); display:flex; justify-content:center; align-items:center; color:#f59e0b; font-size:1.3rem; flex-shrink: 0;"><i class="fa-solid fa-map-location-dot"></i></div>
-                        <div>
-                            <h4 style="font-weight:700; margin-bottom:2px;" data-i18n="inv_feat4_title">Offline Navigation Maps</h4>
-                            <p style="font-size:0.9rem; color:var(--text-secondary);" data-i18n="inv_feat4_desc">Offline and online GPS maps optimized for various vehicle sizes and cargo loads.</p>
+                        <div class="legend-item">
+                            <div class="legend-dot growth-dot"></div>
+                            <div>
+                                <strong data-i18n="leg_growth_title">20% Development & Scaling</strong>
+                                <p data-i18n="leg_growth_desc">Allocated for voice AI, maps integration, marketing campaigns, and driver onboardings.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,29 +274,18 @@
         </div>
     </section>
 
-    <!-- Capital Guarantee & Real Estate Security Section -->
-    <section class="investor-section glass-container" style="margin: 20px auto; max-width: 1200px; padding: 50px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(0, 102, 204, 0.05)); border: 1px solid rgba(0, 102, 204, 0.25);">
-        <div style="display:flex; flex-direction:column; align-items:center; text-align:center; max-width: 800px; margin: 0 auto; gap: 20px;">
-            <div style="width:70px; height:70px; border-radius:50%; background:rgba(0, 102, 204, 0.1); display:flex; justify-content:center; align-items:center; color:var(--primary-color); font-size:2rem;"><i class="fa-solid fa-shield-check"></i></div>
-            <h2 style="font-size: 2.2rem; font-weight:800;" data-i18n="inv_guarantee_title">Low-Risk Investment with 80% Capital Guarantee</h2>
-            <p style="color:var(--text-secondary); line-height:1.7; font-size:1.1rem;" data-i18n="inv_guarantee_desc">
-                Michi offers a highly secure investment model. The initial development and operational expenses are backed by solid rental revenues from the real estate assets of International Halal Capital Group. Because expenses are covered by stable cash flows, we guarantee that at least 80% of the investor's principal capital can be safely returned even in the case of project failure. This unique structure makes the platform completely unparalleled in terms of risk mitigation.
-            </p>
-        </div>
-    </section>
-
     <!-- Logistics Partnership & Deficit Crisis Section -->
     <section class="investor-section glass-container" style="margin: 20px auto; max-width: 1200px; padding: 50px;">
         <h2 style="text-align:center; margin-bottom: 20px; font-size: 2.5rem;" data-i18n="inv_logistics_title">Partnering with Logistics Companies</h2>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-            <div class="investor-card" style="padding: 40px; background:rgba(255,255,255,0.4); border: 1px solid var(--glass-border); border-radius:24px;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch;">
+            <div class="investor-card-premium">
                 <div style="font-size: 2.5rem; font-weight:800; margin-bottom:15px; color:var(--primary-color);"><i class="fa-solid fa-building-user"></i></div>
                 <h3 style="font-size: 1.4rem; margin-bottom: 15px; font-weight:700;" data-i18n="inv_partner_title">The Primary Target Investors</h3>
                 <p style="color:var(--text-secondary); line-height:1.6;" data-i18n="inv_partner_desc">
                     Logistics companies are our most essential partners and primary investors. In Japan's current economic climate, the demand for cargo transport is rising, but the driver deficit is critical. Fleet operators need workforce security now.
                 </p>
             </div>
-            <div class="investor-card" style="padding: 40px; background:rgba(255,255,255,0.4); border: 1px solid var(--glass-border); border-radius:24px;">
+            <div class="investor-card-premium purple">
                 <div style="font-size: 2.5rem; font-weight:800; margin-bottom:15px; color:#8b5cf6;"><i class="fa-solid fa-user-plus"></i></div>
                 <h3 style="font-size: 1.4rem; margin-bottom: 15px; font-weight:700;" data-i18n="inv_talent_title">Attracting New Talent</h3>
                 <p style="color:var(--text-secondary); line-height:1.6;" data-i18n="inv_talent_desc">
@@ -150,29 +295,200 @@
         </div>
     </section>
 
+    <!-- Competitive Landscape Section -->
+    <section class="investor-section glass-container" style="margin: 20px auto; max-width: 1200px; padding: 50px;">
+        <h2 style="text-align:center; margin-bottom: 10px; font-size: 2.5rem;" data-i18n="inv_comp_title">Competitive Landscape</h2>
+        <p style="text-align:center; color:var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;" data-i18n="inv_comp_desc">How Michi outperforms traditional recruitment and generic job platforms in Japan's logistics sector.</p>
+        
+        <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr class="table-header">
+                        <th data-i18n="th_feature">Key Feature</th>
+                        <th class="michi-header" data-i18n="th_michi" style="color: var(--primary-color);">Michi Platform</th>
+                        <th data-i18n="th_traditional">Traditional Agencies</th>
+                        <th data-i18n="th_boards">Generic Job Boards</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row michi-row">
+                        <td class="table-cell feature-name">
+                            <i class="fa-solid fa-percent" style="margin-right: 8px; color: var(--text-secondary); width: 16px;"></i>
+                            <span data-i18n="td_f1_name">Recruitment Cost</span>
+                        </td>
+                        <td class="table-cell michi-cell michi-column-cell">
+                            <span class="comparison-pill success">
+                                <i class="fa-solid fa-circle-check status-icon yes"></i>
+                                <span data-i18n="td_f1_michi">0% Middleman Fee</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f1_trad">30-35% of Salary</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill warning">
+                                <i class="fa-solid fa-triangle-exclamation status-icon warning"></i>
+                                <span data-i18n="td_f1_boards">High Pay-Per-Click Fees</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell feature-name">
+                            <i class="fa-solid fa-bolt" style="margin-right: 8px; color: var(--text-secondary); width: 16px;"></i>
+                            <span data-i18n="td_f2_name">Matching Speed</span>
+                        </td>
+                        <td class="table-cell michi-cell michi-column-cell">
+                            <span class="comparison-pill success">
+                                <i class="fa-solid fa-circle-check status-icon yes"></i>
+                                <span data-i18n="td_f2_michi">Instant (AI-Powered)</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f2_trad">2-4 Weeks (Manual)</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f2_boards">Days to Weeks</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="table-row michi-row">
+                        <td class="table-cell feature-name">
+                            <i class="fa-solid fa-microphone" style="margin-right: 8px; color: var(--text-secondary); width: 16px;"></i>
+                            <span data-i18n="td_f3_name">Voice AI Assistant</span>
+                        </td>
+                        <td class="table-cell michi-cell michi-column-cell">
+                            <span class="comparison-pill success">
+                                <i class="fa-solid fa-circle-check status-icon yes"></i>
+                                <span data-i18n="td_f3_michi">Hands-Free In-App AI</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f3_trad">None</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f3_boards">None</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-cell feature-name">
+                            <i class="fa-solid fa-shield-halved" style="margin-right: 8px; color: var(--text-secondary); width: 16px;"></i>
+                            <span data-i18n="td_f4_name">Safety & Guarantee</span>
+                        </td>
+                        <td class="table-cell michi-cell michi-column-cell">
+                            <span class="comparison-pill success">
+                                <i class="fa-solid fa-circle-check status-icon yes"></i>
+                                <span data-i18n="td_f4_michi">80% Principal Backed</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f4_trad">No Protection</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f4_boards">No Protection</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="table-row michi-row">
+                        <td class="table-cell feature-name">
+                            <i class="fa-solid fa-map-location-dot" style="margin-right: 8px; color: var(--text-secondary); width: 16px;"></i>
+                            <span data-i18n="td_f5_name">Logistics Features</span>
+                        </td>
+                        <td class="table-cell michi-cell michi-column-cell">
+                            <span class="comparison-pill success">
+                                <i class="fa-solid fa-circle-check status-icon yes"></i>
+                                <span data-i18n="td_f5_michi">Offline Maps & Shaken</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f5_trad">None</span>
+                            </span>
+                        </td>
+                        <td class="table-cell">
+                            <span class="comparison-pill neutral">
+                                <i class="fa-solid fa-circle-xmark status-icon no"></i>
+                                <span data-i18n="td_f5_boards">None</span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <!-- Pitch deck Request Form -->
     <section class="waitlist-section glass-container heavy-glass" id="pitch-request" style="margin: 40px auto; max-width: 1200px; padding: 50px;">
-        <h2 class="dark-heading" style="font-size: 2.2rem; margin-bottom: 10px;" data-i18n="inv_form_title">Request Pitch Deck & Financial Model</h2>
-        <p class="dark-text large-text" style="margin-bottom: 30px;" data-i18n="inv_form_desc">Get exclusive access to our valuation, financial projections, and growth plans. Please provide your business details.</p>
-        
-        <form id="investor-form" class="waitlist-form-container" style="display:flex; flex-direction:column; gap:15px; max-width: 600px; margin: 0 auto;">
-            <input type="text" name="name" placeholder="Full Name" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:rgba(255,255,255,0.8); border:1px solid rgba(0,0,0,0.1); color:var(--text-main); font-size:1rem;">
-            <input type="email" name="email" placeholder="Business Email" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:rgba(255,255,255,0.8); border:1px solid rgba(0,0,0,0.1); color:var(--text-main); font-size:1rem;">
-            <input type="text" name="company" placeholder="Company / Fund Name" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:rgba(255,255,255,0.8); border:1px solid rgba(0,0,0,0.1); color:var(--text-main); font-size:1rem;">
+        <div class="form-split-grid">
+            <div class="form-info-side">
+                <h2 class="dark-heading" style="font-size: 2.2rem; margin-bottom: 10px; text-align: left;" data-i18n="inv_form_title">Request Pitch Deck & Financial Model</h2>
+                <p class="dark-text" style="font-size: 1.05rem; line-height: 1.5; color: var(--text-secondary);" data-i18n="inv_form_desc">Get exclusive access to our valuation, financial projections, and growth plans. Please provide your business details.</p>
+                
+                <div class="info-checklist">
+                    <div class="checklist-card">
+                        <div class="checklist-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="checklist-text">
+                            <strong data-i18n="inv_list_item1_title">Valuation & Projections</strong>
+                            <p data-i18n="inv_list_item1_desc">5-year detailed balance sheet and cash flow forecasts.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-card">
+                        <div class="checklist-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="checklist-text">
+                            <strong data-i18n="inv_list_item2_title">Voice AI Roadmap</strong>
+                            <p data-i18n="inv_list_item2_desc">Integration details with leading navigation systems.</p>
+                        </div>
+                    </div>
+                    <div class="checklist-card">
+                        <div class="checklist-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="checklist-text">
+                            <strong data-i18n="inv_list_item3_title">IHCG Guarantee Terms</strong>
+                            <p data-i18n="inv_list_item3_desc">Legal structures backing the 80% capital return.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <select name="investmentRange" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:rgba(255,255,255,0.8); border:1px solid rgba(0,0,0,0.1); color:var(--text-main); font-size:1rem; cursor:pointer;">
-                <option value="" disabled selected data-i18n="inv_form_select_opt">Investment Range (USD)</option>
-                <option value="10k-50k">$10,000 - $50,000</option>
-                <option value="50k-250k">$50,000 - $250,000</option>
-                <option value="250k-1m">$250,000 - $1,000,000</option>
-                <option value="1m+">$1,000,000+</option>
-            </select>
+            <div>
+                <form id="investor-form" class="waitlist-form-container" style="display:flex; flex-direction:column; gap:15px; max-width: 100%; margin: 0 auto; background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 35px; border-radius: 24px; box-shadow: var(--glass-shadow);">
+                    <input type="text" name="name" placeholder="Full Name" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:var(--input-bg); border:1px solid var(--input-border); color:var(--text-main); font-size:1rem;" data-i18n="placeholder_name">
+                    <input type="email" name="email" placeholder="Business Email" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:var(--input-bg); border:1px solid var(--input-border); color:var(--text-main); font-size:1rem;" data-i18n="placeholder_email">
+                    <input type="text" name="company" placeholder="Company / Fund Name" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:var(--input-bg); border:1px solid var(--input-border); color:var(--text-main); font-size:1rem;" data-i18n="placeholder_company">
+                    
+                    <select name="investmentRange" required class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:var(--input-bg); border:1px solid var(--input-border); color:var(--text-main); font-size:1rem; cursor:pointer;">
+                        <option value="" disabled selected data-i18n="inv_form_select_opt">Investment Range (USD)</option>
+                        <option value="10k-50k">$10,000 - $50,000</option>
+                        <option value="50k-250k">$50,000 - $250,000</option>
+                        <option value="250k-1m">$250,000 - $1,000,000</option>
+                        <option value="1m+">$1,000,000+</option>
+                    </select>
 
-            <textarea name="message" placeholder="Optional Message / Questions" class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:rgba(255,255,255,0.8); border:1px solid rgba(0,0,0,0.1); color:var(--text-main); font-size:1rem; min-height:100px; font-family:inherit; resize:vertical;"></textarea>
+                    <textarea name="message" placeholder="Optional Message / Questions" class="waitlist-input" style="width:100%; border-radius:12px; padding:15px; background:var(--input-bg); border:1px solid var(--input-border); color:var(--text-main); font-size:1rem; min-height:100px; font-family:inherit; resize:vertical;" data-i18n="placeholder_message"></textarea>
 
-            <button type="submit" class="primary-btn large" style="width:100%; font-weight:600; border-radius:12px;" data-i18n="inv_form_btn">Submit Request</button>
-        </form>
-        <div id="investor-form-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+                    <button type="submit" class="primary-btn large" style="width:100%; font-weight:600; border-radius:12px;" data-i18n="inv_form_btn">Submit Request</button>
+                </form>
+                <div id="investor-form-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -181,12 +497,65 @@
             <p data-i18n="footer_copyright">© 2026 Michi (道). A project by <a href="https://halalcapitalgroup.com/" target="_blank" class="parent-company-link"><strong>International Halal Capital Group</strong></a>.</p>
             <div class="footer-links">
                 <a href="./investors.html" data-i18n="nav_investors">Investors</a>
-                <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer_terms">Terms of Service</a>
-                <a href="mailto:info@michi.jp.net" data-i18n="footer_contact">Contact Us</a>
+                <a href="#" id="link-privacy" data-i18n="footer_privacy">Privacy Policy</a>
+                <a href="#" id="link-terms" data-i18n="footer_terms">Terms of Service</a>
+                <a href="#" id="link-contact" data-i18n="footer_contact">Contact Us</a>
             </div>
         </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass" style="max-height: 80vh; overflow-y: auto;">
+            <button class="modal-close" id="privacy-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="privacy_title">Privacy Policy</h2>
+            <div style="text-align: left; margin-top: 20px; color: var(--text-main); line-height: 1.6; font-size: 0.95rem;">
+                <p style="margin-bottom:15px; font-weight:700;" data-i18n="privacy_updated">Last updated: June 2026</p>
+                <p style="margin-bottom:15px;" data-i18n="privacy_intro">Michi ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information when you use our platform.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="privacy_h1">1. Information We Collect</h4>
+                <p style="margin-bottom:15px;" data-i18n="privacy_p1">We collect information you provide directly, such as your email address when joining the waitlist, company details when partnering, or licensing information when registering as a driver.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="privacy_h2">2. How We Use Information</h4>
+                <p style="margin-bottom:15px;" data-i18n="privacy_p2">We use the information to connect drivers with logistics networks, improve our voice AI services, process maintenance bookings, and contact you with updates.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="privacy_h3">3. Capital & Asset Backing</h4>
+                <p style="margin-bottom:15px;" data-i18n="privacy_p3">Operational data and funding are legally secured by International Halal Capital Group's assets. We ensure maximum compliance with data protection laws in Japan.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="terms-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass" style="max-height: 80vh; overflow-y: auto;">
+            <button class="modal-close" id="terms-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="terms_title">Terms of Service</h2>
+            <div style="text-align: left; margin-top: 20px; color: var(--text-main); line-height: 1.6; font-size: 0.95rem;">
+                <p style="margin-bottom:15px; font-weight:700;" data-i18n="terms_effective">Effective date: June 2026</p>
+                <p style="margin-bottom:15px;" data-i18n="terms_intro">By using the Michi platform, website, or application, you agree to these Terms of Service. Please read them carefully.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="terms_h1">1. Platform Use</h4>
+                <p style="margin-bottom:15px;" data-i18n="terms_p1">Michi provides a matchmaking ecosystem for logistics companies and drivers. Users must provide accurate profile details and maintain valid licenses where required.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="terms_h2">2. Investment Guarantee</h4>
+                <p style="margin-bottom:15px;" data-i18n="terms_p2">All capital guarantees for registered partners are backed by International Halal Capital Group's real estate assets and are subject to the legal partnership terms outlined in the Pitch Deck.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="terms_h3">3. Limitation of Liability</h4>
+                <p style="margin-bottom:15px;" data-i18n="terms_p3">Michi acts as an optimization and matching software layer. We do not directly employ drivers or control fleet logistics operations.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass">
+            <button class="modal-close" id="contact-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="footer_contact">Contact Us</h2>
+            <p style="text-align: center; margin-bottom: 25px; color: var(--text-secondary);" data-i18n="modal_hire_desc">Get in touch with our team for general inquiries or support.</p>
+            
+            <form id="contact-form" class="modal-form">
+                <input type="text" name="name" placeholder="Full Name" required class="modal-input" data-i18n="placeholder_name">
+                <input type="email" name="email" placeholder="Business Email" required class="modal-input" data-i18n="placeholder_email">
+                <textarea name="message" placeholder="Optional Message / Questions" required class="modal-input" style="min-height: 120px; font-family: inherit; resize: vertical;" data-i18n="placeholder_message"></textarea>
+                <button type="submit" class="primary-btn large" style="width: 100%; margin-top: 10px;" data-i18n="modal_submit_btn">Submit Request</button>
+            </form>
+            <div id="contact-form-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
     <script>

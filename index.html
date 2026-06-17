@@ -81,69 +81,80 @@
         </div>
     </nav>
 
-    <main class="hero-section">
-        <div class="glass-container hero-content">
-            <span class="badge" data-i18n="hero_badge">Japan's #1 Logistics Platform</span>
-            <h1 data-i18n="hero_title">Find Your <span class="gradient-text">Path (道)</span> in Japan</h1>
-            <p class="description" data-i18n="hero_desc">
-                The ultimate platform connecting reliable drivers with top logistics and transport companies across Japan. Simple, fast, and transparent.
-            </p>
-            <div class="cta-group">
-                <button class="primary-btn large" data-i18n="hero_btn_find">Find a Job</button>
-                <button class="secondary-btn large" data-i18n="hero_btn_hire">Hire Drivers</button>
+    <main class="hero-section" style="padding-top: 140px; min-height: auto;">
+        <div class="hero-split-grid">
+            <div class="glass-container hero-content" style="max-width: 100%; margin-bottom: 0;">
+                <span class="badge" data-i18n="hero_badge">Japan's #1 Logistics Platform</span>
+                <h1 data-i18n="hero_title">Find Your <span class="gradient-text">Path (道)</span> in Japan</h1>
+                <p class="description" data-i18n="hero_desc">
+                    The ultimate platform connecting reliable drivers with top logistics and transport companies across Japan. Simple, fast, and transparent.
+                </p>
+                <div class="cta-group">
+                    <button class="primary-btn large" id="btn-find-job" data-i18n="hero_btn_find">Find a Job</button>
+                    <button class="secondary-btn large" id="btn-hire-drivers" data-i18n="hero_btn_hire">Partner or Invest</button>
+                </div>
+                
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="stat-text-group">
+                            <h3>10k+</h3>
+                            <p data-i18n="stat_1">Open Positions</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper"><i class="fa-solid fa-building"></i></div>
+                        <div class="stat-text-group">
+                            <h3>500+</h3>
+                            <p data-i18n="stat_2">Companies</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper"><i class="fa-solid fa-headset"></i></div>
+                        <div class="stat-text-group">
+                            <h3>24/7</h3>
+                            <p data-i18n="stat_3">Support</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="stats-row">
-                <div class="stat-item">
-                    <h3>10k+</h3>
-                    <p data-i18n="stat_1">Open Positions</p>
-                </div>
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p data-i18n="stat_2">Companies</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p data-i18n="stat_3">Support</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-image-container">
-            <div class="glass-app-mockup">
-                <div class="mockup-header">
-                    <div class="mockup-dot red"></div>
-                    <div class="mockup-dot yellow"></div>
-                    <div class="mockup-dot green"></div>
-                    <div style="margin-left:auto; display:flex; align-items:center; gap:6px; font-size: 0.8rem; font-weight:700; color:var(--text-main); letter-spacing: 1px;">
-                        <div class="logo-kanji" style="width:20px; height:20px; font-size:0.7rem; border-radius:6px; box-shadow:none;">道</div>
-                        MICHI APP
-                    </div>
-                </div>
-                <div class="mockup-body">
-                    <div class="mockup-card">
-                        <div class="card-icon gradient-bg"><i class="fa-solid fa-truck"></i></div>
-                        <div class="card-text">
-                            <h4 data-i18n="mockup_company_1">Tokyo Logistics Co.</h4>
-                            <p data-i18n="mockup_salary_1">¥350,000 - ¥450,000 / month</p>
+            <div class="hero-image-container" style="width: 100%;">
+                <div class="glass-app-mockup" style="margin: 0 auto;">
+                    <div class="mockup-header">
+                        <div class="mockup-dot red"></div>
+                        <div class="mockup-dot yellow"></div>
+                        <div class="mockup-dot green"></div>
+                        <div style="margin-left:auto; display:flex; align-items:center; gap:6px; font-size: 0.8rem; font-weight:700; color:var(--text-main); letter-spacing: 1px;">
+                            <div class="logo-kanji" style="width:20px; height:20px; font-size:0.7rem; border-radius:6px; box-shadow:none;">道</div>
+                            MICHI APP
                         </div>
-                        <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
                     </div>
-                    <div class="mockup-card">
-                        <div class="card-icon gradient-bg"><i class="fa-solid fa-box"></i></div>
-                        <div class="card-text">
-                            <h4 data-i18n="mockup_company_2">Osaka Express</h4>
-                            <p data-i18n="mockup_salary_2">¥300,000 - ¥400,000 / month</p>
+                    <div class="mockup-body">
+                        <div class="mockup-card">
+                            <div class="card-icon gradient-bg"><i class="fa-solid fa-truck"></i></div>
+                            <div class="card-text">
+                                <h4 data-i18n="mockup_company_1">Tokyo Logistics Co.</h4>
+                                <p data-i18n="mockup_salary_1">¥350,000 - ¥450,000 / month</p>
+                            </div>
+                            <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
                         </div>
-                        <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
-                    </div>
-                    <div class="mockup-card">
-                        <div class="card-icon gradient-bg"><i class="fa-solid fa-truck-moving"></i></div>
-                        <div class="card-text">
-                            <h4 data-i18n="mockup_company_3">Nagoya Freight</h4>
-                            <p data-i18n="mockup_salary_3">¥400,000+ / month</p>
+                        <div class="mockup-card">
+                            <div class="card-icon gradient-bg"><i class="fa-solid fa-box"></i></div>
+                            <div class="card-text">
+                                <h4 data-i18n="mockup_company_2">Osaka Express</h4>
+                                <p data-i18n="mockup_salary_2">¥300,000 - ¥400,000 / month</p>
+                            </div>
+                            <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
                         </div>
-                        <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
+                        <div class="mockup-card">
+                            <div class="card-icon gradient-bg"><i class="fa-solid fa-truck-moving"></i></div>
+                            <div class="card-text">
+                                <h4 data-i18n="mockup_company_3">Nagoya Freight</h4>
+                                <p data-i18n="mockup_salary_3">¥400,000+ / month</p>
+                            </div>
+                            <button class="apply-btn" data-i18n="mockup_apply">Apply</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -257,7 +268,7 @@
         <p class="dark-text large-text" data-i18n="download_desc">Download the Michi app now and connect with Japan's top logistics companies instantly.</p>
         
         <form id="waitlist-form" class="waitlist-form-container">
-            <input type="email" name="email" placeholder="Enter your email" required class="waitlist-input">
+            <input type="email" name="email" placeholder="Enter your email" required class="waitlist-input" data-i18n="placeholder_enter_email">
             <button type="submit" class="primary-btn large">Join Waitlist</button>
         </form>
         <div id="form-message" class="form-message"></div>
@@ -273,12 +284,83 @@
             <p data-i18n="footer_copyright">© 2026 Michi (道). A project by <a href="https://halalcapitalgroup.com/" target="_blank" class="parent-company-link"><strong>International Halal Capital Group</strong></a>.</p>
             <div class="footer-links">
                 <a href="./investors.html" data-i18n="nav_investors">Investors</a>
-                <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer_terms">Terms of Service</a>
-                <a href="mailto:info@michi.jp.net" data-i18n="footer_contact">Contact Us</a>
+                <a href="#" id="link-privacy" data-i18n="footer_privacy">Privacy Policy</a>
+                <a href="#" id="link-terms" data-i18n="footer_terms">Terms of Service</a>
+                <a href="#" id="link-contact" data-i18n="footer_contact">Contact Us</a>
             </div>
         </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass" style="max-height: 80vh; overflow-y: auto;">
+            <button class="modal-close" id="privacy-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="privacy_title">Privacy Policy</h2>
+            <div style="text-align: left; margin-top: 20px; color: var(--text-main); line-height: 1.6; font-size: 0.95rem;">
+                <p style="margin-bottom:15px; font-weight:700;" data-i18n="privacy_updated">Last updated: June 2026</p>
+                <p style="margin-bottom:15px;" data-i18n="privacy_intro">Michi ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information when you use our platform.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="privacy_h1">1. Information We Collect</h4>
+                <p style="margin-bottom:15px;" data-i18n="privacy_p1">We collect information you provide directly, such as your email address when joining the waitlist, company details when partnering, or licensing information when registering as a driver.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="privacy_h2">2. How We Use Information</h4>
+                <p style="margin-bottom:15px;" data-i18n="privacy_p2">We use the information to connect drivers with logistics networks, improve our voice AI services, process maintenance bookings, and contact you with updates.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="privacy_h3">3. Capital & Asset Backing</h4>
+                <p style="margin-bottom:15px;" data-i18n="privacy_p3">Operational data and funding are legally secured by International Halal Capital Group's assets. We ensure maximum compliance with data protection laws in Japan.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="terms-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass" style="max-height: 80vh; overflow-y: auto;">
+            <button class="modal-close" id="terms-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="terms_title">Terms of Service</h2>
+            <div style="text-align: left; margin-top: 20px; color: var(--text-main); line-height: 1.6; font-size: 0.95rem;">
+                <p style="margin-bottom:15px; font-weight:700;" data-i18n="terms_effective">Effective date: June 2026</p>
+                <p style="margin-bottom:15px;" data-i18n="terms_intro">By using the Michi platform, website, or application, you agree to these Terms of Service. Please read them carefully.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="terms_h1">1. Platform Use</h4>
+                <p style="margin-bottom:15px;" data-i18n="terms_p1">Michi provides a matchmaking ecosystem for logistics companies and drivers. Users must provide accurate profile details and maintain valid licenses where required.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="terms_h2">2. Investment Guarantee</h4>
+                <p style="margin-bottom:15px;" data-i18n="terms_p2">All capital guarantees for registered partners are backed by International Halal Capital Group's real estate assets and are subject to the legal partnership terms outlined in the Pitch Deck.</p>
+                <h4 style="margin:20px 0 10px; font-size:1.1rem; font-weight:700;" data-i18n="terms_h3">3. Limitation of Liability</h4>
+                <p style="margin-bottom:15px;" data-i18n="terms_p3">Michi acts as an optimization and matching software layer. We do not directly employ drivers or control fleet logistics operations.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass">
+            <button class="modal-close" id="contact-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="footer_contact">Contact Us</h2>
+            <p style="text-align: center; margin-bottom: 25px; color: var(--text-secondary);" data-i18n="modal_hire_desc">Get in touch with our team for general inquiries or support.</p>
+            
+            <form id="contact-form" class="modal-form">
+                <input type="text" name="name" placeholder="Full Name" required class="modal-input" data-i18n="placeholder_name">
+                <input type="email" name="email" placeholder="Business Email" required class="modal-input" data-i18n="placeholder_email">
+                <textarea name="message" placeholder="Optional Message / Questions" required class="modal-input" style="min-height: 120px; font-family: inherit; resize: vertical;" data-i18n="placeholder_message"></textarea>
+                <button type="submit" class="primary-btn large" style="width: 100%; margin-top: 10px;" data-i18n="modal_submit_btn">Submit Request</button>
+            </form>
+            <div id="contact-form-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+        </div>
+    </div>
+
+    <!-- Company Registration Modal (Hire Drivers) -->
+    <div id="company-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass">
+            <button class="modal-close" id="company-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="modal_hire_title">Partner or Invest - Join Waitlist</h2>
+            <p data-i18n="modal_hire_desc">Register your logistics company or investment inquiry to gain early access to our business platform.</p>
+            
+            <form id="company-form" class="modal-form">
+                <input type="text" name="company_name" placeholder="Company Name" required class="modal-input" data-i18n="placeholder_company_name">
+                <input type="text" name="contact_name" placeholder="Contact Person" required class="modal-input" data-i18n="placeholder_contact_name">
+                <input type="email" name="email" placeholder="Business Email" required class="modal-input" data-i18n="placeholder_email">
+                <input type="tel" name="phone" placeholder="Phone Number" required class="modal-input" data-i18n="placeholder_phone">
+                <button type="submit" class="primary-btn large" style="width: 100%; margin-top: 10px;" data-i18n="modal_submit_btn">Submit Request</button>
+            </form>
+            <div id="company-form-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>
