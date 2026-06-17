@@ -2540,3 +2540,63 @@ body.dark-mode .channel-card:hover {
         padding-top: 30px;
     }
 }
+
+/* Responsive Grid Layouts for Investors Page */
+.platform-responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+}
+
+.logistics-responsive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .platform-responsive-grid,
+    .logistics-responsive-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Mobile adjustments for Investor Section & Safety Model Chart */
+@media (max-width: 768px) {
+    .investor-section {
+        padding: 30px 20px !important;
+        border-radius: 24px !important;
+        margin: 20px auto !important;
+    }
+    
+    .safety-chart-card {
+        padding: 25px 15px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .platform-stats-row {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .safety-bar-label {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+}
+
