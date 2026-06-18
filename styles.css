@@ -613,10 +613,7 @@ body.dark-mode .stat-icon-wrapper {
         width: 95%;
         padding: 0 15px;
     }
-    
-    .nav-links {
-        display: none; /* Hide on mobile for now */
-    }
+
     
     .hero-content {
         box-shadow: 0 20px 40px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,1);
@@ -1326,19 +1323,43 @@ body.dark-mode .stat-icon-wrapper {
     .glass-nav {
         padding: 0 15px;
         height: 60px;
+        top: 10px;
+        width: 95%;
     }
     
-    .glass-nav .nav-links, .glass-nav .primary-btn {
-        display: none; /* Hide text links and Waitlist button on mobile to save space */
+    .glass-nav .primary-btn {
+        display: none; /* Hide Waitlist button on mobile to save space */
+    }
+    
+    .glass-nav .nav-links {
+        display: flex;
+        gap: 12px;
+    }
+    
+    .glass-nav .nav-links a {
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    .glass-nav .logo {
+        font-size: 1.25rem;
+        gap: 6px;
+    }
+    
+    .logo-kanji {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+        border-radius: 8px;
     }
     
     .nav-actions {
-        gap: 10px;
+        gap: 8px;
     }
     
     .lang-btn {
-        padding: 4px 8px;
-        font-size: 0.8rem;
+        padding: 4px 6px;
+        font-size: 0.75rem;
     }
     
     /* App buttons fixes for mobile */
