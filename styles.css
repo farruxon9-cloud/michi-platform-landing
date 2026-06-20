@@ -2621,3 +2621,95 @@ body.dark-mode .channel-card:hover {
     }
 }
 
+/* Capital protected cycle flowchart styles */
+.capital-flow-container {
+    width: 100%;
+}
+
+.flowchart-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.flowchart-step {
+    flex: 1;
+    padding: 24px 15px;
+    text-align: center;
+    border-radius: 16px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.flowchart-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.flowchart-step.highlight {
+    border-color: rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, var(--glass-bg), rgba(16, 185, 129, 0.05));
+}
+
+.flowchart-step .step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.flowchart-step.highlight .step-num {
+    background: #10b981;
+}
+
+.flowchart-step h4 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.flowchart-step p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+.flowchart-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 991px) {
+    .flowchart-steps {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .flowchart-step {
+        width: 100%;
+        max-width: 400px;
+    }
+    .flowchart-arrow {
+        transform: rotate(90deg);
+        margin: 5px 0;
+    }
+}
+
+

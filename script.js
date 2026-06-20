@@ -186,7 +186,38 @@ const translations = {
         terms_h2: "2. Investment Guarantee",
         terms_p2: "All capital guarantees for registered partners are backed by International Halal Capital Group's real estate assets and are subject to the legal partnership terms outlined in the Pitch Deck.",
         terms_h3: "3. Limitation of Liability",
-        terms_p3: "Michi acts as an optimization and matching software layer. We do not directly employ drivers or control fleet logistics operations."
+        terms_p3: "Michi acts as an optimization and matching software layer. We do not directly employ drivers or control fleet logistics operations.",
+        inv_hero_guar_val: "80% - 100%",
+        inv_logistics_reason1_title: "Workforce Sovereignty",
+        inv_logistics_reason1_desc: "Secure direct access to Japan's primary digital driver pipeline, completely bypassing recruitment middleman fees.",
+        inv_logistics_reason2_title: "Drastic Cost Saving",
+        inv_logistics_reason2_desc: "Shifting from high recruitment costs (¥1.2M+ per driver) to a 0% commission matching structure saves fleets millions of Yen.",
+        inv_logistics_reason3_title: "Asset + Tech Double Yield",
+        inv_logistics_reason3_desc: "Earn yields from IHCG's underlying real estate while gaining equity in a high-growth logistics technology platform.",
+        flow_title: "How the Capital Protection Cycle Works",
+        flow_step1_title: "100% Investment",
+        flow_step1_desc: "Capital contributed by new investors.",
+        flow_step2_title: "80% - 100% Real Estate",
+        flow_step2_desc: "Allocated to IHCG rental properties.",
+        flow_step3_title: "Stable Rental Yield",
+        flow_step3_desc: "Low-risk rental cash flows generated monthly.",
+        flow_step4_title: "App Funding",
+        flow_step4_desc: "Scaling funded solely by rental yields.",
+        flow_step5_title: "Protected Principal",
+        flow_step5_desc: "Underlying assets guarantee capital return.",
+        nav_demo: "Try Demo",
+        demo_badge: "Live Staging Sandbox",
+        demo_title: "Try Michi App Interactive Demo",
+        demo_desc: "Experience the live working application on our staging server. Enter the investor passcode to unlock the access credentials and link.",
+        placeholder_passcode: "Enter Investor Passcode",
+        demo_btn_unlock: "Unlock Demo",
+        demo_unlocked_title: "Access Authorized",
+        demo_unlocked_msg: "Use the following credentials to log in to the Michi App web interface:",
+        demo_username_label: "Username",
+        demo_password_label: "Password",
+        demo_link_btn: "Open Web Demo",
+        demo_error_msg: "Invalid passcode. Please request credentials.",
+        demo_disclaimer: "⚠️ <strong>Intellectual Property Notice:</strong> All designs, proprietary algorithms, and layouts of Michi (道) App are the exclusive intellectual property of International Halal Capital Group. Unauthorized replication or distribution is strictly prohibited and subject to legal action under international copyright law."
     },
     ja: {
         page_title: "Michi (道) - 運転手と物流企業をつなぐ統合支援サービス",
@@ -367,7 +398,38 @@ const translations = {
         terms_h2: "2. 出資保証",
         terms_p2: "登録パートナーに対するすべての出資元本保証は、International Halal Capital Group（IHCG）の不動産資産に裏付けられており、ピッチデックに記載された法的契約条件に従います。",
         terms_h3: "3. 免責事項",
-        terms_p3: "Michiはマッチングおよび運行最適化のソフトウェア層として機能します。当社はドライバーを直接雇用したり、フリート企業の運行業務を管理するものではありません。"
+        terms_p3: "Michiはマッチングおよび運行最適化のソフトウェア層として機能します。当社はドライバーを直接雇用したり、フリート企業の運行業務を管理するものではありません。",
+        inv_hero_guar_val: "80%〜100%",
+        inv_logistics_reason1_title: "ドライバー人材の直接確保",
+        inv_logistics_reason1_desc: "高額な人材紹介手数料を一切払うことなく、日本国内のデジタルドライバー基盤へダイレクトにアクセス可能。",
+        inv_logistics_reason2_title: "劇的な採用コスト削減",
+        inv_logistics_reason2_desc: "従来の採用コスト（1名あたり120万円〜）を「手数料0%」のMichiアプリに移行することで、年間数千万円のコストを削減。",
+        inv_logistics_reason3_title: "不動産とテックのダブルリターン",
+        inv_logistics_reason3_desc: "担保となるIHCG不動産からの安定した分配金を得つつ、成長著しい物流テックプラットフォームの株式を保有。",
+        flow_title: "元本保護サイクルの仕組み",
+        flow_step1_title: "100% 出資金",
+        flow_step1_desc: "投資家から出sirされた元本。",
+        flow_step2_title: "80%〜100% 不動産",
+        flow_step2_desc: "IHCGの安定した賃貸物件に割り当て。",
+        flow_step3_title: "安定した賃貸収入",
+        flow_step3_desc: "毎月生み出される低リスクのキャッシュフロー。",
+        flow_step4_title: "アプリの開発資金",
+        flow_step4_desc: "賃貸収益のみを原資として開発・運用。",
+        flow_step5_title: "保全された出資元本",
+        flow_step5_desc: "不動産資産により元本返還が強力に保証されます。",
+        nav_demo: "デモを試す",
+        demo_badge: "ライブステージング環境",
+        demo_title: "Michi アプリ インタラクティブデモを試す",
+        demo_desc: "ステージングサーバー上で動作するライブアプリケーションをご体験いただけます。当社の知的財産を保護するため、アクセス情報とリンクを解除するには投資家専用パスコードを入力してください。",
+        placeholder_passcode: "投資家専用パスコードを入力",
+        demo_btn_unlock: "デモを解除",
+        demo_unlocked_title: "アクセス承認完了",
+        demo_unlocked_msg: "以下のログイン情報を使用して、Michi アプリのウェブ画面にログインしてください：",
+        demo_username_label: "ユーザー名",
+        demo_password_label: "パスワード",
+        demo_link_btn: "ウェブデモを開く",
+        demo_error_msg: "パスコードが正しくありません。アクセス権を請求してください。",
+        demo_disclaimer: "⚠️ <strong>知的財産権に関する注意:</strong> Michi（道）アプリのすべてのデザイン、独自のアルゴリズム、およびレイアウトは、International Halal Capital Groupの独占的知的財産です。無断での複製または配布は厳格に禁止されており、国際著作権法に基づき法的措置の対象となります。"
     }
 };
 
@@ -689,6 +751,42 @@ document.addEventListener('DOMContentLoaded', () => {
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerText = originalBtnText;
+            }
+        });
+    }
+
+    // Demo passcode validation and unlock logic
+    const demoUnlockForm = document.getElementById('demo-unlock-form');
+    const demoLockedContainer = document.getElementById('demo-locked-container');
+    const demoUnlockedContainer = document.getElementById('demo-unlocked-container');
+    const demoErrorMessage = document.getElementById('demo-error-message');
+    const demoPasscodeInput = document.getElementById('demo-passcode-input');
+
+    if (demoUnlockForm) {
+        demoUnlockForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const passcode = demoPasscodeInput.value.trim().toLowerCase();
+            
+            // Accept 'admin' or 'michi' or 'michi2026'
+            if (passcode === 'admin' || passcode === 'michi' || passcode === 'michi2026') {
+                demoLockedContainer.style.display = 'none';
+                demoUnlockedContainer.style.display = 'block';
+                demoErrorMessage.innerText = '';
+                
+                // Smooth scroll to the unlocked section
+                setTimeout(() => {
+                    demoUnlockedContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            } else {
+                const activeLang = document.documentElement.lang || 'en';
+                const errorMsg = translations[activeLang] && translations[activeLang]['demo_error_msg'] 
+                    ? translations[activeLang]['demo_error_msg'] 
+                    : 'Invalid passcode. Please request credentials.';
+                demoErrorMessage.innerText = errorMsg;
+                demoPasscodeInput.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.4)';
+                setTimeout(() => {
+                    demoPasscodeInput.style.boxShadow = '';
+                }, 2000);
             }
         });
     }
