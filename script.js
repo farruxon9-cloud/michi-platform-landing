@@ -209,16 +209,14 @@ const translations = {
         nav_demo: "Try Demo",
         demo_badge: "Live Staging Sandbox",
         demo_title: "Try Michi App Interactive Demo",
-        demo_desc: "Experience the live working application on our staging server. Enter the investor passcode to unlock the access credentials and link.",
-        placeholder_passcode: "Enter Investor Passcode",
-        demo_btn_unlock: "Unlock Demo",
+        demo_desc: "Experience the live working application on our staging server. Click the button below to view the access credentials and open the interactive demo.",
+        demo_btn_unlock: "Try Michi App Interactive Demo",
         demo_unlocked_title: "Access Authorized",
         demo_unlocked_msg: "Use the following credentials to log in to the Michi App web interface:",
         demo_username_label: "Username",
         demo_password_label: "Password",
-        demo_link_btn: "Open Web Demo",
-        demo_error_msg: "Invalid passcode. Please request credentials.",
-        demo_passcode_tip: "💡 Tip: Enter 'michi' to instantly unlock the staging portal and try the demo.",
+        demo_instructions: "When you enter the app, first select your preferred language, then choose your role (either Driver or Company). Next, enter the test credentials: <strong>Username: admin</strong> and <strong>Password: admin</strong>. Use the same credentials for both roles. Feel free to log in under either role to experience the initial stage of the application interface.",
+        demo_link_btn: "Open Web Demo Sandbox",
         demo_disclaimer_title: "Intellectual Property & Patent Protection Warning",
         demo_disclaimer: "⚠️ All designs, workflows, layout shapes, UI details, proprietary algorithms, and architectural components of Michi (道) App are the exclusive intellectual property of International Halal Capital Group (IHCG). Every single line, design layout, flow curve, and system detail is fully patented and legally protected. Unauthorized replication, theft, reverse engineering, or distribution is strictly prohibited and will be prosecuted under Japanese patent laws and international copyright protection treaties to the maximum legal extent."
     },
@@ -424,16 +422,14 @@ const translations = {
         nav_demo: "デモを試す",
         demo_badge: "ライブステージング環境",
         demo_title: "Michi アプリ インタラクティブデモを試す",
-        demo_desc: "ステージングサーバー上で動作するライブアプリケーションをご体験いただけます。当社の知的財産を保護するため、アクセス情報とリンクを解除するには投資家専用パスコードを入力してください。",
-        placeholder_passcode: "投資家専用パスコードを入力",
-        demo_btn_unlock: "デモを解除",
+        demo_desc: "ステージングサーバー上で動作するライブアプリケーションをご体験いただけます。以下のボタンをクリックしてアクセス情報を表示し、インタラクティブデモを開いてください。",
+        demo_btn_unlock: "Michi アプリ インタラクティブデモを試す",
         demo_unlocked_title: "アクセス承認完了",
         demo_unlocked_msg: "以下のログイン情報を使用して、Michi アプリのウェブ画面にログインしてください：",
         demo_username_label: "ユーザー名",
         demo_password_label: "パスワード",
+        demo_instructions: "アプリにアクセスしたら、まず希望する言語を選択し、次にログインするロール（ドライバーまたは企業）を選択します。その後、テスト用に用意された<strong>ユーザー名: admin</strong>、<strong>パスワード: admin</strong>を入力してログインします。ドライバープロファイルと企業プロファイルのどちらでも同じログイン情報を使用できます。どちらのロールでも自由にログインし、アプリの初期段階のインターフェースを体験していただけます。",
         demo_link_btn: "ウェブデモを開く",
-        demo_error_msg: "パスコードが正しくありません。アクセス権を請求してください。",
-        demo_passcode_tip: "💡 ヒント：'michi'と入力すると、デモポータルが解除され、デモ版を試行可能になります。",
         demo_disclaimer_title: "知的財産権および特許保護に関する警告",
         demo_disclaimer: "⚠️ Michi（道）アプリのすべてのデザイン、ワークフロー、レイアウト形状、UIの詳細、独自のアルゴリズム、およびシステム構造は、International Halal Capital Group（IHCG）の独占的知的財産です。すべてのプログラムコード行、デザイン配置、フロー曲線、および各部詳細は完全に特許化され、法的に保護されています。無断での複製、盗用、リバースエンジニアリング、または配布は厳格に禁止されており、日本の特許法および国際著作権条約に基づき、最大限の法的措置の対象となります。"
     }
@@ -826,43 +822,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Demo passcode validation and unlock logic for Phone Mockup
-    const demoUnlockForm = document.getElementById('demo-unlock-form');
+    // Demo direct unlock logic
+    const btnUnlockDemoDirect = document.getElementById('btn-unlock-demo-direct');
     const demoLockedScreen = document.getElementById('demo-locked-screen');
     const demoUnlockedScreen = document.getElementById('demo-unlocked-screen');
-    const demoErrorMessage = document.getElementById('demo-error-message');
-    const demoPasscodeInput = document.getElementById('demo-passcode-input');
     const btnLockDemo = document.getElementById('btn-lock-demo');
 
-    if (demoUnlockForm) {
-        demoUnlockForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const passcode = demoPasscodeInput.value.trim().toLowerCase();
-            
-            // Accept 'admin' or 'michi' or 'michi2026'
-            if (passcode === 'admin' || passcode === 'michi' || passcode === 'michi2026') {
-                if (demoLockedScreen) demoLockedScreen.style.display = 'none';
-                if (demoUnlockedScreen) {
-                    demoUnlockedScreen.style.display = 'flex';
-                    // Trigger fade-in transition
-                    demoUnlockedScreen.style.opacity = 0;
-                    demoUnlockedScreen.offsetHeight;
-                    demoUnlockedScreen.style.opacity = 1;
-                }
-                if (demoErrorMessage) demoErrorMessage.innerText = '';
-                if (demoPasscodeInput) demoPasscodeInput.value = '';
-            } else {
-                const activeLang = document.documentElement.lang || 'en';
-                const errorMsg = translations[activeLang] && translations[activeLang]['demo_error_msg'] 
-                    ? translations[activeLang]['demo_error_msg'] 
-                    : 'Invalid passcode. Please request credentials.';
-                if (demoErrorMessage) demoErrorMessage.innerText = errorMsg;
-                if (demoPasscodeInput) {
-                    demoPasscodeInput.style.boxShadow = '0 0 0 3px rgba(255, 69, 58, 0.4)';
-                    setTimeout(() => {
-                        demoPasscodeInput.style.boxShadow = '';
-                    }, 2000);
-                }
+    if (btnUnlockDemoDirect) {
+        btnUnlockDemoDirect.addEventListener('click', () => {
+            if (demoLockedScreen) demoLockedScreen.style.display = 'none';
+            if (demoUnlockedScreen) {
+                demoUnlockedScreen.style.display = 'flex';
+                // Trigger fade-in transition
+                demoUnlockedScreen.style.opacity = 0;
+                demoUnlockedScreen.offsetHeight;
+                demoUnlockedScreen.style.opacity = 1;
             }
         });
     }
