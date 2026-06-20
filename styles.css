@@ -3229,5 +3229,37 @@ body.dark-mode .pillar-card:hover {
     }
 }
 
+/* Global Card Mobile Unification & Optimization */
+@media (max-width: 768px) {
+    .feature-card,
+    .investor-card,
+    .comp-column-card,
+    .investor-card-premium,
+    .pillar-card,
+    .checklist-card,
+    .blog-card,
+    .comp-card,
+    .contact-info-card,
+    .contact-form-card,
+    .patent-warning-card,
+    .flow-step-card {
+        padding: 24px 20px !important;
+        border-radius: 20px !important;
+        gap: 15px !important;
+    }
+
+    .feature-card h3,
+    .investor-card h3,
+    .comp-column-card h3,
+    .checklist-card h4,
+    .blog-card-title,
+    .comp-card h3,
+    .contact-info-card h4 {
+        font-size: 1.25rem !important;
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+    }
+}
+
 
 
