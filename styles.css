@@ -1704,15 +1704,21 @@ body.dark-mode .infographic-bar-container {
 }
 
 .safety-chart-card {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
-    padding: 35px;
-    border-radius: 28px;
+    padding: 40px;
+    border-radius: 24px;
     box-shadow: var(--glass-shadow);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    box-sizing: border-box;
 }
 
 body.dark-mode .safety-chart-card {
-    background: rgba(28, 28, 30, 0.4);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .chart-card-title {
@@ -2633,8 +2639,15 @@ body.dark-mode .channel-card:hover {
     }
     
     .safety-chart-card {
-        padding: 25px 15px;
-        border-radius: 20px;
+        padding: 25px 20px !important;
+        border-radius: 20px !important;
+        gap: 20px !important;
+    }
+    
+    .dashboard-body-area {
+        padding: 20px 15px !important;
+        height: auto !important;
+        min-height: 380px !important;
     }
 }
 
@@ -2828,6 +2841,16 @@ body.dark-mode .pillar-card:hover {
 /* Interactive Dashboard Console Staging Card Styling */
 .demo-dashboard-container {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dashboard-body-area {
+    padding: 25px 40px;
+    position: relative;
+    height: 415px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .demo-dashboard-container:hover {
