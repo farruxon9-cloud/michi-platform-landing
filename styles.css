@@ -2403,31 +2403,35 @@ body.dark-mode .mini-progress-bar-container {
 
 /* Form Section Split Checklist Card Layout */
 .checklist-card {
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.65);
+    border: 1.5px solid rgba(0, 102, 204, 0.16);
     border-radius: 20px;
     padding: 20px;
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: default;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.015);
 }
 
 body.dark-mode .checklist-card {
-    background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.045);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .checklist-card:hover {
-    transform: translateX(6px);
-    background: rgba(255, 255, 255, 0.5);
-    border-color: rgba(0, 102, 204, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.03);
+    transform: translateY(-3px) translateX(4px);
+    background: rgba(255, 255, 255, 0.88);
+    border-color: rgba(0, 102, 204, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 102, 204, 0.08);
 }
 
 body.dark-mode .checklist-card:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(0, 113, 227, 0.55);
+    box-shadow: 0 12px 30px rgba(0, 113, 227, 0.15);
 }
 
 @media (max-width: 1100px) {
