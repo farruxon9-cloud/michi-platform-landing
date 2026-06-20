@@ -2139,7 +2139,7 @@ body.dark-mode .comparison-table tr:hover td.michi-column-cell {
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--glass-border);
     border-radius: 28px;
-    padding: 30px;
+    padding: 40px;
     box-shadow: var(--glass-shadow);
     display: flex;
     flex-direction: column;
