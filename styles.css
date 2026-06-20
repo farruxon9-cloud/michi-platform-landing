@@ -2054,22 +2054,55 @@ body.dark-mode .comparison-pill.warning {
 }
 
 .comparison-table th.michi-header {
-    background: rgba(0, 102, 204, 0.04) !important;
+    background: linear-gradient(180deg, rgba(0, 102, 204, 0.15), rgba(0, 102, 204, 0.03)) !important;
+    border-top: 3px solid var(--primary-color) !important;
+    border-left: 2px solid rgba(0, 102, 204, 0.4) !important;
+    border-right: 2px solid rgba(0, 102, 204, 0.4) !important;
     border-bottom: 2px solid var(--primary-color) !important;
+    position: relative;
 }
+
 body.dark-mode .comparison-table th.michi-header {
-    background: rgba(0, 113, 227, 0.08) !important;
+    background: linear-gradient(180deg, rgba(0, 113, 227, 0.2), rgba(0, 113, 227, 0.04)) !important;
+    border-top: 3px solid #0071e3 !important;
+    border-left: 2px solid rgba(0, 113, 227, 0.5) !important;
+    border-right: 2px solid rgba(0, 113, 227, 0.5) !important;
 }
 
 .comparison-table td.michi-column-cell {
-    background: rgba(0, 102, 204, 0.02);
-    border-left: 1px solid rgba(0, 102, 204, 0.05);
-    border-right: 1px solid rgba(0, 102, 204, 0.05);
+    background: rgba(0, 102, 204, 0.04) !important;
+    border-left: 2px solid rgba(0, 102, 204, 0.4) !important;
+    border-right: 2px solid rgba(0, 102, 204, 0.4) !important;
+    font-weight: 600;
 }
+
 body.dark-mode .comparison-table td.michi-column-cell {
-    background: rgba(0, 113, 227, 0.03);
-    border-left: 1px solid rgba(0, 113, 227, 0.08);
-    border-right: 1px solid rgba(0, 113, 227, 0.08);
+    background: rgba(0, 113, 227, 0.05) !important;
+    border-left: 2px solid rgba(0, 113, 227, 0.5) !important;
+    border-right: 2px solid rgba(0, 113, 227, 0.5) !important;
+}
+
+/* 3D Row Hover Effect */
+.comparison-table tr {
+    transition: background 0.3s, transform 0.3s;
+}
+
+.comparison-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .comparison-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.comparison-table tr:hover td.michi-column-cell {
+    background: rgba(0, 102, 204, 0.08) !important;
+    transform: scale(1.015);
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+}
+
+body.dark-mode .comparison-table tr:hover td.michi-column-cell {
+    background: rgba(0, 113, 227, 0.1) !important;
 }
 
 /* Hero Split Layout */
