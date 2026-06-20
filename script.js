@@ -755,12 +755,78 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Demo passcode validation and unlock logic
+    // Slideshow navigation logic
+    const slideTabs = document.querySelectorAll('.slide-tab-btn');
+    const slides = document.querySelectorAll('.security-slide');
+    const prevBtn = document.getElementById('btn-prev-slide');
+    const nextBtn = document.getElementById('btn-next-slide');
+    const currentSlideNum = document.getElementById('current-slide-num');
+    let currentSlideIndex = 0;
+
+    function showSlide(index) {
+        if (slides.length === 0) return;
+        
+        // Clamp index
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        
+        currentSlideIndex = index;
+        
+        // Update tabs
+        slideTabs.forEach((tab, i) => {
+            if (i === currentSlideIndex) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        // Update slides
+        slides.forEach((slide, i) => {
+            if (i === currentSlideIndex) {
+                slide.style.display = 'block';
+                // Trigger reflow for animation
+                slide.offsetHeight;
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+                slide.style.display = 'none';
+            }
+        });
+
+        // Update indicator
+        if (currentSlideNum) {
+            currentSlideNum.innerText = currentSlideIndex + 1;
+        }
+    }
+
+    if (slideTabs.length > 0) {
+        slideTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                showSlide(parseInt(tab.dataset.slide));
+            });
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlideIndex - 1);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlideIndex + 1);
+        });
+    }
+
+    // Demo passcode validation and unlock logic for Phone Mockup
     const demoUnlockForm = document.getElementById('demo-unlock-form');
-    const demoLockedContainer = document.getElementById('demo-locked-container');
-    const demoUnlockedContainer = document.getElementById('demo-unlocked-container');
+    const demoLockedScreen = document.getElementById('demo-locked-screen');
+    const demoUnlockedScreen = document.getElementById('demo-unlocked-screen');
     const demoErrorMessage = document.getElementById('demo-error-message');
     const demoPasscodeInput = document.getElementById('demo-passcode-input');
+    const btnLockDemo = document.getElementById('btn-lock-demo');
 
     if (demoUnlockForm) {
         demoUnlockForm.addEventListener('submit', (e) => {
@@ -769,24 +835,40 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Accept 'admin' or 'michi' or 'michi2026'
             if (passcode === 'admin' || passcode === 'michi' || passcode === 'michi2026') {
-                demoLockedContainer.style.display = 'none';
-                demoUnlockedContainer.style.display = 'block';
-                demoErrorMessage.innerText = '';
-                
-                // Smooth scroll to the unlocked section
-                setTimeout(() => {
-                    demoUnlockedContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 100);
+                if (demoLockedScreen) demoLockedScreen.style.display = 'none';
+                if (demoUnlockedScreen) {
+                    demoUnlockedScreen.style.display = 'flex';
+                    // Trigger fade-in transition
+                    demoUnlockedScreen.style.opacity = 0;
+                    demoUnlockedScreen.offsetHeight;
+                    demoUnlockedScreen.style.opacity = 1;
+                }
+                if (demoErrorMessage) demoErrorMessage.innerText = '';
+                if (demoPasscodeInput) demoPasscodeInput.value = '';
             } else {
                 const activeLang = document.documentElement.lang || 'en';
                 const errorMsg = translations[activeLang] && translations[activeLang]['demo_error_msg'] 
                     ? translations[activeLang]['demo_error_msg'] 
                     : 'Invalid passcode. Please request credentials.';
-                demoErrorMessage.innerText = errorMsg;
-                demoPasscodeInput.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.4)';
-                setTimeout(() => {
-                    demoPasscodeInput.style.boxShadow = '';
-                }, 2000);
+                if (demoErrorMessage) demoErrorMessage.innerText = errorMsg;
+                if (demoPasscodeInput) {
+                    demoPasscodeInput.style.boxShadow = '0 0 0 3px rgba(255, 69, 58, 0.4)';
+                    setTimeout(() => {
+                        demoPasscodeInput.style.boxShadow = '';
+                    }, 2000);
+                }
+            }
+        });
+    }
+
+    if (btnLockDemo) {
+        btnLockDemo.addEventListener('click', () => {
+            if (demoUnlockedScreen) demoUnlockedScreen.style.display = 'none';
+            if (demoLockedScreen) {
+                demoLockedScreen.style.display = 'flex';
+                demoLockedScreen.style.opacity = 0;
+                demoLockedScreen.offsetHeight;
+                demoLockedScreen.style.opacity = 1;
             }
         });
     }

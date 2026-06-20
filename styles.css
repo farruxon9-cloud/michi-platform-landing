@@ -2621,95 +2621,127 @@ body.dark-mode .channel-card:hover {
     }
 }
 
-/* Capital protected cycle flowchart styles */
-.capital-flow-container {
+/* Interactive Security Model presentation styles */
+.guarantee-grid-enhanced {
     width: 100%;
 }
 
-.flowchart-steps {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 15px;
-    margin-top: 20px;
+.slide-tab-btn {
+    border: 1px solid var(--glass-border);
+    background: var(--input-bg);
+    color: var(--text-secondary);
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
-.flowchart-step {
-    flex: 1;
-    padding: 24px 15px;
-    text-align: center;
-    border-radius: 16px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.slide-tab-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-main);
+}
+
+.slide-tab-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
+}
+
+.security-slide {
+    opacity: 0;
+    transform: translateX(15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.security-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-nav-btn:hover {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+/* Creative Logistics Partnership Styling */
+.logistics-grid-enhanced {
+    width: 100%;
+}
+
+.pillar-card {
     transition: all 0.3s ease;
 }
 
-.flowchart-step:hover {
+.pillar-card:hover {
+    transform: translateX(10px) translateY(-2px);
+    border-color: rgba(0, 102, 204, 0.25) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    box-shadow: var(--glass-shadow);
+}
+
+body.dark-mode .pillar-card:hover {
+    background: rgba(28, 28, 30, 0.7) !important;
+    border-color: rgba(0, 113, 227, 0.3) !important;
+}
+
+.pillar-card:hover .pillar-num-text {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Interactive iOS Phone Mockup Styling */
+.phone-mockup-wrapper {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phone-mockup-wrapper:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6), inset 0 0 2px 2px rgba(255,255,255,0.25), 0 0 0 10px #1d1d1f;
 }
 
-.flowchart-step.highlight {
-    border-color: rgba(16, 185, 129, 0.4);
-    background: linear-gradient(135deg, var(--glass-bg), rgba(16, 185, 129, 0.05));
+@keyframes pulse-indicator {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
 }
 
-.flowchart-step .step-num {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    font-weight: 700;
-    font-size: 0.9rem;
+.phone-screen input:focus {
+    outline: none;
+    border-color: var(--primary-color) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.3) !important;
 }
 
-.flowchart-step.highlight .step-num {
-    background: #10b981;
-}
-
-.flowchart-step h4 {
-    font-size: 1.05rem;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.flowchart-step p {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
-}
-
-.flowchart-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-}
-
+/* Responsive improvements for enhanced layout */
 @media (max-width: 991px) {
-    .flowchart-steps {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
+    .guarantee-grid-enhanced,
+    .logistics-grid-enhanced {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
     }
-    .flowchart-step {
-        width: 100%;
-        max-width: 400px;
-    }
-    .flowchart-arrow {
-        transform: rotate(90deg);
-        margin: 5px 0;
+    
+    .logistics-pitch-sidebar {
+        position: static !important;
     }
 }
+
+@media (max-width: 768px) {
+    .security-slides-panel {
+        padding: 30px 20px !important;
+    }
+    
+    .slide-tab-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
 
 
