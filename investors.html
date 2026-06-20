@@ -414,167 +414,157 @@
     <!-- Competitive Landscape Section -->
     <section class="investor-section glass-container" style="margin: 20px auto; max-width: 1200px; padding: 50px;">
         <div style="text-align: center; margin-bottom: 45px;">
-            <span class="badge" data-i18n="th_feature">競合分析・ポジショニング</span>
+            <span class="badge" data-i18n="th_feature">Key Feature</span>
             <h2 style="font-size: 2.5rem; margin-top: 10px; font-weight: 800;" data-i18n="inv_comp_title">Competitive Landscape</h2>
             <p style="color:var(--text-secondary); font-size: 1.1rem; max-width: 800px; margin: 15px auto 0;" data-i18n="inv_comp_desc">How Michi outperforms traditional recruitment and generic job platforms in Japan's logistics sector.</p>
         </div>
 
-        <div class="positioning-grid-enhanced">
-            <!-- Left: Interactive Positioning Map (Quadrant Chart) -->
-            <div class="quadrant-chart-container glass-container">
-                <!-- Chart Title -->
-                <div class="quadrant-chart-header">
-                    <span class="quadrant-axis-label-y-title">MATCHING SPEED & TECH VALUE</span>
+        <div class="comp-board-grid">
+            <!-- Column 1: Traditional Agencies -->
+            <div class="comp-column-card other-platform">
+                <span class="comp-card-badge">High Cost</span>
+                <div class="comp-card-header">
+                    <h3 data-i18n="th_traditional">Traditional Agencies</h3>
                 </div>
-                
-                <div class="quadrant-grid">
-                    <!-- Quadrant lines -->
-                    <div class="quadrant-line-x"></div>
-                    <div class="quadrant-line-y"></div>
-                    
-                    <!-- Axis Labels -->
-                    <span class="quadrant-axis-label-top">FAST (高速)</span>
-                    <span class="quadrant-axis-label-bottom">SLOW (低速)</span>
-                    <span class="quadrant-axis-label-left">HIGH COST (高コスト)</span>
-                    <span class="quadrant-axis-label-right">0% COST (低コスト)</span>
-                    
-                    <!-- Chart Nodes -->
-                    <!-- Node 1: Michi Platform (Leader - Top Right) -->
-                    <div class="quadrant-node node-michi">
-                        <div class="node-glow"></div>
-                        <div class="node-icon">道</div>
-                        <div class="node-label">
-                            <span class="node-title" data-i18n="th_michi">Michi Platform</span>
-                            <span class="node-status-badge">LEADER</span>
+                <div class="comp-item-list">
+                    <!-- Cost -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f1_name">Recruitment Cost</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f1_trad">30-35% of Salary</span>
                         </div>
                     </div>
-                    
-                    <!-- Node 2: Traditional Agencies (Bottom Left) -->
-                    <div class="quadrant-node node-traditional">
-                        <div class="node-icon"><i class="fa-solid fa-users-slash"></i></div>
-                        <div class="node-label">
-                            <span class="node-title" data-i18n="th_traditional">Traditional Agencies</span>
+                    <!-- Speed -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f2_name">Matching Speed</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f2_trad">2-4 Weeks (Manual)</span>
                         </div>
                     </div>
-                    
-                    <!-- Node 3: Generic Job Boards (Bottom Right-ish/Middle) -->
-                    <div class="quadrant-node node-boards">
-                        <div class="node-icon"><i class="fa-solid fa-list-check"></i></div>
-                        <div class="node-label">
-                            <span class="node-title" data-i18n="th_boards">Generic Job Boards</span>
+                    <!-- Voice AI -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f3_name">Voice AI Assistant</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f3_trad">None</span>
+                        </div>
+                    </div>
+                    <!-- Guarantee -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f4_name">Safety & Guarantee</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f4_trad">No Protection</span>
+                        </div>
+                    </div>
+                    <!-- Logistics -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f5_name">Logistics Features</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f5_trad">None</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Feature Advantage Cards List -->
-            <div class="comparison-cards-list">
-                <!-- Card 1 -->
-                <div class="comp-feature-card glass-container">
-                    <div class="comp-feature-header">
-                        <span class="comp-feature-icon"><i class="fa-solid fa-percent"></i></span>
-                        <h4 data-i18n="td_f1_name">Recruitment Cost</h4>
+            <!-- Column 2: Michi Platform (The Highlighted Winner) -->
+            <div class="comp-column-card michi-winner">
+                <span class="comp-card-badge">⭐ Recommended / Winner</span>
+                <div class="comp-card-header">
+                    <h3 data-i18n="th_michi">Michi Platform</h3>
+                </div>
+                <div class="comp-item-list">
+                    <!-- Cost -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f1_name">Recruitment Cost</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f1_michi">0% Middleman Fee</span>
+                        </div>
                     </div>
-                    <div class="comp-comparison-row">
-                        <div class="comp-compare-item compare-michi">
-                            <span class="platform-label" data-i18n="th_michi">Michi</span>
-                            <span class="value-text" data-i18n="td_f1_michi">0% Middleman Fee</span>
+                    <!-- Speed -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f2_name">Matching Speed</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f2_michi">Instant (AI-Powered)</span>
                         </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_traditional">Traditional</span>
-                            <span class="value-text" data-i18n="td_f1_trad">30-35% of Salary</span>
+                    </div>
+                    <!-- Voice AI -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f3_name">Voice AI Assistant</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f3_michi">Hands-Free In-App AI</span>
                         </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_boards">Job Boards</span>
-                            <span class="value-text" data-i18n="td_f1_boards">High Click Fees</span>
+                    </div>
+                    <!-- Guarantee -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f4_name">Safety & Guarantee</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f4_michi">80% Principal Backed</span>
+                        </div>
+                    </div>
+                    <!-- Logistics -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon"><i class="fa-solid fa-check"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f5_name">Logistics Features</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f5_michi">Offline Maps & Shaken</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Card 2 -->
-                <div class="comp-feature-card glass-container">
-                    <div class="comp-feature-header">
-                        <span class="comp-feature-icon"><i class="fa-solid fa-bolt"></i></span>
-                        <h4 data-i18n="td_f2_name">Matching Speed</h4>
-                    </div>
-                    <div class="comp-comparison-row">
-                        <div class="comp-compare-item compare-michi">
-                            <span class="platform-label" data-i18n="th_michi">Michi</span>
-                            <span class="value-text" data-i18n="td_f2_michi">Instant (AI-Powered)</span>
-                        </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_traditional">Traditional</span>
-                            <span class="value-text" data-i18n="td_f2_trad">2-4 Weeks (Manual)</span>
-                        </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_boards">Job Boards</span>
-                            <span class="value-text" data-i18n="td_f2_boards">Days to Weeks</span>
-                        </div>
-                    </div>
+            <!-- Column 3: Generic Job Boards -->
+            <div class="comp-column-card other-platform">
+                <span class="comp-card-badge">Manual Effort</span>
+                <div class="comp-card-header">
+                    <h3 data-i18n="th_boards">Generic Job Boards</h3>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="comp-feature-card glass-container">
-                    <div class="comp-feature-header">
-                        <span class="comp-feature-icon"><i class="fa-solid fa-microphone"></i></span>
-                        <h4 data-i18n="td_f3_name">Voice AI Assistant</h4>
-                    </div>
-                    <div class="comp-comparison-row">
-                        <div class="comp-compare-item compare-michi">
-                            <span class="platform-label" data-i18n="th_michi">Michi</span>
-                            <span class="value-text" data-i18n="td_f3_michi">Hands-Free In-App AI</span>
-                        </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_traditional">Traditional</span>
-                            <span class="value-text" data-i18n="td_f3_trad">None</span>
-                        </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_boards">Job Boards</span>
-                            <span class="value-text" data-i18n="td_f3_boards">None</span>
+                <div class="comp-item-list">
+                    <!-- Cost -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f1_name">Recruitment Cost</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f1_boards">High Click Fees</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="comp-feature-card glass-container">
-                    <div class="comp-feature-header">
-                        <span class="comp-feature-icon"><i class="fa-solid fa-shield-halved"></i></span>
-                        <h4 data-i18n="td_f4_name">Safety & Guarantee</h4>
-                    </div>
-                    <div class="comp-comparison-row">
-                        <div class="comp-compare-item compare-michi">
-                            <span class="platform-label" data-i18n="th_michi">Michi</span>
-                            <span class="value-text" data-i18n="td_f4_michi">80% Principal Backed</span>
-                        </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_traditional">Traditional</span>
-                            <span class="value-text" data-i18n="td_f4_trad">No Protection</span>
-                        </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_boards">Job Boards</span>
-                            <span class="value-text" data-i18n="td_f4_boards">No Protection</span>
+                    <!-- Speed -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f2_name">Matching Speed</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f2_boards">Days to Weeks</span>
                         </div>
                     </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="comp-feature-card glass-container">
-                    <div class="comp-feature-header">
-                        <span class="comp-feature-icon"><i class="fa-solid fa-map-location-dot"></i></span>
-                        <h4 data-i18n="td_f5_name">Logistics Features</h4>
+                    <!-- Voice AI -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f3_name">Voice AI Assistant</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f3_boards">None</span>
+                        </div>
                     </div>
-                    <div class="comp-comparison-row">
-                        <div class="comp-compare-item compare-michi">
-                            <span class="platform-label" data-i18n="th_michi">Michi</span>
-                            <span class="value-text" data-i18n="td_f5_michi">Offline Maps & Shaken</span>
+                    <!-- Guarantee -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f4_name">Safety & Guarantee</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f4_boards">No Protection</span>
                         </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_traditional">Traditional</span>
-                            <span class="value-text" data-i18n="td_f5_trad">None</span>
-                        </div>
-                        <div class="comp-compare-item compare-other">
-                            <span class="platform-label" data-i18n="th_boards">Job Boards</span>
-                            <span class="value-text" data-i18n="td_f5_boards">None</span>
+                    </div>
+                    <!-- Logistics -->
+                    <div class="comp-item-row">
+                        <div class="comp-item-icon cross"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="comp-item-details">
+                            <span class="comp-item-feature-label" data-i18n="td_f5_name">Logistics Features</span>
+                            <span class="comp-item-feature-value" data-i18n="td_f5_boards">None</span>
                         </div>
                     </div>
                 </div>

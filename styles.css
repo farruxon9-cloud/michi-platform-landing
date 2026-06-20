@@ -2879,359 +2879,181 @@ body.dark-mode .pillar-card:hover {
     }
 }
 
-/* Positioning Grid & Quadrant Chart Styling */
-.positioning-grid-enhanced {
+/* Redesigned Clean Column Comparison Cards */
+.comp-board-grid {
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 40px;
-    align-items: start;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-.quadrant-chart-container {
+.comp-column-card {
+    position: relative;
     padding: 40px 30px;
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    overflow: hidden;
 }
 
-.quadrant-chart-header {
-    margin-bottom: 25px;
-    text-align: center;
-    width: 100%;
+.comp-column-card:hover {
+    transform: translateY(-5px);
 }
 
-.quadrant-axis-label-y-title {
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--primary-color);
-    text-transform: uppercase;
+/* Michi Winner Column Highlight */
+.comp-column-card.michi-winner {
+    background: linear-gradient(180deg, rgba(0, 102, 204, 0.08), rgba(255, 255, 255, 0.01)) !important;
+    border: 2px solid var(--primary-color) !important;
+    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.2);
+    transform: scale(1.03);
+    z-index: 2;
 }
 
-.quadrant-grid {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1.1 / 1;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    overflow: hidden;
+.comp-column-card.michi-winner:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 45px rgba(0, 102, 204, 0.3);
 }
 
-/* Axis grid lines */
-.quadrant-line-x {
+.comp-card-badge {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 1px;
-    border-top: 1px dashed rgba(255, 255, 255, 0.15);
-}
-
-.quadrant-line-y {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    top: -15px;
     left: 50%;
-    width: 1px;
-    border-left: 1px dashed rgba(255, 255, 255, 0.15);
-}
-
-/* Axis labels */
-.quadrant-axis-label-top,
-.quadrant-axis-label-bottom,
-.quadrant-axis-label-left,
-.quadrant-axis-label-right {
-    position: absolute;
+    transform: translateX(-50%);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+.comp-column-card.michi-winner .comp-card-badge {
+    background: linear-gradient(135deg, var(--primary-color), #00d2ff);
+    color: white;
+}
+
+.comp-column-card.other-platform .comp-card-badge {
+    background: rgba(255, 255, 255, 0.08);
     color: var(--text-secondary);
-    background: rgba(11, 11, 12, 0.8);
-    padding: 4px 10px;
-    border-radius: 8px;
     border: 1px solid var(--glass-border);
-    z-index: 3;
 }
 
-.quadrant-axis-label-top {
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
+.comp-card-header {
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 10px;
 }
 
-.quadrant-axis-label-bottom {
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
+.comp-card-header h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0;
 }
 
-.quadrant-axis-label-left {
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+.comp-column-card.michi-winner .comp-card-header h3 {
+    background: linear-gradient(135deg, #fff, #a5f3fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.quadrant-axis-label-right {
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
+.comp-column-card.other-platform .comp-card-header h3 {
+    color: var(--text-secondary);
 }
 
-/* Quadrant Nodes */
-.quadrant-node {
-    position: absolute;
+.comp-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.comp-item-row {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 18px;
-    border-radius: 16px;
-    z-index: 5;
-    transition: all 0.3s ease;
-    cursor: default;
+    gap: 15px;
+    text-align: left;
 }
 
-/* Floating animations */
-@keyframes float-michi {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(0, -6px); }
-}
-
-@keyframes float-node {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(0, 4px); }
-}
-
-/* Node Positions & Colors */
-.node-michi {
-    top: 20%;
-    right: 15%;
-    background: linear-gradient(135deg, var(--primary-color), #00d2ff);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.4);
-    animation: float-michi 4s infinite ease-in-out;
-}
-
-.node-michi:hover {
-    transform: scale(1.05) translate(0, -6px);
-    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.6);
-}
-
-.node-michi .node-glow {
-    position: absolute;
-    inset: -3px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, var(--primary-color), #00d2ff);
-    z-index: -1;
-    opacity: 0.5;
-    filter: blur(8px);
-    animation: node-glow-pulse 2s infinite ease-in-out;
-}
-
-@keyframes node-glow-pulse {
-    0%, 100% { transform: scale(1); opacity: 0.3; }
-    50% { transform: scale(1.08); opacity: 0.6; }
-}
-
-.node-michi .node-icon {
+.comp-item-icon {
     width: 32px;
     height: 32px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-weight: 900;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
-}
-
-.node-michi .node-title {
-    font-weight: 800;
-    color: #fff;
-    font-size: 0.95rem;
-    display: block;
-}
-
-.node-michi .node-status-badge {
-    font-size: 0.6rem;
-    font-weight: 900;
-    background: #fff;
-    color: var(--primary-color);
-    padding: 1px 6px;
-    border-radius: 10px;
-    margin-top: 2px;
-    display: inline-block;
-    letter-spacing: 0.5px;
-}
-
-.node-traditional {
-    bottom: 20%;
-    left: 12%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    animation: float-node 5s infinite ease-in-out;
-}
-
-.node-traditional:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.node-traditional .node-icon {
-    color: #ff5f56;
-    font-size: 1.1rem;
-}
-
-.node-traditional .node-title {
-    font-weight: 700;
-    color: var(--text-secondary);
     font-size: 0.85rem;
+    flex-shrink: 0;
 }
 
-.node-boards {
-    bottom: 30%;
-    left: 45%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    animation: float-node 4.5s infinite ease-in-out;
+.comp-column-card.michi-winner .comp-item-icon {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
 }
 
-.node-boards:hover {
-    background: rgba(255, 255, 255, 0.08);
+.comp-column-card.other-platform .comp-item-icon.check {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
 }
 
-.node-boards .node-icon {
-    color: #ffbd2e;
-    font-size: 1.1rem;
+.comp-column-card.other-platform .comp-item-icon.cross {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
 }
 
-.node-boards .node-title {
-    font-weight: 700;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
+.comp-column-card.other-platform .comp-item-icon.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
 }
 
-/* Right side Comparison Cards Styling */
-.comparison-cards-list {
+.comp-item-details {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 100%;
+    gap: 2px;
 }
 
-.comp-feature-card {
-    padding: 22px 25px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--glass-border);
-    transition: all 0.3s ease;
-}
-
-.comp-feature-card:hover {
-    transform: translateX(5px);
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(0, 102, 204, 0.2) !important;
-}
-
-.comp-feature-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 15px;
-}
-
-.comp-feature-icon {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    width: 24px;
-    text-align: center;
-}
-
-.comp-feature-header h4 {
-    font-size: 1.05rem;
+.comp-item-feature-label {
+    font-size: 0.72rem;
     font-weight: 700;
-    margin: 0;
-    color: var(--text-main);
-}
-
-.comp-comparison-row {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 12px;
-}
-
-.comp-compare-item {
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 0.82rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.comp-compare-item .platform-label {
-    font-size: 0.65rem;
-    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--text-secondary);
+    opacity: 0.7;
 }
 
-.comp-compare-item .value-text {
-    font-weight: 600;
-    line-height: 1.3;
-}
-
-/* Michi Item Highlight */
-.compare-michi {
-    background: rgba(0, 102, 204, 0.08);
-    border: 1px solid rgba(0, 102, 204, 0.25);
-    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.05);
-}
-
-.compare-michi .platform-label {
-    color: var(--primary-color);
-}
-
-.compare-michi .value-text {
-    color: #fff;
+.comp-item-feature-value {
+    font-size: 0.95rem;
     font-weight: 700;
+    color: var(--text-main);
 }
 
-/* Other Platforms Item */
-.compare-other {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--glass-border);
+.comp-column-card.michi-winner .comp-item-feature-value {
+    color: #fff;
 }
 
-.compare-other .value-text {
+.comp-column-card.other-platform .comp-item-feature-value {
     color: var(--text-secondary);
 }
 
 @media (max-width: 991px) {
-    .positioning-grid-enhanced {
+    .comp-board-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-@media (max-width: 576px) {
-    .comp-comparison-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 40px;
     }
     
-    .quadrant-grid {
-        aspect-ratio: 1 / 1;
+    .comp-column-card.michi-winner {
+        transform: scale(1);
+    }
+    
+    .comp-column-card.michi-winner:hover {
+        transform: translateY(-5px) scale(1);
     }
 }
 
