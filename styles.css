@@ -2733,7 +2733,7 @@ body.dark-mode .pillar-card:hover {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
     gap: 50px;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
 }
 
