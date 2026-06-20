@@ -681,9 +681,10 @@ body.dark-mode .stat-icon-wrapper {
 
 /* Features Section */
 .features-section {
+    width: 90%;
     max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
+    margin: 40px auto;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -763,9 +764,10 @@ body.dark-mode .stat-icon-wrapper {
 }
 
 .waitlist-section {
+    width: 90%;
     max-width: 800px;
-    margin: 100px auto;
-    padding: 60px 40px;
+    margin: 40px auto;
+    padding: 40px;
     text-align: center;
     border-radius: 32px;
 }
@@ -948,9 +950,10 @@ body.dark-mode .stat-icon-wrapper {
 
 /* App Showcase Section */
 .app-showcase-section {
+    width: 90%;
     max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
+    margin: 40px auto;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1081,12 +1084,25 @@ body.dark-mode .stat-icon-wrapper {
 
 /* Investor Section Redesign */
 .investor-section {
+    width: 90%;
     max-width: 1200px;
-    margin: 100px auto;
-    padding: 80px 40px;
+    margin: 40px auto;
+    padding: 40px;
     border-radius: 40px;
     position: relative;
     overflow: hidden;
+}
+
+/* Centralized Grid Spacing for Comparison, FAQ & Contact containers */
+.comparison-section,
+.faq-section,
+.contact-section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 40px;
+    box-sizing: border-box;
 }
 
 .investor-section h2 {
@@ -2632,10 +2648,15 @@ body.dark-mode .channel-card:hover {
 
 /* Mobile adjustments for Investor Section & Safety Model Chart */
 @media (max-width: 768px) {
-    .investor-section {
+    .investor-section,
+    .waitlist-section,
+    .comparison-section,
+    .faq-section,
+    .contact-section-container {
         padding: 30px 20px !important;
         border-radius: 24px !important;
-        margin: 20px auto !important;
+        margin: 24px auto !important;
+        width: 90% !important;
     }
     
     .safety-chart-card {
