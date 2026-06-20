@@ -592,7 +592,7 @@ body.dark-mode .stat-icon-wrapper {
 @media (max-width: 992px) {
     .hero-section {
         flex-direction: column;
-        padding-top: 120px;
+        padding-top: 110px;
     }
     
     .hero-content {
@@ -1343,6 +1343,10 @@ body.dark-mode .stat-icon-wrapper {
         height: 60px;
         top: 10px;
         width: 95%;
+    }
+    
+    .hero-section {
+        padding-top: 95px !important;
     }
     
     .glass-nav .primary-btn {
