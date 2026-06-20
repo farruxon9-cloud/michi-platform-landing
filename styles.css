@@ -773,6 +773,7 @@ body.dark-mode .stat-icon-wrapper {
 }
 
 .waitlist-section h2 {
+    margin-top: 0;
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
@@ -1106,6 +1107,7 @@ body.dark-mode .stat-icon-wrapper {
 }
 
 .investor-section h2 {
+    margin-top: 0;
     font-size: 3rem;
     text-align: center;
     margin-bottom: 50px;
