@@ -2728,51 +2728,154 @@ body.dark-mode .pillar-card:hover {
     transition: transform 0.3s ease;
 }
 
-/* Interactive iOS Phone Mockup Styling */
-.phone-mockup-wrapper {
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Redesigned Capital Guarantee Section Styling */
+.guarantee-top-row {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
 }
 
-.phone-mockup-wrapper:hover {
+.protection-flow-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.flow-step-card {
+    flex: 1;
+    position: relative;
+    padding: 35px 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow-step-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 102, 204, 0.3) !important;
+    box-shadow: 0 15px 35px rgba(0, 102, 204, 0.15);
+}
+
+.step-badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    font-family: monospace;
+}
+
+.step-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 22px;
+    transition: transform 0.3s ease;
+}
+
+.flow-step-card:hover .step-icon-circle {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.flow-step-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--text-main);
+    line-height: 1.35;
+}
+
+.flow-step-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.flow-arrow-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    opacity: 0.35;
+    font-size: 1.3rem;
+    padding: 0 5px;
+}
+
+/* Interactive Dashboard Console Staging Card Styling */
+.demo-dashboard-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.demo-dashboard-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.6), inset 0 0 2px 2px rgba(255,255,255,0.25), 0 0 0 10px #1d1d1f;
+    border-color: rgba(0, 102, 204, 0.25) !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 102, 204, 0.15);
+}
+
+.demo-dashboard-container input:focus {
+    outline: none;
+    border-color: var(--primary-color) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.25) !important;
+}
+
+.passcode-tip-box {
+    animation: pulse-indicator 3s infinite ease-in-out;
+}
+
+.patent-warning-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.patent-warning-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(239, 68, 68, 0.4) !important;
 }
 
 @keyframes pulse-indicator {
-    0% { opacity: 0.4; }
+    0%, 100% { opacity: 0.8; }
     50% { opacity: 1; }
-    100% { opacity: 0.4; }
 }
 
-.phone-screen input:focus {
-    outline: none;
-    border-color: var(--primary-color) !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.3) !important;
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .protection-flow-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+    
+    .flow-arrow-connector {
+        transform: rotate(90deg);
+        padding: 5px 0;
+        margin: 5px auto;
+    }
 }
 
-/* Responsive improvements for enhanced layout */
 @media (max-width: 991px) {
-    .guarantee-grid-enhanced,
-    .logistics-grid-enhanced {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-    }
-    
-    .logistics-pitch-sidebar {
-        position: static !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .security-slides-panel {
-        padding: 30px 20px !important;
-    }
-    
-    .slide-tab-btn {
-        padding: 8px 16px;
-        font-size: 0.85rem;
+    .guarantee-top-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }
 

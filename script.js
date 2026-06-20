@@ -218,7 +218,9 @@ const translations = {
         demo_password_label: "Password",
         demo_link_btn: "Open Web Demo",
         demo_error_msg: "Invalid passcode. Please request credentials.",
-        demo_disclaimer: "⚠️ <strong>Intellectual Property Notice:</strong> All designs, proprietary algorithms, and layouts of Michi (道) App are the exclusive intellectual property of International Halal Capital Group. Unauthorized replication or distribution is strictly prohibited and subject to legal action under international copyright law."
+        demo_passcode_tip: "💡 Tip: Enter 'michi' to instantly unlock the staging portal and try the demo.",
+        demo_disclaimer_title: "Intellectual Property & Patent Protection Warning",
+        demo_disclaimer: "⚠️ All designs, workflows, layout shapes, UI details, proprietary algorithms, and architectural components of Michi (道) App are the exclusive intellectual property of International Halal Capital Group (IHCG). Every single line, design layout, flow curve, and system detail is fully patented and legally protected. Unauthorized replication, theft, reverse engineering, or distribution is strictly prohibited and will be prosecuted under Japanese patent laws and international copyright protection treaties to the maximum legal extent."
     },
     ja: {
         page_title: "Michi (道) - 運転手と物流企業をつなぐ統合支援サービス",
@@ -431,7 +433,9 @@ const translations = {
         demo_password_label: "パスワード",
         demo_link_btn: "ウェブデモを開く",
         demo_error_msg: "パスコードが正しくありません。アクセス権を請求してください。",
-        demo_disclaimer: "⚠️ <strong>知的財産権に関する注意:</strong> Michi（道）アプリのすべてのデザイン、独自のアルゴリズム、およびレイアウトは、International Halal Capital Groupの独占的知的財産です。無断での複製または配布は厳格に禁止されており、国際著作権法に基づき法的措置の対象となります。"
+        demo_passcode_tip: "💡 ヒント：'michi'と入力すると、デモポータルが解除され、デモ版を試行可能になります。",
+        demo_disclaimer_title: "知的財産権および特許保護に関する警告",
+        demo_disclaimer: "⚠️ Michi（道）アプリのすべてのデザイン、ワークフロー、レイアウト形状、UIの詳細、独自のアルゴリズム、およびシステム構造は、International Halal Capital Group（IHCG）の独占的知的財産です。すべてのプログラムコード行、デザイン配置、フロー曲線、および各部詳細は完全に特許化され、法的に保護されています。無断での複製、盗用、リバースエンジニアリング、または配布は厳格に禁止されており、日本の特許法および国際著作権条約に基づき、最大限の法的措置の対象となります。"
     }
 };
 
