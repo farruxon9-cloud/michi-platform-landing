@@ -1019,32 +1019,125 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Demo direct unlock logic
+    // Demo direct unlock logic with smooth height morph & fade animations to prevent layout jumps
     const btnUnlockDemoDirect = document.getElementById('btn-unlock-demo-direct');
     const demoLockedScreen = document.getElementById('demo-locked-screen');
     const demoUnlockedScreen = document.getElementById('demo-unlocked-screen');
     const btnLockDemo = document.getElementById('btn-lock-demo');
 
-    if (btnUnlockDemoDirect) {
+    if (btnUnlockDemoDirect && demoLockedScreen && demoUnlockedScreen) {
         btnUnlockDemoDirect.addEventListener('click', () => {
+            if (typeof gsap !== 'undefined') {
+                const bodyArea = document.querySelector('.dashboard-body-area');
+                if (bodyArea) {
+                    const startHeight = bodyArea.offsetHeight;
+                    
+                    // Temp switch to measure final height
+                    demoLockedScreen.style.display = 'none';
+                    demoUnlockedScreen.style.display = 'flex';
+                    demoUnlockedScreen.style.opacity = 0;
+                    
+                    const endHeight = bodyArea.offsetHeight;
+                    
+                    // Revert back for animating
+                    demoLockedScreen.style.display = 'flex';
+                    demoUnlockedScreen.style.display = 'none';
+                    
+                    // Play timeline
+                    gsap.to(demoLockedScreen, {
+                        opacity: 0,
+                        duration: 0.2,
+                        onComplete: () => {
+                            demoLockedScreen.style.display = 'none';
+                            demoUnlockedScreen.style.display = 'flex';
+                            
+                            // Morph height smoothly
+                            gsap.fromTo(bodyArea, 
+                                { height: startHeight }, 
+                                { 
+                                    height: endHeight, 
+                                    duration: 0.3, 
+                                    ease: 'power2.inOut',
+                                    onComplete: () => {
+                                        bodyArea.style.height = ''; // keep responsive
+                                    }
+                                }
+                            );
+                            
+                            // Fade in unlocked content
+                            gsap.fromTo(demoUnlockedScreen, 
+                                { opacity: 0 }, 
+                                { opacity: 1, duration: 0.25 }
+                            );
+                        }
+                    });
+                    return;
+                }
+            }
+            
+            // Standard fallback without GSAP
             if (demoLockedScreen) demoLockedScreen.style.display = 'none';
             if (demoUnlockedScreen) {
                 demoUnlockedScreen.style.display = 'flex';
-                // Trigger fade-in transition
-                demoUnlockedScreen.style.opacity = 0;
-                demoUnlockedScreen.offsetHeight;
                 demoUnlockedScreen.style.opacity = 1;
             }
         });
     }
 
-    if (btnLockDemo) {
+    if (btnLockDemo && demoLockedScreen && demoUnlockedScreen) {
         btnLockDemo.addEventListener('click', () => {
+            if (typeof gsap !== 'undefined') {
+                const bodyArea = document.querySelector('.dashboard-body-area');
+                if (bodyArea) {
+                    const startHeight = bodyArea.offsetHeight;
+                    
+                    // Temp switch to measure final height
+                    demoUnlockedScreen.style.display = 'none';
+                    demoLockedScreen.style.display = 'flex';
+                    demoLockedScreen.style.opacity = 0;
+                    
+                    const endHeight = bodyArea.offsetHeight;
+                    
+                    // Revert back for animating
+                    demoUnlockedScreen.style.display = 'flex';
+                    demoLockedScreen.style.display = 'none';
+                    
+                    // Play timeline
+                    gsap.to(demoUnlockedScreen, {
+                        opacity: 0,
+                        duration: 0.2,
+                        onComplete: () => {
+                            demoUnlockedScreen.style.display = 'none';
+                            demoLockedScreen.style.display = 'flex';
+                            
+                            // Morph height smoothly
+                            gsap.fromTo(bodyArea, 
+                                { height: startHeight }, 
+                                { 
+                                    height: endHeight, 
+                                    duration: 0.3, 
+                                    ease: 'power2.inOut',
+                                    onComplete: () => {
+                                        bodyArea.style.height = ''; // keep responsive
+                                    }
+                                }
+                            );
+                            
+                            // Fade in locked content
+                            gsap.fromTo(demoLockedScreen, 
+                                { opacity: 0 }, 
+                                { opacity: 1, duration: 0.25 }
+                            );
+                        }
+                    });
+                    return;
+                }
+            }
+            
+            // Standard fallback without GSAP
             if (demoUnlockedScreen) demoUnlockedScreen.style.display = 'none';
             if (demoLockedScreen) {
                 demoLockedScreen.style.display = 'flex';
-                demoLockedScreen.style.opacity = 0;
-                demoLockedScreen.offsetHeight;
                 demoLockedScreen.style.opacity = 1;
             }
         });
