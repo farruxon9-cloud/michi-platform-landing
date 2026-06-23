@@ -3643,5 +3643,54 @@ body.dark-mode .investor-card-premium:hover {
     box-shadow: 0 15px 35px rgba(239, 68, 68, 0.06) !important;
 }
 
+/* ==========================================
+   TYPOGRAPHY & LINE WRAPPING OPTIMIZATIONS
+   ========================================== */
+
+/* Prevent orphans (single words or characters on a line) for headings and short items */
+h1, h2, h3, h4, h5, h6, 
+.badge, 
+.primary-btn, 
+.secondary-btn, 
+.apply-btn, 
+.stat-item h3, 
+.stat-item p,
+.metric-num,
+.comp-card-badge,
+.step-badge,
+.pillar-num-text {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-wrap: balance; /* Automatically balances line widths to prevent single-word orphans */
+}
+
+/* Paragraphs, descriptions, lists, and standard copy */
+p, li, .description, .dark-text, .flow-step-card p, .pillar-card p, .feature-card p, .investor-card p {
+    text-wrap: pretty; /* Prevents trailing single-word/character orphans at paragraph endings */
+}
+
+/* Specific optimizations for Japanese typography (to keep phrases intact and prevent single character drops) */
+html[lang="ja"] {
+    line-break: strict; /* Prevents punctuation, symbols, and small kana from starting a new line */
+    word-break: normal;
+}
+
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] h4,
+html[lang="ja"] h5,
+html[lang="ja"] h6,
+html[lang="ja"] .badge,
+html[lang="ja"] .primary-btn,
+html[lang="ja"] .secondary-btn,
+html[lang="ja"] .apply-btn,
+html[lang="ja"] .comp-card-badge,
+html[lang="ja"] .step-badge,
+html[lang="ja"] .pillar-num-text {
+    word-break: keep-all; /* Keeps Japanese words/phrases whole in headings, buttons, and badges */
+    overflow-wrap: anywhere;
+}
+
 
 
