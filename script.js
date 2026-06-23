@@ -1054,40 +1054,273 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof gsap !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
-        // Hero content fade & slide up on load
-        gsap.from('.hero-content .badge', { opacity: 0, y: -20, duration: 0.8, ease: 'power3.out' });
-        gsap.from('.hero-content h1', { opacity: 0, y: 30, duration: 1, delay: 0.2, ease: 'power3.out' });
-        gsap.from('.hero-content .description', { opacity: 0, y: 20, duration: 0.8, delay: 0.4, ease: 'power3.out' });
-        gsap.from('.hero-content .cta-group', { opacity: 0, y: 15, duration: 0.8, delay: 0.5, ease: 'power3.out' });
-        gsap.from('.hero-content .stats-row', { opacity: 0, y: 15, duration: 0.8, delay: 0.7, ease: 'power3.out' });
-        gsap.from('.hero-dashboard-widget, .app-mockup-wrapper', { opacity: 0, scale: 0.96, duration: 1.2, delay: 0.3, ease: 'power3.out' });
+        // Pre-set initial states via GSAP to prevent visual jumps when removing .js-loading
+        gsap.set('.hero-content .badge, .hero-content h1, .hero-content .description, .hero-content .cta-group, .hero-content .stats-row', { opacity: 0 });
+        gsap.set('.hero-dashboard-widget, .app-mockup-wrapper, .animated-phone-wrapper', { opacity: 0 });
+        
+        // Also pre-set initial state of sections & card containers that will be animated to avoid flashes
+        const animatedContainers = [
+            '.features-section .feature-card',
+            '.investor-section .investor-card',
+            '.highlights-grid .highlight-card',
+            '.convenience-grid-showcase .convenience-card',
+            '.protection-flow-container .flow-step-card',
+            '.investor-card-premium',
+            '.logistics-pillars-wrapper .pillar-card',
+            '.comp-board-grid .comp-column-card',
+            '.form-info-side .checklist-card',
+            '.blog-card',
+            '.comp-card',
+            '.contact-info-card',
+            '.contact-form-card',
+            '.patent-warning-card',
+            '.safety-chart-card',
+            '.waitlist-section'
+        ];
+        animatedContainers.forEach(sel => {
+            gsap.set(sel, { opacity: 0 });
+        });
 
-        // Scroll trigger animations for sections
+        // Now safe to remove the loading class and start animations
+        document.documentElement.classList.remove('js-loading');
+        document.documentElement.classList.add('js-loaded');
+
+        // Hero content fade & slide up on load (gentle, soft translations)
+        gsap.fromTo('.hero-content .badge', { opacity: 0, y: -15 }, { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' });
+        gsap.fromTo('.hero-content h1', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1.2, delay: 0.15, ease: 'power3.out' });
+        gsap.fromTo('.hero-content .description', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 1.0, delay: 0.3, ease: 'power3.out' });
+        gsap.fromTo('.hero-content .cta-group', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 1.0, delay: 0.4, ease: 'power3.out' });
+        gsap.fromTo('.hero-content .stats-row', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 1.0, delay: 0.6, ease: 'power3.out' });
+        gsap.fromTo('.hero-dashboard-widget, .app-mockup-wrapper, .animated-phone-wrapper', { opacity: 0, scale: 0.97 }, { opacity: 1, scale: 1, duration: 1.4, delay: 0.25, ease: 'power3.out' });
+
+        // Gentle, soft entry animations for sections (without double translating y)
         gsap.utils.toArray('.investor-section, .features-section, .waitlist-section').forEach(section => {
-            gsap.from(section, {
-                opacity: 0,
-                y: 40,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none'
-                }
-            });
+            // Check if section contains cards that we want to stagger. If so, don't animate section y, just fade it.
+            // If not, fade it and slide it up gently.
+            const hasStaggeredCards = section.querySelector('.feature-card, .investor-card');
+            
+            if (hasStaggeredCards) {
+                gsap.fromTo(section, 
+                    { opacity: 0 }, 
+                    { 
+                        opacity: 1, 
+                        duration: 1.2, 
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            } else {
+                gsap.fromTo(section, 
+                    { opacity: 0, y: 20 }, 
+                    { 
+                        opacity: 1, 
+                        y: 0,
+                        duration: 1.2, 
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            }
         });
 
-        // Scroll trigger for cards inside sections
-        gsap.utils.toArray('.investor-card, .feature-card, .convenience-card, .highlight-card, .flow-step-card, .pillar-card').forEach(card => {
-            gsap.from(card, {
-                opacity: 0,
-                y: 25,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 90%',
-                    toggleActions: 'play none none none'
+        // 1. Features section cards stagger
+        if (document.querySelector('.features-section .feature-card')) {
+            gsap.fromTo('.features-section .feature-card', 
+                { opacity: 0, y: 25 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.15,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.features-section',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
                 }
-            });
+            );
+        }
+
+        // 2. Investor section cards stagger
+        if (document.querySelector('.investor-section .investor-card')) {
+            gsap.fromTo('.investor-section .investor-card', 
+                { opacity: 0, y: 25 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.15,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.investor-section',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 3. Highlights Grid stagger
+        if (document.querySelector('.highlights-grid .highlight-card')) {
+            gsap.fromTo('.highlights-grid .highlight-card', 
+                { opacity: 0, y: 25 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.12,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.highlights-grid',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 4. Convenience Grid (The Platform Showcase) stagger
+        if (document.querySelector('.convenience-grid-showcase .convenience-card')) {
+            gsap.fromTo('.convenience-grid-showcase .convenience-card', 
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.12,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.convenience-grid-showcase',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 5. Protection flowchart steps stagger
+        if (document.querySelector('.protection-flow-container .flow-step-card')) {
+            gsap.fromTo('.protection-flow-container .flow-step-card', 
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.12,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.protection-flow-container',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 6. Logistics Sidebar Premium Card
+        if (document.querySelector('.investor-card-premium')) {
+            gsap.fromTo('.investor-card-premium',
+                { opacity: 0, y: 25 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.logistics-grid-enhanced',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 7. Logistics Pillars Cards stagger
+        if (document.querySelector('.logistics-pillars-wrapper .pillar-card')) {
+            gsap.fromTo('.logistics-pillars-wrapper .pillar-card',
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.15,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.logistics-pillars-wrapper',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 8. Competitive Table Columns stagger
+        if (document.querySelector('.comp-board-grid .comp-column-card')) {
+            gsap.fromTo('.comp-board-grid .comp-column-card',
+                { opacity: 0, y: 25 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.15,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.comp-board-grid',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 9. Checklist Cards stagger
+        if (document.querySelector('.form-info-side .checklist-card')) {
+            gsap.fromTo('.form-info-side .checklist-card',
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    stagger: 0.12,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.form-info-side',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // 10. Fallback smooth scroll animations for other cards (e.g. blog, contact, safety chart, patent warning)
+        const fallbackCards = gsap.utils.toArray('.blog-card, .comp-card, .contact-info-card, .contact-form-card, .patent-warning-card, .safety-chart-card');
+        fallbackCards.forEach(card => {
+            gsap.fromTo(card,
+                { opacity: 0, y: 25 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 88%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
         });
+    } else {
+        // Fallback: If GSAP is blocked/unavailable, make sure we show all elements immediately
+        document.documentElement.classList.remove('js-loading');
     }
 });

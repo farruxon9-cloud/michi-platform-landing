@@ -3383,5 +3383,265 @@ body.dark-mode .pillar-card:hover {
     }
 }
 
+/* ==========================================
+   PREVENT GSAP FOUC (Flash of Unstyled Content)
+   ========================================== */
+html.js-loading .hero-content .badge,
+html.js-loading .hero-content h1,
+html.js-loading .hero-content .description,
+html.js-loading .hero-content .cta-group,
+html.js-loading .hero-content .stats-row,
+html.js-loading .hero-dashboard-widget,
+html.js-loading .app-mockup-wrapper,
+html.js-loading .animated-phone-wrapper,
+html.js-loading .investor-section,
+html.js-loading .features-section,
+html.js-loading .waitlist-section,
+html.js-loading .investor-card,
+html.js-loading .feature-card,
+html.js-loading .convenience-card,
+html.js-loading .highlight-card,
+html.js-loading .flow-step-card,
+html.js-loading .pillar-card,
+html.js-loading .comp-column-card,
+html.js-loading .checklist-card,
+html.js-loading .blog-card,
+html.js-loading .comp-card,
+html.js-loading .contact-info-card,
+html.js-loading .contact-form-card,
+html.js-loading .patent-warning-card,
+html.js-loading .safety-chart-card {
+    opacity: 0 !important;
+}
+
+/* ==========================================
+   PREMIUM SMOOTH CARD HOVER EFFECTS
+   ========================================== */
+
+/* Universal Transition Override for Premium Feel */
+.feature-card,
+.investor-card,
+.highlight-card,
+.convenience-card,
+.checklist-card,
+.pillar-card,
+.flow-step-card,
+.comp-column-card,
+.investor-card-premium,
+.blog-card,
+.comp-card,
+.contact-info-card,
+.contact-form-card,
+.patent-warning-card,
+.safety-chart-card,
+.mockup-card {
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+                background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+                border-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+/* Universal Transition for Card Icons */
+.feature-icon-wrapper,
+.feature-icon,
+.investor-icon,
+.investor-icon i,
+.convenience-card-icon,
+.convenience-card-icon i,
+.checklist-icon,
+.checklist-icon i,
+.step-icon-circle,
+.step-icon-circle i,
+.pillar-num-text,
+.comp-item-icon,
+.investor-card-premium i,
+.card-icon i,
+.blog-card img {
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                background 0.5s ease, 
+                color 0.5s ease !important;
+}
+
+/* 1. Feature Cards Hover */
+.feature-card:hover {
+    transform: translateY(-8px) rotate(0.8deg) scale(1.02) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(240, 246, 255, 0.9)) !important;
+    border-color: rgba(0, 102, 204, 0.3) !important;
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 1) !important;
+}
+body.dark-mode .feature-card:hover {
+    background: linear-gradient(145deg, rgba(30, 30, 40, 0.95), rgba(20, 20, 30, 0.8)) !important;
+    border-color: rgba(0, 113, 227, 0.35) !important;
+    box-shadow: 0 25px 50px rgba(0, 113, 227, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+}
+.feature-card:hover .feature-icon-wrapper {
+    transform: scale(1.15) rotate(8deg) !important;
+}
+
+/* 2. Investor Cards Hover */
+.investor-card:hover {
+    transform: translateY(-8px) rotate(-0.8deg) scale(1.015) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(244, 247, 254, 0.85)) !important;
+    border-color: rgba(0, 102, 204, 0.35) !important;
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.08) !important;
+}
+body.dark-mode .investor-card:hover {
+    background: linear-gradient(145deg, rgba(25, 25, 35, 0.8), rgba(15, 15, 25, 0.7)) !important;
+    border-color: rgba(0, 113, 227, 0.35) !important;
+    box-shadow: 0 25px 50px rgba(0, 113, 227, 0.12) !important;
+}
+.investor-card:hover .investor-icon {
+    transform: scale(1.15) rotate(8deg) !important;
+}
+
+/* 3. Highlight Cards Hover */
+.highlight-card:hover {
+    transform: translateY(-8px) rotate(0.6deg) scale(1.015) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 246, 255, 0.95)) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.08) !important;
+}
+body.dark-mode .highlight-card:hover {
+    background: linear-gradient(145deg, rgba(25, 25, 35, 0.85), rgba(15, 15, 25, 0.75)) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 25px 50px rgba(124, 58, 237, 0.12) !important;
+}
+
+/* 4. Convenience Cards Hover */
+.convenience-card:hover {
+    transform: translateY(-6px) rotate(-0.6deg) scale(1.02) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(244, 243, 255, 0.9)) !important;
+    border-color: rgba(139, 92, 246, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.08) !important;
+}
+body.dark-mode .convenience-card:hover {
+    background: linear-gradient(145deg, rgba(30, 25, 45, 0.8), rgba(15, 15, 25, 0.7)) !important;
+    border-color: rgba(139, 92, 246, 0.45) !important;
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15) !important;
+}
+.convenience-card:hover .convenience-card-icon {
+    transform: scale(1.15) rotate(8deg) !important;
+}
+
+/* 5. Checklist Cards Hover */
+.checklist-card:hover {
+    transform: translateY(-5px) translateX(4px) rotate(0.4deg) scale(1.01) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 253, 250, 0.95)) !important;
+    border-color: rgba(16, 185, 129, 0.4) !important;
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.08) !important;
+}
+body.dark-mode .checklist-card:hover {
+    background: linear-gradient(145deg, rgba(20, 35, 30, 0.8), rgba(15, 20, 20, 0.7)) !important;
+    border-color: rgba(16, 185, 129, 0.45) !important;
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.12) !important;
+}
+.checklist-card:hover .checklist-icon i {
+    transform: scale(1.2) rotate(10deg) !important;
+}
+
+/* 6. Pillar Cards Hover */
+.pillar-card:hover {
+    transform: translateY(-6px) translateX(6px) rotate(-0.5deg) scale(1.01) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(245, 247, 255, 0.9)) !important;
+    border-color: rgba(0, 102, 204, 0.3) !important;
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.08) !important;
+}
+body.dark-mode .pillar-card:hover {
+    background: rgba(28, 28, 30, 0.85) !important;
+    border-color: rgba(0, 113, 227, 0.35) !important;
+    box-shadow: 0 20px 40px rgba(0, 113, 227, 0.15) !important;
+}
+.pillar-card:hover .pillar-num-text {
+    transform: scale(1.15) rotate(5deg) !important;
+}
+
+/* 7. Flow Step Cards Hover */
+.flow-step-card:hover {
+    transform: translateY(-8px) rotate(0.6deg) scale(1.02) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(245, 247, 255, 0.95)) !important;
+    border-color: rgba(0, 102, 204, 0.35) !important;
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.08) !important;
+}
+body.dark-mode .flow-step-card:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(0, 113, 227, 0.35) !important;
+    box-shadow: 0 20px 40px rgba(0, 113, 227, 0.12) !important;
+}
+.flow-step-card:hover .step-icon-circle {
+    transform: scale(1.15) rotate(8deg) !important;
+}
+
+/* 8. Competitive Column Cards Hover */
+.comp-column-card:hover {
+    transform: translateY(-6px) rotate(-0.5deg) scale(1.015) !important;
+    border-color: rgba(0, 102, 204, 0.2) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06) !important;
+}
+body.dark-mode .comp-column-card:hover {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+}
+.comp-column-card.michi-winner:hover {
+    transform: translateY(-10px) scale(1.04) rotate(0.6deg) !important;
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.25) !important;
+}
+
+/* 9. Premium Logistics Sidebar Card Hover */
+.investor-card-premium:hover {
+    transform: translateY(-8px) rotate(0.5deg) scale(1.015) !important;
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.08) !important;
+}
+body.dark-mode .investor-card-premium:hover {
+    box-shadow: 0 25px 50px rgba(124, 58, 237, 0.15) !important;
+}
+.investor-card-premium:hover i {
+    transform: scale(1.15) rotate(8deg) !important;
+}
+
+/* 10. Web Demo Mockup Cards Hover */
+.mockup-card:hover {
+    transform: translateY(-4px) scale(1.02) rotate(0.5deg) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06) !important;
+}
+.mockup-card:hover .card-icon i {
+    transform: scale(1.15) rotate(6deg) !important;
+}
+
+/* 11. Blog Cards Hover */
+.blog-card:hover {
+    transform: translateY(-8px) rotate(0.5deg) scale(1.015) !important;
+    border-color: rgba(0, 102, 204, 0.25) !important;
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.08) !important;
+}
+.blog-card:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* 12. Companies / Driver Comp Cards Hover */
+.comp-card:hover {
+    transform: translateY(-8px) rotate(0.5deg) scale(1.015) !important;
+    border-color: rgba(0, 102, 204, 0.25) !important;
+    box-shadow: 0 25px 50px rgba(0, 102, 204, 0.08) !important;
+}
+
+/* 13. Contact Page Info & Form Cards Hover */
+.contact-info-card:hover,
+.contact-form-card:hover {
+    transform: translateY(-6px) rotate(0.5deg) scale(1.01) !important;
+    border-color: rgba(0, 102, 204, 0.25) !important;
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.06) !important;
+}
+
+/* 14. Safety Chart & Patent Warning Hover */
+.safety-chart-card:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.06) !important;
+}
+.patent-warning-card:hover {
+    transform: translateY(-4px) scale(1.005) !important;
+    box-shadow: 0 15px 35px rgba(239, 68, 68, 0.06) !important;
+}
+
 
 
