@@ -88,11 +88,12 @@
                 <span class="badge" data-i18n="hero_badge">Japan's #1 Logistics Platform</span>
                 <h1 data-i18n="hero_title">Find Your <span class="gradient-text">Path (道)</span> in Japan</h1>
                 <p class="description" data-i18n="hero_desc">
-                    The ultimate platform connecting reliable drivers with top logistics and transport companies across Japan. Simple, fast, and transparent.
+                    Unifying Japan's logistics and automotive ecosystem into a single digital platform. We connect drivers, commercial fleets, and service networks directly without middlemen, maximizing efficiency and transparency.
                 </p>
                 <div class="cta-group">
                     <button class="primary-btn large" id="btn-find-job" data-i18n="hero_btn_find">Find a Job</button>
-                    <button class="secondary-btn large" id="btn-hire-drivers" data-i18n="hero_btn_hire">Partner or Invest</button>
+                    <button class="secondary-btn large" id="btn-partner-us" data-i18n="hero_btn_partner">Partner with Us</button>
+                    <a href="./investors.html" class="secondary-btn large" id="btn-invest-michi" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;" data-i18n="hero_btn_invest">Invest in Michi</a>
                 </div>
                 
                 <div class="stats-row">
@@ -253,13 +254,13 @@
             </div>
             <div class="investor-card">
                 <div class="investor-icon"><i class="fa-solid fa-chart-line"></i></div>
-                <h3 data-i18n="investor3_title">Scalable & High Margin</h3>
-                <p data-i18n="investor3_desc">A pure software platform with low acquisition costs. Our unified ecosystem serves both independent drivers and massive enterprise logistics networks simultaneously.</p>
+                <h3 data-i18n="investor3_title">High-Volume Ecosystem</h3>
+                <p data-i18n="investor3_desc">A massive transaction-based Uber model for automotive services combining all vehicle classes, driving continuous software margins and high retention.</p>
             </div>
             <div class="investor-card">
                 <div class="investor-icon"><i class="fa-solid fa-building-shield"></i></div>
-                <h3 data-i18n="investor4_title">Backed by Solid Assets</h3>
-                <p data-i18n="investor4_desc">Michi is financially backed by <a href="https://halalcapitalgroup.com/" target="_blank" class="parent-company-link"><strong>International Halal Capital Group</strong></a>'s real estate portfolio. This cross-border foundation provides operational stability and minimizes risk for new investors.</p>
+                <h3 data-i18n="investor4_title">Asset-Backed Security</h3>
+                <p data-i18n="investor4_desc">Michi is financially backed by solid real estate portfolios via International Halal Capital Group, providing unparalleled operational stability and minimizing investor risks.</p>
             </div>
         </div>
     </section>
@@ -282,7 +283,10 @@
 
     <footer class="glass-footer">
         <div class="footer-content">
-            <p data-i18n="footer_copyright">© 2026 Michi (道). A project by <a href="https://halalcapitalgroup.com/" target="_blank" class="parent-company-link"><strong>International Halal Capital Group</strong></a>.</p>
+            <div class="footer-info">
+                <p class="footer-disclaimer" data-i18n="footer_disclaimer">Forward-Looking Statements & Projections: All statistical data, market sizing, IRR yields, and transactional revenue figures displayed on this platform represent analytical models and future growth projections. Actual financial outcomes may vary based on market conditions and the ultimate scale of capital deployment.</p>
+                <p data-i18n="footer_copyright">© 2026 Michi (道). A project by <a href="https://halalcapitalgroup.com/" target="_blank" class="parent-company-link"><strong>International Halal Capital Group</strong></a>.</p>
+            </div>
             <div class="footer-links">
                 <a href="./investors.html" data-i18n="nav_investors">Investors</a>
                 <a href="#" id="link-privacy" data-i18n="footer_privacy">Privacy Policy</a>
@@ -411,8 +415,8 @@
     <div id="company-modal" class="modal-overlay">
         <div class="modal-content glass-container heavy-glass">
             <button class="modal-close" id="company-modal-close" aria-label="Close Modal">&times;</button>
-            <h2 data-i18n="modal_hire_title">Partner or Invest - Join Waitlist</h2>
-            <p data-i18n="modal_hire_desc">Register your logistics company or investment inquiry to gain early access to our business platform.</p>
+            <h2 data-i18n="modal_hire_title">Strategic Partnership for Logistics Companies</h2>
+            <p data-i18n="modal_hire_desc">We offer a 'Digital Sovereignty' model for screening and attracting international workforces for logistics companies in Japan. Through our platform, you gain priority access to a 'Pre-vetted' driver database – the most reliable way to find qualified workers directly, without unexpected risks or human errors.</p>
             
             <form id="company-form" class="modal-form">
                 <input type="text" name="company_name" placeholder="Company Name" required class="modal-input" data-i18n="placeholder_company_name">
@@ -425,6 +429,59 @@
         </div>
     </div>
 
+    <!-- Driver Registration Modal (Find a Job) -->
+    <div id="driver-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass">
+            <button class="modal-close" id="driver-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="modal_driver_title">Driver Application - Join Waitlist</h2>
+            <p data-i18n="modal_driver_desc">Apply to find high-paying driving jobs and parts/maintenance discounts across Japan. No complex resume required.</p>
+            
+            <form id="driver-modal-form" class="modal-form">
+                <input type="text" name="name" placeholder="Full Name" required class="modal-input" data-i18n="placeholder_name">
+                <input type="email" name="email" placeholder="Email Address" required class="modal-input" data-i18n="placeholder_email_normal">
+                <input type="tel" name="phone" placeholder="Phone Number" required class="modal-input" data-i18n="placeholder_phone">
+                <select name="license" required class="modal-input" style="background-color: var(--card-bg); color: var(--text-main); border: 1px solid var(--glass-border); border-radius: 8px;">
+                    <option value="" disabled selected data-i18n="placeholder_license">Select License Type</option>
+                    <option value="Ordinary" data-i18n="license_ordinary">Ordinary (普通免許)</option>
+                    <option value="Semi-Medium" data-i18n="license_semi_medium">Semi-Medium (準中型免許)</option>
+                    <option value="Medium" data-i18n="license_medium">Medium (中型免許)</option>
+                    <option value="Heavy" data-i18n="license_heavy">Heavy (大型免許)</option>
+                    <option value="Towing" data-i18n="license_towing">Towing (牽引免許)</option>
+                </select>
+                <button type="submit" class="primary-btn large" style="width: 100%; margin-top: 10px;" data-i18n="modal_submit_btn">Submit Application</button>
+            </form>
+            <div id="driver-modal-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+        </div>
+    </div>
+
+    <!-- Investor Query Modal (Invest in Michi) -->
+    <div id="investor-modal" class="modal-overlay">
+        <div class="modal-content glass-container heavy-glass">
+            <button class="modal-close" id="investor-modal-close" aria-label="Close Modal">&times;</button>
+            <h2 data-i18n="modal_investor_title">Request Pitch Deck & Financial Model</h2>
+            <p data-i18n="modal_investor_desc">Get exclusive access to Michi's valuation, financial projections, and growth plans. Please provide your business details.</p>
+            
+            <form id="investor-modal-form" class="modal-form">
+                <input type="text" name="name" placeholder="Full Name" required class="modal-input" data-i18n="placeholder_name">
+                <input type="email" name="email" placeholder="Business Email" required class="modal-input" data-i18n="placeholder_email">
+                <input type="text" name="company" placeholder="Company / Fund Name" required class="modal-input" data-i18n="placeholder_company">
+                <select name="investmentRange" required class="modal-input" style="background-color: var(--card-bg); color: var(--text-main); border: 1px solid var(--glass-border); border-radius: 8px;">
+                    <option value="" disabled selected data-i18n="inv_form_select_opt">Investment Range (USD)</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="100k-250k">$100,000 - $250,000</option>
+                    <option value="250k-500k">$250,000 - $500,000</option>
+                    <option value="500k+">$500,000+</option>
+                </select>
+                <textarea name="message" placeholder="Optional Message / Questions" class="modal-input" style="height: 80px; resize: none;" data-i18n="placeholder_message"></textarea>
+                <button type="submit" class="primary-btn large" style="width: 100%; margin-top: 10px;" data-i18n="modal_submit_btn">Submit Request</button>
+            </form>
+            <div id="investor-modal-message" class="form-message" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+        </div>
+    </div>
+
+    <!-- GSAP for Smooth Premium Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./script.js?v=4"></script>
 </body>
 </html>

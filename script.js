@@ -6,9 +6,10 @@ const translations = {
         nav_join: "Join Waitlist",
         hero_badge: "Japan's #1 Logistics Platform",
         hero_title: "Find Your <span class='gradient-text'>Path (道)</span> in Japan",
-        hero_desc: "The ultimate platform connecting reliable drivers with top logistics and transport companies across Japan. Simple, fast, and transparent.",
+        hero_desc: "Unifying Japan's logistics and automotive ecosystem into a single digital platform. We connect drivers, commercial fleets, and service networks directly without middlemen, maximizing efficiency and transparency.",
         hero_btn_find: "Find a Job",
-        hero_btn_hire: "Partner or Invest",
+        hero_btn_partner: "Partner with Us",
+        hero_btn_invest: "Invest in Michi",
         stat_1: "Open Positions",
         stat_2: "Companies",
         stat_3: "Support",
@@ -42,15 +43,16 @@ const translations = {
         investor1_desc: "Japan is facing a severe driver shortage due to new strict overtime regulations. Michi optimizes the workforce, providing a digital solution to a trillion-yen national crisis.",
         investor2_title: "Super App Vision",
         investor2_desc: "Starting with seamless job matching, Michi will scale into a full ecosystem offering insurance, vehicle maintenance, and auto parts directly to drivers and fleets.",
-        investor3_title: "Scalable & High Margin",
-        investor3_desc: "A pure software platform with low acquisition costs. Our unified ecosystem serves both independent drivers and massive enterprise logistics networks simultaneously.",
-        investor4_title: "Backed by Solid Assets",
-        investor4_desc: "Michi is financially backed by <a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a>'s real estate portfolio. This cross-border foundation provides operational stability and minimizes risk for new investors.",
+        investor3_title: "High-Volume Ecosystem",
+        investor3_desc: "A massive transaction-based Uber model for automotive services combining all vehicle classes, driving continuous software margins and high retention.",
+        investor4_title: "Asset-Backed Security",
+        investor4_desc: "Michi is financially backed by solid real estate portfolios via International Halal Capital Group, providing unparalleled operational stability and minimizing investor risks.",
         download_title: "Start Your Journey Today",
         download_desc: "Download the Michi app now and connect with Japan's top logistics companies instantly.",
         download_apple: "App Store",
         download_google: "Google Play",
         footer_copyright: "© 2026 Michi (道). A project by <a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a>.",
+        footer_disclaimer: "Forward-Looking Statements & Projections: All statistical data, market sizing, IRR yields, and transactional revenue figures displayed on this platform represent analytical models and future growth projections. Actual financial outcomes may vary based on market conditions and the ultimate scale of capital deployment.",
         footer_privacy: "Privacy Policy",
         footer_terms: "Terms of Service",
         footer_contact: "Contact",
@@ -70,16 +72,16 @@ const translations = {
         inv_convenience_title: "All Conveniences in One App",
         inv_convenience_desc1: "Michi consolidates all critical tools and conveniences for drivers in Japan into a single, comprehensive mobile super-app. From job matching to fleet optimization, we bring efficiency directly to the road.",
         inv_convenience_desc2: "By eliminating recruitment middlemen, we cut costs for fleets while maximizing daily earnings and flexibility for the active workforce.",
-        inv_feat1_title: "Job Ads & Arubaito",
-        inv_feat1_desc: "Instant access to part-time and full-time driver listings across Japan.",
+        inv_feat1_title: "Job Ads & Part-time Jobs",
+        inv_feat1_desc: "Prioritized access to a highly curated enterprise talent pool.",
         inv_feat2_title: "Auto Service Booking",
-        inv_feat2_desc: "Pre-book vehicle inspections (Shaken) and maintenance to eliminate waiting times.",
+        inv_feat2_desc: "An Uber-style pre-payment and booking system for all vehicle classes, from passenger cars to heavy machinery.",
         inv_feat3_title: "Voice AI Assistant",
-        inv_feat3_desc: "Drivers command all application features using safe, hands-free conversational dialogue.",
+        inv_feat3_desc: "Hands-free conversational smart assistant for drivers on the road.",
         inv_feat4_title: "Offline Navigation Maps",
-        inv_feat4_desc: "Offline and online GPS maps optimized for various vehicle sizes and cargo loads.",
-        inv_guarantee_title: "Low-Risk Investment with 80% Capital Guarantee",
-        inv_guarantee_desc: "Michi offers a highly secure investment model. The initial development and operational expenses are backed by solid rental revenues from the real estate assets of International Halal Capital Group. Because expenses are covered by stable cash flows, we guarantee that at least 80% of the investor's principal capital can be safely returned even in the case of project failure. This unique structure makes the platform completely unparalleled in terms of risk mitigation.",
+        inv_feat4_desc: "Offline GPS navigation optimized specifically for heavy-duty trucks.",
+        inv_guarantee_title: "Asset-Backed Security Model",
+        inv_guarantee_desc: "The Michi project is based on a structured asset-backed security model. Initial scaling and technology development are fully stabilized by prime real estate rental yields through International Halal Capital Group. This robust financial framework ensures that 80% to 100% of the investor's principal capital is legally and materially safeguarded by underlying tangible assets even in a worst-case scenario.",
         inv_logistics_title: "Partnering with Logistics Companies",
         inv_logistics_desc: "Secure your workforce pipeline and acquire equity in Japan's premier driver infrastructure.",
         inv_partner_title: "The Primary Target Investors",
@@ -90,9 +92,20 @@ const translations = {
         inv_form_desc: "Get exclusive access to our valuation, financial projections, and growth plans. Please provide your business details.",
         inv_form_select_opt: "Investment Range (USD)",
         inv_form_btn: "Submit Request",
-        modal_hire_title: "Partner or Invest - Join Waitlist",
-        modal_hire_desc: "Register your logistics company or investment inquiry to gain early access to our business platform.",
+        modal_hire_title: "Strategic Partnership for Logistics Companies",
+        modal_hire_desc: "We offer a 'Digital Sovereignty' model for screening and attracting international workforces for logistics companies in Japan. Through our platform, you gain priority access to a 'Pre-vetted' driver database – the most reliable way to find qualified workers directly, without unexpected risks or human errors.",
         modal_submit_btn: "Submit Request",
+        modal_driver_title: "Driver Application - Join Waitlist",
+        modal_driver_desc: "Apply to find high-paying driving jobs and parts/maintenance discounts across Japan. No complex resume required.",
+        placeholder_email_normal: "Email Address",
+        placeholder_license: "Select License Type",
+        license_ordinary: "Ordinary (普通免許)",
+        license_semi_medium: "Semi-Medium (準中型免許)",
+        license_medium: "Medium (中型免許)",
+        license_heavy: "Heavy (大型免許)",
+        license_towing: "Towing (牽引免許)",
+        modal_investor_title: "Request Pitch Deck & Financial Model",
+        modal_investor_desc: "Get exclusive access to Michi's valuation, financial projections, and growth plans. Please provide your business details.",
         placeholder_enter_email: "Enter your email",
         placeholder_company_name: "Company Name",
         placeholder_contact_name: "Contact Person",
@@ -111,18 +124,18 @@ const translations = {
         channel_info_title: "General Inquiries",
         inv_highlights_title: "Investment Highlights & Market Potential",
         inv_highlights_desc: "Why Michi is the most attractive and secure tech opportunity in Japan's current economic landscape.",
-        tag_critical: "Critical Market Need",
-        card_deficit_title: "The 2024 Driver Crisis",
-        unit_deficit: "Undelivered Cargo by 2030",
-        card_deficit_desc: "Strict overtime limits in Japan have created an unprecedented driver shortage. Logistics fleets are desperately seeking efficiency solutions.",
+        tag_critical: "Strategic Market Access",
+        card_deficit_title: "Premium SaaS & Global Pipeline",
+        unit_deficit: "Pre-Vetted Driver Pipeline",
+        card_deficit_desc: "For a flat ¥300,000/year, logistics fleets unlock localized driver pools inclusive of a borderless Tokutei Gino pipeline, connecting directly with verified talent from Uzbekistan, Nepal, and Sri Lanka via In-App digital screening.",
         tag_growth: "Market Potential",
         card_market_title: "Japan Logistics Market",
         unit_market: "Trillion Yen Industry",
         card_market_desc: "Japan's delivery demand continues to expand rapidly with e-commerce, creating a massive addressable market for digital driver services.",
         tag_margin: "Business Model",
-        card_margin_title: "Scalability & Margin",
+        card_margin_title: "¥5.5T Automotive Disruption",
         unit_margin: "Target EBITDA Margin",
-        card_margin_desc: "A pure digital super-app with low operational overhead, delivering high software margins and rapid compound scaling across Japan.",
+        card_margin_desc: "Capturing a steady 3% transaction fee from a unified booking framework. Targeting just 0.05% of Japan's automotive service volume yields ¥84,000,000 in annual transactional revenue.",
         chart_title: "Capital Allocation & Safety Model",
         lbl_guaranteed: "80% Principal Guaranteed",
         lbl_growth: "20% Growth Capital",
@@ -228,9 +241,10 @@ const translations = {
         nav_join: "参加登録",
         hero_badge: "日本最大級の物流マッチングサービス",
         hero_title: "日本であなたの<span class='gradient-text'>道</span>を見つける",
-        hero_desc: "信頼できる運転手（ドライバー）と日本全国の優良な物流企業をつなぐ配送支援サービス。手続きは簡単で素早く、透明性の高いマッチングを実現します。",
+        hero_desc: "日本の物流および自動車サービスのエコシステムを単一のデジタルプラットフォームに統合します。中間業者を介さずに、ドライバー、商用フリート、サービスネットワークを直接つなぎ、効率性と透明性を最大化します。",
         hero_btn_find: "仕事を探す",
-        hero_btn_hire: "業務提携・投資のご案内",
+        hero_btn_partner: "パートナー提携",
+        hero_btn_invest: "Michiへ投資する",
         stat_1: "求人案件",
         stat_2: "登録企業",
         stat_3: "サポート体制",
@@ -264,44 +278,20 @@ const translations = {
         investor1_desc: "時間外労働の規制強化に伴い、日本は深刻な運転手不足に直面しています。Michiは労働力を効率化し、数兆円規模の社会的課題にデジタル技術で解決策を提供します。",
         investor2_title: "次世代の物流統合アプリ構想",
         investor2_desc: "迅速な求人マッチングから始まり、保険、車両整備、自動車部品などを運転手に直接提供する包括的な支援ネットワークへとサービスを拡張します。",
-        investor3_title: "高い拡張性と収益性",
-        investor3_desc: "効率的なシステム運用により、低コストで拡張可能なソフトウェア事業。個人ドライバーと大手物流企業ネットワークの双方にサービスを同時に提供します。",
-        investor4_title: "強固な資産基盤",
-        investor4_desc: "Michiは、<a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a>の資産によって財政支援を受けています。この強固な基盤により、投資家のリスクを最小限に抑え、安定した成長を実現します。",
-        download_title: "今日から新しい道を始めましょう",
-        download_desc: "今すぐMichiアプリをダウンロードして、日本の優良な物流企業とすぐにつながりましょう。",
-        download_apple: "App Store",
-        download_google: "Google Play",
-        footer_copyright: "© 2026 Michi (道)。 <a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a> のプロジェクト。",
-        footer_privacy: "プライバシーポリシー",
-        footer_terms: "利用規約",
-        footer_contact: "お問い合わせ",
-        meta_desc: "日本のトップ物流企業と信頼できるドライバーをつなぐプラットフォーム。ドライバー求人、アルバイト、運転手募集、自動車整備・車検予約を簡単に行えます。",
-        meta_keywords: "michi, 道, ドライバー, 求人, アルバイト, 運転手, 自動車整備, 車検, 予約, 物流, トラック, arubaito, 日本",
-        og_title: "Michi (道) - 日本のプレミアムドライバーエコシステム",
-        og_desc: "日本のトップ物流企業と信頼できるドライバーをつなぐプラットフォーム。ドライバー求人、アルバイト募集、自動車整備・車検の簡単予約システムを提供。",
-        investor_page_title: "Michi (道) - 投資家向け情報",
-        nav_investors: "投資家向け",
-        nav_pitch: "資料請求",
-        inv_hero_badge: "独占的投資機会",
-        inv_hero_title: "日本の物流の<span class='gradient-text'>未来に投資する</span>",
-        inv_hero_desc: "Michiは、日本の物流企業と運転手のために設計された、低リスクかつ社会的貢献度の高いデジタルインフラ事業です。強固な不動産資産に裏付けされた極めて高い財務安定性を提供します。",
-        inv_hero_btn_pitch: "資料請求",
-        inv_hero_btn_learn: "詳細はこちら",
-        inv_about_title: "事業の全体像",
-        inv_convenience_title: "すべての利便性を1つのアプリに",
-        inv_convenience_desc1: "Michiは、日本全国の運転手が必要とするすべての重要機能や利便性を1つの統合モバイルアプリにまとめます。求人マッチングから車両・運行管理の効率化まで、現場に直接的な効率性をもたらします。",
-        inv_convenience_desc2: "高額な採用仲介業者を通さないことで、物流企業（車両保有会社）のコストを削減し、運転手の日雇い収入の増加と柔軟な働き方を同時に実現します。",
+        investor3_title: "高トランザクション型エコシステム",
+        investor3_desc: "すべての車両クラスを組み合わせた、自動車サービス向けのトランザクションベースの大規模なUber型モデルであり、継続的なソフトウェア・マージンと高い維持率を実現します。",
+        investor4_title: "資産担保型セキュリティ",
+        investor4_desc: "Michiは、International Halal Capital Groupを通じた堅固な不動産ポートフォリオによって財務的に裏付けられており、比類のない事業安定性を提供し、投資家のリスクを最小限に抑えます。",
         inv_feat1_title: "求人情報とアルバイト",
-        inv_feat1_desc: "日本全国の運転手のアルバイトおよび正社員求人情報への即時アクセス。",
+        inv_feat1_desc: "厳選された企業向け人材プールへの優先的なアクセス。",
         inv_feat2_title: "自動車整備の予約",
-        inv_feat2_desc: "車検や整備を事前にオンライン予約し、待ち時間を完全に解消します。",
+        inv_feat2_desc: "乗用車から重機まで、すべての車両クラスに対応したUberスタイルの事前決済および予約システム。",
         inv_feat3_title: "音声AI運転アシスタント",
-        inv_feat3_desc: "運転手は、安全なハンズフリー音声操作を使用して、すべてのアプリ機能を操作できます。",
+        inv_feat3_desc: "ドライバー向けのハンズフリーで安全なインテリジェント音声アシスタント。",
         inv_feat4_title: "オフライン対応の地図ナビ",
-        inv_feat4_desc: "電波の届かない場所でも使える、車両サイズや積載量に最適化されたGPS地図・案内機能。",
-        inv_guarantee_title: "80%の元本保証付き低リスク投資",
-        inv_guarantee_desc: "Michiは、極めて安全な投資モデルを提供します。初期開発および運営費用は、International Halal Capital Groupの不動産資産から得られる堅実な賃貸収入によって裏付けられています。安定したキャッシュフローで費用がカバーされるため、万が一プロジェクトが失敗した場合でも、投資家の元本の少なくとも80%を安全に返還することを保証します。この独自の構造により、リスク軽減の面で完全に比類のないものとなっています。",
+        inv_feat4_desc: "大型トラック向けに最適化されたオフラインナビゲーション。",
+        inv_guarantee_title: "アセットバック型セキュリティモデル",
+        inv_guarantee_desc: "Michiプロジェクトは、構造化された資産担保セキュリティモデルに基づいています。初期の規模拡大と技術開発は、International Halal Capital Groupを通じた優良不動産の賃貸収益によって完全に安定化されています。この堅牢な財務枠組みにより、最悪のシナリオにおいても、投資家の元本資本の80%から100%が原資産となる有形資産によって法的および実質的に保護されます。",
         inv_logistics_title: "物流企業との強力なパートナーシップ",
         inv_logistics_desc: "人材パイプラインを確実に保護し、日本有数のドライバーインフラの株式を取得します。",
         inv_partner_title: "最重要のパートナー企業",
@@ -312,8 +302,8 @@ const translations = {
         inv_form_desc: "企業評価、財務予測、成長計画に関する詳細資料を入手いただけます。企業情報をご入力ください。",
         inv_form_select_opt: "投資範囲 (USD)",
         inv_form_btn: "送信する",
-        modal_hire_title: "共同提携・投資のご相談（事前登録）",
-        modal_hire_desc: "本サービスの早期利用に向けて、物流企業様のご登録、または投資に関するご相談をこちらから承っております。",
+        modal_hire_title: "物流企業向け戦略的パートナーシップ",
+        modal_hire_desc: "日本の物流企業向けに、海外人材のスクリーニングと獲得を行う「Digital Sovereignty（デジタル主権）」モデルを提供します。当社のプラットフォームを通じて、事前審査済み（Pre-vetted）のドライバーデータベースへの優先アクセス権を取得できます。これは、予期せぬリスクやヒューマンエラーを排除し、適格な人材を直接見つける最も信頼性の高い方法です。",
         modal_submit_btn: "送信する",
         placeholder_enter_email: "メールアドレスを入力",
         placeholder_company_name: "会社名",
@@ -325,18 +315,18 @@ const translations = {
         placeholder_message: "ご質問・ご要望（任意）",
         inv_highlights_title: "投資のハイライトと市場のポテンシャル",
         inv_highlights_desc: "Michiが現在の日本の経済環境において、最も魅力的で安全なテック投資機会である理由。",
-        tag_critical: "極めて高い市場ニーズ",
-        card_deficit_title: "2024年ドライバー危機",
-        unit_deficit: "2030年までに配送不能となる貨物割合",
-        card_deficit_desc: "日本における厳格な残業規制は、前例のないドライバー不足をもたらしました。物流企業は運行効率化ソリューションを切望しています。",
+        tag_critical: "戦略的市場アクセス",
+        card_deficit_title: "プレミアムSaaS＆グローバルパイプライン",
+        unit_deficit: "事前審査済みドライバーの確保体制",
+        card_deficit_desc: "年間一律300,000円で、物流フリートは国境のない「特定技能」パイプラインを含む現地のドライバープールを開放し、アプリ内のデジタルスクリーニングを通じて、ウズベキスタン、ネパール、スリランカの検証済み人材と直接つながることができます。",
         tag_growth: "市場の成長性",
         card_market_title: "日本国内の物流市場規模",
         unit_market: "数兆円規模の超巨大産業",
         card_market_desc: "日本の配送需要はEコマースの普及に伴い急速に拡大し続けており、デジタルドライバーサービスにとって巨大なターゲット市場を形成しています。",
         tag_margin: "高収益ビジネスモデル",
-        card_margin_title: "高い拡張性と収益力",
+        card_margin_title: "5.5兆円の自動車サービス市場の変革",
         unit_margin: "目標EBITDAマージン",
-        card_margin_desc: "運営管理コストの低い純粋なデジタルスーパーアプリであり、高いソフトウェア利益率と日本全国への迅速なスケールを実現します。",
+        card_margin_desc: "統合された予約フレームワークから安定した3%の取引手数料を回収します。日本の自動車サービス市場のわずか0.05%をターゲットにするだけで、年間84,000,000円の取引収益が得られます。",
         chart_title: "元本配分と安全性のモデル",
         lbl_guaranteed: "80% 元本保証（資産担保）",
         lbl_growth: "20% 成長開発投資",
@@ -433,7 +423,51 @@ const translations = {
         demo_instructions: "アプリにアクセスしたら、まず希望する言語を選択し、次にログインするロール（ドライバーまたは企業）を選択します。その後、テスト用に用意された<strong>ユーザー名: admin</strong>、<strong>パスワード: admin</strong>を入力してログインします。ドライバープロファイルと企業プロファイルのどちらでも同じログイン情報を使用できます。どちらのロールでも自由にログインし、アプリの初期段階のインターフェースを体験していただけます。",
         demo_link_btn: "ウェブデモを開く",
         demo_disclaimer_title: "知的財産権および特許保護に関する警告",
-        demo_disclaimer: "⚠️ Michi（道）アプリのすべてのデザイン、ワークフロー、レイアウト形状、UIの詳細、独自のアルゴリズム、およびシステム構造は、International Halal Capital Group（IHCG）の独占的知的財産です。すべてのプログラムコード行、デザイン配置、フロー曲線、および各部詳細は完全に特許化され、法的に保護されています。無断での複製、盗用、リバースエンジニアリング、または配布は厳格に禁止されており、日本の特許法および国際著作権条約に基づき、最大限の法的措置の対象となります。"
+        demo_disclaimer: "⚠️ Michi（道）アプリのすべてのデザイン、ワークフロー、レイアウト形状、UIの詳細、独自のアルゴリズム、およびシステム構造は、International Halal Capital Group（IHCG）の独占的知的財産です。すべてのプログラムコード行、デザイン配置、フロー曲線、および各部詳細は完全に特許化され、法的に保護されています。無断での複製、盗用、リバースエンジニアリング、または配布は厳格に禁止されており、日本の特許法および国際著作権条約に基づき、最大限の法的措置の対象となります。",
+        download_title: "今日から新しい道を始めましょう",
+        download_desc: "今すぐMichiアプリをダウンロードして、日本の優良な物流企業とすぐにつながりましょう。",
+        download_apple: "App Store",
+        download_google: "Google Play",
+        footer_copyright: "© 2026 Michi (道)。 <a href='https://halalcapitalgroup.com/' target='_blank' class='parent-company-link'><strong>International Halal Capital Group</strong></a> のプロジェクト。",
+        footer_disclaimer: "将来予想に関する記述および予測：本プラットフォームに表示されているすべての統計データ、市場規模、IRR利回り、および取引収益の数値は、分析モデルおよび将来の成長予測を示すものです。実際の財務結果は、市場環境や資本還元の最終的な規模によって異なる場合があります。",
+        footer_privacy: "プライバシーポリシー",
+        footer_terms: "利用規約",
+        footer_contact: "お問い合わせ",
+        meta_desc: "日本のトップ物流企業と信頼できるドライバーをつなぐプラットフォーム。ドライバー求人、アルバイト、運転手募集、自動車整備・車検予約を簡単に行えます。",
+        meta_keywords: "michi, 道, ドライバー, 求人, アルバイト, 運転手, 自動車整備, 車検, 予約, 物流, トラック, arubaito, 日本",
+        og_title: "Michi (道) - 日本のプレミアムドライバーエコシステム",
+        og_desc: "日本のトップ物流企業と信頼できるドライバーをつなぐプラットフォーム。ドライバー求人、アルバイト募集、自動車整備・車検の簡単予約システムを提供。",
+        investor_page_title: "Michi (道) - 投資家向け情報",
+        nav_investors: "投資家向け",
+        nav_pitch: "資料請求",
+        inv_hero_badge: "独占的投資機会",
+        inv_hero_title: "日本の物流の<span class='gradient-text'>未来に投資する</span>",
+        inv_hero_desc: "Michiは、日本の物流企業と運転手のために設計された、低リスクかつ社会的貢献度の高いデジタルインフラ事業です。強固な不動産資産に裏付けされた極めて高い財務安定性を提供します。",
+        inv_hero_btn_pitch: "資料請求",
+        inv_hero_btn_learn: "詳細はこちら",
+        inv_about_title: "事業の全体像",
+        inv_convenience_title: "すべての利便性を1つのアプリに",
+        inv_convenience_desc1: "Michiは、日本全国の運転手が必要とするすべての重要機能や利便性を1つの統合モバイルアプリにまとめます。求人マッチングから車両・運行管理の効率化まで、現場に直接的な効率性をもたらします。",
+        inv_convenience_desc2: "高額な採用仲介業者を通さないことで、物流企業（車両保有会社）のコストを削減し、運転手の日雇い収入の増加と柔軟な働き方を同時に実現します。",
+        contact_modal_desc: "一般のお問い合わせやサポートについては、当社チームまでご連絡ください。",
+        contact_channels_title: "直接お問い合わせ窓口",
+        contact_channels_desc: "各専門部署へ直接メールをお送りいただけます。",
+        channel_invest_title: "投資家向け情報窓口",
+        channel_partners_title: "パートナー・業務提携",
+        channel_hr_title: "採用・人事",
+        channel_support_title: "ドライバー向けサポート",
+        channel_info_title: "総合窓口・その他",
+        modal_driver_title: "ドライバー登録 - ウェイトリストへの参加",
+        modal_driver_desc: "履歴書不要。日本全国の高収入ドライバー求人への即時応募や、自動車パーツ・整備の特別割引を利用できます。",
+        placeholder_email_normal: "メールアドレス",
+        placeholder_license: "免許の種類を選択",
+        license_ordinary: "普通免許",
+        license_semi_medium: "準中型免許",
+        license_medium: "中型免許",
+        license_heavy: "大型免許",
+        license_towing: "牽引免許",
+        modal_investor_title: "詳細資料と財務モデルの請求",
+        modal_investor_desc: "企業評価、財務予測、成長計画に関する詳細資料を入手いただけます。企業情報をご入力ください。"
     }
 };
 
@@ -526,11 +560,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Skip the actual submit button in the form
         if(btn.type === 'submit') return;
 
-        // Skip anchor links pointing to page hashes
-        if(btn.tagName === 'A' && btn.getAttribute('href') && btn.getAttribute('href').startsWith('#') && btn.getAttribute('href') !== '#') return;
+        // Skip buttons inside form elements or modal containers or staging widgets
+        if(btn.closest('form') || btn.closest('.modal-content') || btn.closest('.hero-dashboard-widget') || btn.closest('.dashboard-body-area')) return;
+
+        // Skip external links or anchor links pointing to page hashes
+        if(btn.tagName === 'A' && (btn.getAttribute('target') === '_blank' || (btn.getAttribute('href') && btn.getAttribute('href').startsWith('#') && btn.getAttribute('href') !== '#'))) return;
 
         // Skip custom hero buttons that are handled separately
-        if(btn.id === 'btn-find-job' || btn.id === 'btn-hire-drivers') return;
+        if(btn.id === 'btn-find-job' || btn.id === 'btn-partner-us' || btn.id === 'btn-invest-michi') return;
 
         btn.addEventListener('click', (e) => {
             const target = document.getElementById('download');
@@ -554,35 +591,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Custom Hero Button: Find a Job
+    // Custom Hero Button: Find a Job (Open Driver Modal)
     const btnFindJob = document.getElementById('btn-find-job');
-    if(btnFindJob) {
+    const driverModal = document.getElementById('driver-modal');
+    const driverModalClose = document.getElementById('driver-modal-close');
+
+    if(btnFindJob && driverModal) {
         btnFindJob.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = document.getElementById('download');
-            if(target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-                setTimeout(() => {
-                    if (waitlistForm) {
-                        const input = waitlistForm.querySelector('input');
-                        if (input) {
-                            input.focus();
-                            input.style.boxShadow = '0 0 0 3px rgba(0, 102, 204, 0.3)';
-                            setTimeout(() => input.style.boxShadow = '', 2000);
-                        }
-                    }
-                }, 800);
+            driverModal.classList.add('open');
+        });
+    }
+
+    if(driverModalClose && driverModal) {
+        driverModalClose.addEventListener('click', () => {
+            driverModal.classList.remove('open');
+        });
+    }
+
+    if(driverModal) {
+        driverModal.addEventListener('click', (e) => {
+            if(e.target === driverModal) {
+                driverModal.classList.remove('open');
+            }
+        });
+    }
+
+    // Custom Hero Button: Invest in Michi (Open Investor Modal)
+    const btnInvestMichi = document.getElementById('btn-invest-michi');
+    const investorModal = document.getElementById('investor-modal');
+    const investorModalClose = document.getElementById('investor-modal-close');
+
+    if(btnInvestMichi && investorModal) {
+        btnInvestMichi.addEventListener('click', (e) => {
+            e.preventDefault();
+            investorModal.classList.add('open');
+        });
+    }
+
+    if(investorModalClose && investorModal) {
+        investorModalClose.addEventListener('click', () => {
+            investorModal.classList.remove('open');
+        });
+    }
+
+    if(investorModal) {
+        investorModal.addEventListener('click', (e) => {
+            if(e.target === investorModal) {
+                investorModal.classList.remove('open');
             }
         });
     }
 
     // Custom Hero Button: Hire Drivers (Open Modal)
-    const btnHireDrivers = document.getElementById('btn-hire-drivers');
+    const btnPartnerUs = document.getElementById('btn-partner-us');
     const companyModal = document.getElementById('company-modal');
     const companyModalClose = document.getElementById('company-modal-close');
 
-    if(btnHireDrivers && companyModal) {
-        btnHireDrivers.addEventListener('click', (e) => {
+    if(btnPartnerUs && companyModal) {
+        btnPartnerUs.addEventListener('click', (e) => {
             e.preventDefault();
             companyModal.classList.add('open');
         });
@@ -646,6 +713,109 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 companyFormMessage.innerText = 'Something went wrong. Please try again.';
                 companyFormMessage.className = 'form-message error';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            }
+        });
+    }
+
+    // Driver Modal Form Submission
+    const driverModalForm = document.getElementById('driver-modal-form');
+    const driverModalMessage = document.getElementById('driver-modal-message');
+
+    if(driverModalForm) {
+        driverModalForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = driverModalForm.name.value;
+            const email = driverModalForm.email.value;
+            const phone = driverModalForm.phone.value;
+            const license = driverModalForm.license.value;
+            const submitBtn = driverModalForm.querySelector('button');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+            driverModalMessage.innerText = '';
+
+            try {
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwRWVFT53dvaLrvs4JhOQzeX1f5M-4NyieKiXtZfhbaT6jM6nJC5jqqjjrIgka1V1LqdQ/exec';
+                
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams({ 
+                        email: email,
+                        name: name,
+                        message: `Phone: ${phone} | License: ${license}`,
+                        type: 'driver'
+                    })
+                });
+
+                driverModalMessage.innerText = 'Thank you! Your driver application has been sent. ✓';
+                driverModalMessage.className = 'form-message success';
+                driverModalForm.reset();
+                setTimeout(() => {
+                    driverModal.classList.remove('open');
+                    driverModalMessage.innerText = '';
+                }, 3000);
+            } catch (error) {
+                driverModalMessage.innerText = 'Something went wrong. Please try again.';
+                driverModalMessage.className = 'form-message error';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            }
+        });
+    }
+
+    // Investor Modal Form Submission (Homepage)
+    const investorModalForm = document.getElementById('investor-modal-form');
+    const investorModalMessage = document.getElementById('investor-modal-message');
+
+    if(investorModalForm) {
+        investorModalForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = investorModalForm.name.value;
+            const email = investorModalForm.email.value;
+            const company = investorModalForm.company.value;
+            const range = investorModalForm.investmentRange.value;
+            const messageText = investorModalForm.message.value;
+            const submitBtn = investorModalForm.querySelector('button');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+            investorModalMessage.innerText = '';
+
+            try {
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwRWVFT53dvaLrvs4JhOQzeX1f5M-4NyieKiXtZfhbaT6jM6nJC5jqqjjrIgka1V1LqdQ/exec';
+                
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams({ 
+                        email: email,
+                        name: name,
+                        company: company,
+                        investmentRange: range,
+                        message: messageText,
+                        type: 'investor'
+                    })
+                });
+
+                investorModalMessage.innerText = 'Thank you! Your investor request has been sent. ✓';
+                investorModalMessage.className = 'form-message success';
+                investorModalForm.reset();
+                setTimeout(() => {
+                    investorModal.classList.remove('open');
+                    investorModalMessage.innerText = '';
+                }, 3000);
+            } catch (error) {
+                investorModalMessage.innerText = 'Something went wrong. Please try again.';
+                investorModalMessage.className = 'form-message error';
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerText = originalBtnText;
@@ -852,6 +1022,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 demoLockedScreen.offsetHeight;
                 demoLockedScreen.style.opacity = 1;
             }
+        });
+    }
+
+    // Initialize GSAP Animations if GSAP is available
+    if (typeof gsap !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero content fade & slide up on load
+        gsap.from('.hero-content .badge', { opacity: 0, y: -20, duration: 0.8, ease: 'power3.out' });
+        gsap.from('.hero-content h1', { opacity: 0, y: 30, duration: 1, delay: 0.2, ease: 'power3.out' });
+        gsap.from('.hero-content .description', { opacity: 0, y: 20, duration: 0.8, delay: 0.4, ease: 'power3.out' });
+        gsap.from('.hero-content .cta-group', { opacity: 0, y: 15, duration: 0.8, delay: 0.5, ease: 'power3.out' });
+        gsap.from('.hero-content .stats-row', { opacity: 0, y: 15, duration: 0.8, delay: 0.7, ease: 'power3.out' });
+        gsap.from('.hero-dashboard-widget, .app-mockup-wrapper', { opacity: 0, scale: 0.96, duration: 1.2, delay: 0.3, ease: 'power3.out' });
+
+        // Scroll trigger animations for sections
+        gsap.utils.toArray('.investor-section, .features-section, .waitlist-section').forEach(section => {
+            gsap.from(section, {
+                opacity: 0,
+                y: 40,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+
+        // Scroll trigger for cards inside sections
+        gsap.utils.toArray('.investor-card, .feature-card, .convenience-card, .highlight-card, .flow-step-card, .pillar-card').forEach(card => {
+            gsap.from(card, {
+                opacity: 0,
+                y: 25,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 90%',
+                    toggleActions: 'play none none none'
+                }
+            });
         });
     }
 });

@@ -367,6 +367,65 @@ button {
     font-size: 1.1rem;
 }
 
+/* Premium Minimalist Hero Buttons (Apple-style Classic UI) */
+/* Premium Unified Minimalist Hero Buttons (Uniform Sizes for EN/JA, Bolder & Darker Text) */
+#btn-find-job, #btn-partner-us, #btn-invest-michi {
+    width: 210px !important;
+    max-width: 100% !important;
+    padding: 12px 20px !important;
+    font-size: 0.92rem !important; /* Kichikroq / Smaller */
+    font-weight: 700 !important; /* Semizroq / Bolder */
+    border-radius: 100px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    cursor: pointer;
+}
+
+/* Default States (Clean classic white/glass style with darker/bold text) */
+#btn-find-job, #btn-partner-us, #btn-invest-michi {
+    background: rgba(255, 255, 255, 0.85) !important;
+    color: #111111 !important; /* To'qroq / Darker */
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Hover States (Unified Brand colors applied) */
+#btn-find-job:hover, #btn-partner-us:hover, #btn-invest-michi:hover {
+    background: linear-gradient(135deg, #0066cc, #7c3aed) !important;
+    color: white !important;
+    border-color: transparent !important;
+    transform: translateY(-5px) rotate(0.8deg) scale(1.02) !important;
+    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.3) !important;
+}
+
+/* Press Active States */
+#btn-find-job:active, #btn-partner-us:active, #btn-invest-michi:active {
+    transform: translateY(-2px) scale(0.97) !important;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode #btn-find-job,
+body.dark-mode #btn-partner-us,
+body.dark-mode #btn-invest-michi {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode #btn-find-job:hover,
+body.dark-mode #btn-partner-us:hover,
+body.dark-mode #btn-invest-michi:hover {
+    background: linear-gradient(135deg, #0071e2, #8b5cf6) !important;
+    color: white !important;
+    border-color: transparent !important;
+    box-shadow: 0 10px 24px rgba(139, 92, 246, 0.35) !important;
+}
+
 /* Hero Section */
 .hero-section {
     display: flex;
@@ -488,15 +547,15 @@ body.dark-mode .stat-icon-wrapper {
 }
 
 .glass-app-mockup {
-    width: 100%;
-    max-width: 450px;
+    width: 350px;
+    max-width: 100%;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border: 1px solid var(--glass-border);
     border-radius: 28px;
     box-shadow: var(--glass-shadow);
-    padding: 30px;
+    padding: 20px;
     transform: rotateY(-10deg) rotateX(5deg);
     transition: transform 0.5s ease;
 }
@@ -508,13 +567,13 @@ body.dark-mode .stat-icon-wrapper {
 .mockup-header {
     display: flex;
     gap: 6px;
-    margin-bottom: 20px;
-    padding-left: 10px;
+    margin-bottom: 16px;
+    padding-left: 6px;
 }
 
 .mockup-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
 }
 
@@ -525,16 +584,16 @@ body.dark-mode .stat-icon-wrapper {
 .mockup-body {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .mockup-card {
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-    padding: 16px;
+    border-radius: 16px;
+    padding: 12px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     transition: transform 0.2s;
 }
@@ -554,13 +613,13 @@ body.dark-mode .stat-icon-wrapper {
 }
 
 .card-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     color: white;
 }
 
@@ -569,12 +628,12 @@ body.dark-mode .stat-icon-wrapper {
 }
 
 .card-text h4 {
-    font-size: 1rem;
-    margin-bottom: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
 }
 
 .card-text p {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     color: var(--primary-color);
     font-weight: 500;
 }
@@ -583,9 +642,9 @@ body.dark-mode .stat-icon-wrapper {
     margin-left: auto;
     background: var(--text-main);
     color: white;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 100px;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
 }
 
 /* Responsive */
@@ -628,6 +687,15 @@ body.dark-mode .stat-icon-wrapper {
     .cta-group {
         flex-direction: column;
         gap: 12px;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .cta-group button, .cta-group a {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
     }
 
     .glass-app-mockup {
@@ -705,7 +773,7 @@ body.dark-mode .stat-icon-wrapper {
 }
 
 .feature-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-15px) rotate(1deg) scale(1.02);
     box-shadow: 0 30px 60px rgba(0, 102, 204, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 1);
 }
 
@@ -841,10 +909,30 @@ body.dark-mode .stat-icon-wrapper {
     color: var(--text-main);
 }
 
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 700px;
+    text-align: left;
+}
+
+.footer-disclaimer {
+    font-size: 0.72rem !important;
+    color: var(--text-secondary);
+    opacity: 0.65;
+    line-height: 1.4;
+    margin: 0;
+}
+
 @media (max-width: 600px) {
     .footer-content {
         flex-direction: column;
         text-align: center;
+    }
+    .footer-info {
+        text-align: center;
+        align-items: center;
     }
 }
 
@@ -1129,14 +1217,14 @@ body.dark-mode .stat-icon-wrapper {
     border-radius: 32px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 15px 35px rgba(0,0,0,0.03);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .investor-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-12px) rotate(-1deg) scale(1.02);
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 30px 60px rgba(0, 102, 204, 0.1);
     border-color: var(--primary-color);
@@ -1574,18 +1662,22 @@ body.dark-mode .modal-close:hover {
     padding: 35px 30px;
     border-radius: 28px;
     box-shadow: var(--glass-shadow);
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
 }
 
 .highlight-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) rotate(0.8deg) scale(1.02);
     border-color: var(--primary-color);
 }
 
+.highlight-card:hover .metric-num {
+    transform: scale(1.06);
+}
+
 .highlight-card:active {
-    transform: translateY(-4px) scale(0.985);
+    transform: translateY(-4px) scale(0.985) rotate(0.3deg);
 }
 
 .highlight-header {
@@ -1645,6 +1737,8 @@ body:not(.dark-mode) .highlight-tag.success {
     color: var(--text-main);
     line-height: 1;
     letter-spacing: -1px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: inline-block;
 }
 
 .metric-unit {
@@ -1953,7 +2047,7 @@ body.dark-mode .table-row.michi-row {
     border-radius: 24px;
     padding: 25px;
     box-shadow: var(--glass-shadow);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1961,13 +2055,13 @@ body.dark-mode .table-row.michi-row {
 }
 
 .convenience-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(-0.8deg) scale(1.02);
     border-color: var(--primary-color);
     box-shadow: 0 15px 35px rgba(0, 102, 204, 0.08);
 }
 
 .convenience-card:active {
-    transform: translateY(-2px) scale(0.97);
+    transform: translateY(-2px) scale(0.97) rotate(-0.3deg);
 }
 
 .convenience-card-icon {
@@ -2451,7 +2545,7 @@ body.dark-mode .checklist-card {
 }
 
 .checklist-card:hover {
-    transform: translateY(-3px) translateX(4px);
+    transform: translateY(-4px) translateX(4px) rotate(0.6deg) scale(1.015);
     background: rgba(255, 255, 255, 0.88);
     border-color: rgba(0, 102, 204, 0.4);
     box-shadow: 0 12px 30px rgba(0, 102, 204, 0.08);
@@ -2689,6 +2783,11 @@ body.dark-mode .channel-card:hover {
         padding: 10px 0;
     }
 
+    .dashboard-body-area {
+        height: auto !important;
+        padding: 25px 20px !important;
+    }
+
     .investor-card-premium {
         padding: 24px !important;
         gap: 15px !important;
@@ -2696,9 +2795,22 @@ body.dark-mode .channel-card:hover {
     }
 
     .pillar-card {
-        padding: 20px 15px !important;
+        padding: 20px !important;
         gap: 15px !important;
         border-radius: 20px !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .pillar-number-wrapper {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .pillar-number-wrapper div {
+        display: none !important;
     }
 
     .logistics-section-title {
@@ -2817,11 +2929,11 @@ body.dark-mode .channel-card:hover {
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
-    transition: all 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .pillar-card:hover {
-    transform: translateX(10px) translateY(-2px);
+    transform: translateX(10px) translateY(-4px) rotate(-0.5deg) scale(1.01);
     border-color: rgba(0, 102, 204, 0.25) !important;
     background: rgba(255, 255, 255, 0.04) !important;
     box-shadow: var(--glass-shadow);
@@ -2872,7 +2984,7 @@ body.dark-mode .pillar-card:hover {
 }
 
 .flow-step-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) rotate(0.8deg) scale(1.02);
     background: rgba(255, 255, 255, 0.04);
     border-color: rgba(0, 102, 204, 0.3) !important;
     box-shadow: 0 15px 35px rgba(0, 102, 204, 0.15);
@@ -3072,14 +3184,14 @@ body.dark-mode .pillar-card:hover {
     box-shadow: var(--glass-shadow);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s ease, border-color 0.5s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .comp-column-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) rotate(-0.5deg) scale(1.01);
 }
 
 /* Michi Winner Column Highlight */
@@ -3092,7 +3204,7 @@ body.dark-mode .pillar-card:hover {
 }
 
 .comp-column-card.michi-winner:hover {
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-10px) scale(1.04) rotate(0.6deg);
     box-shadow: 0 20px 45px rgba(0, 102, 204, 0.3);
 }
 
@@ -3246,7 +3358,8 @@ body.dark-mode .pillar-card:hover {
     .contact-info-card,
     .contact-form-card,
     .patent-warning-card,
-    .flow-step-card {
+    .flow-step-card,
+    .highlight-card {
         padding: 24px 20px !important;
         border-radius: 20px !important;
         gap: 15px !important;
@@ -3258,10 +3371,15 @@ body.dark-mode .pillar-card:hover {
     .checklist-card h4,
     .blog-card-title,
     .comp-card h3,
-    .contact-info-card h4 {
+    .contact-info-card h4,
+    .highlight-card h3 {
         font-size: 1.25rem !important;
         margin-top: 5px !important;
         margin-bottom: 10px !important;
+    }
+
+    .metric-num {
+        font-size: 2.3rem !important;
     }
 }
 
