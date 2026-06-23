@@ -60,7 +60,21 @@ const translations = {
         meta_keywords: "michi, driver jobs, logistics, truck driver, recruitment, Japan driver jobs, auto service booking, Japan, arubaito, driver part-time",
         og_title: "Michi (道) - Premium Driver Ecosystem in Japan",
         og_desc: "Connect with top logistics companies or find reliable drivers in Japan. Simple, fast, and transparent driver matching ecosystem.",
-        investor_page_title: "Michi (道) - Investor Relations",
+        investor_page_title: "Michi (道) - Investor Relations & Asset-Backed Yields",
+        investor_meta_desc: "Explore low-risk, high-yield investment opportunities in Japan's logistics driver ecosystem. Backed by solid asset portfolios via International Halal Capital Group.",
+        investor_meta_keywords: "invest in Japan logistics, IHCG, halal capital group, Japan driver ecosystem, logistics venture capital, asset backed security",
+        drivers_page_title: "For Drivers - High-Paying Driver Jobs in Japan | Michi App (道)",
+        drivers_meta_desc: "Find high-paying truck driver jobs, part-time delivery work, and driver discounts in Japan. Apply in 1 tap without complex resumes.",
+        drivers_meta_keywords: "driver jobs Japan, truck driver jobs, delivery driver Japan, specified skilled worker driver, driver recruitment Japan, part-time driving jobs",
+        companies_page_title: "For Companies - Hire Pre-Vetted Drivers in Japan | Michi App (道)",
+        companies_meta_desc: "Recruit pre-vetted truck and delivery drivers in Japan directly without middlemen. Save recruitment costs.",
+        companies_meta_keywords: "recruit drivers Japan, fleet recruitment, hire truck drivers, logistics partners Japan, driver shortage solution, transport fleet matching",
+        blog_page_title: "Michi Blog - Japan Logistics & Driver Insights",
+        blog_meta_desc: "Read the latest news and guides about the 2024 driver shortage problem and logistics tech in Japan.",
+        blog_meta_keywords: "Japan logistics news, 2024 driver shortage, Specified Skilled Worker visa Japan, transport innovations",
+        contact_page_title: "Contact Michi Support | Driver matching & Shariah Investment",
+        contact_meta_desc: "Get in touch with Michi support for driver registration, corporate partnerships, or Shariah investments in Japan.",
+        contact_meta_keywords: "contact Michi App, driver support Japan, logistics corporate inquiry, investment contact",
         nav_investors: "Investors",
         nav_pitch: "Get Pitch Deck",
         inv_hero_badge: "Exclusive Investment Opportunity",
@@ -437,7 +451,21 @@ const translations = {
         meta_keywords: "michi, 道, ドライバー, 求人, アルバイト, 運転手, 自動車整備, 車検, 予約, 物流, トラック, arubaito, 日本",
         og_title: "Michi (道) - 日本のプレミアムドライバーエコシステム",
         og_desc: "日本のトップ物流企業と信頼できるドライバーをつなぐプラットフォーム。ドライバー求人、アルバイト募集、自動車整備・車検の簡単予約システムを提供。",
-        investor_page_title: "Michi (道) - 投資家向け情報",
+        investor_page_title: "Michi (道) - 投資家向け情報 | 元本保証型投資モデル",
+        investor_meta_desc: "日本の物流・ドライバーエコシステムへの低リスク・高利回り投資機会。International Halal Capital Groupの強固な不動産ポートフォリオによる資産裏付け。",
+        investor_meta_keywords: "日本 物流 投資, IHCG, ハラルキャピタル, ドライバーエコシステム, 投資, 元本保証, 資産裏付け",
+        drivers_page_title: "ドライバー向け - 日本での高収入トラック・配送運転手求人 | Michi App (道)",
+        drivers_meta_desc: "日本全国の高収入トラック運転手求人、配送バイト、車両整備割引を提供。履歴書不要、ワンタップで優良企業に応募できます。",
+        drivers_meta_keywords: "ドライバー求人, トラック運転手 募集, 配送 バイト, 特定技能 ドライバー, 運転手 採用, 軽貨物ドライバー",
+        companies_page_title: "企業向け - 日本での審査済みトラック・配送運転手の直接採用 | Michi App (道)",
+        companies_meta_desc: "仲介業者なしで直接、日本全国の優秀なトラック・配送ドライバーを採用。採用コストを削減し、運行フリートを最適化します。",
+        companies_meta_keywords: "ドライバー採用, トラック運転手 募集 企業, 運送会社 パートナー, ドライバー不足 解決, 物流マッチング",
+        blog_page_title: "Michi ブログ - 日本の物流業界動向＆ドライバー採用ノウハウ",
+        blog_meta_desc: "物流の2024年問題、外国人ドライバーの特定技能ビザ、運行技術イノベーションに関する最新ニュースとガイドをお届けします。",
+        blog_meta_keywords: "日本 物流 ニュース, 物流2024年問題, トラックドライバー ビザ, 特定技能 運転手, 運行管理 イノベーション",
+        contact_page_title: "お問い合わせ - ドライバー登録・企業提携・投資相談 | Michi App (道)",
+        contact_meta_desc: "ドライバー登録、企業間提携、IHCG元本保証投資に関するお問い合わせはこちら。サポート担当が迅速に対応いたします。",
+        contact_meta_keywords: "Michi お問い合わせ, ドライバーサポート 日本, 物流企業 提携窓口, 投資 相談",
         nav_investors: "投資家向け",
         nav_pitch: "資料請求",
         inv_hero_badge: "独占的投資機会",
@@ -499,9 +527,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         localStorage.setItem('michi_lang', lang);
         document.documentElement.lang = lang;
-        if(translations[lang]['page_title']) {
-            document.title = translations[lang]['page_title'];
-        }
     }
 
     langBtns.forEach(btn => {
