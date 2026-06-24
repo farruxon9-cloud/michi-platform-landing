@@ -76,6 +76,7 @@ const translations = {
         contact_meta_desc: "Get in touch with Michi support for driver registration, corporate partnerships, or Shariah investments in Japan.",
         contact_meta_keywords: "contact Michi App, driver support Japan, logistics corporate inquiry, investment contact",
         nav_investors: "Investors",
+        metric_market_size: "¥24T",
         nav_pitch: "Get Pitch Deck",
         inv_hero_badge: "Exclusive Investment Opportunity",
         inv_hero_title: "Invest in the Future of <span class='gradient-text'>Japan's Logistics</span>",
@@ -467,6 +468,7 @@ const translations = {
         contact_meta_desc: "ドライバー登録、企業間提携、IHCG元本保証投資に関するお問い合わせはこちら。サポート担当が迅速に対応いたします。",
         contact_meta_keywords: "Michi お問い合わせ, ドライバーサポート 日本, 物流企業 提携窓口, 投資 相談",
         nav_investors: "投資家向け",
+        metric_market_size: "¥24兆",
         nav_pitch: "資料請求",
         inv_hero_badge: "独占的投資機会",
         inv_hero_title: "日本の物流の<span class='gradient-text'>未来に投資する</span>",
@@ -503,6 +505,91 @@ document.addEventListener('DOMContentLoaded', () => {
     const langBtns = document.querySelectorAll('.lang-btn');
     const i18nElements = document.querySelectorAll('[data-i18n]');
 
+    // Helper function to format Japanese typography, wrapping katakana, numbers, and specific phrases in .nobr to prevent orphans/splits
+    function formatJapaneseTypography(text) {
+        if (!text) return text;
+        
+        // Helper to convert indices to letters (0->A, 1->B...) to avoid numbers regex matching placeholder indexes
+        function indexToLetters(num) {
+            let letters = '';
+            let temp = num;
+            while (temp >= 0) {
+                letters = String.fromCharCode(65 + (temp % 26)) + letters;
+                temp = Math.floor(temp / 26) - 1;
+            }
+            return letters;
+        }
+        
+        // 1. Extract HTML tags temporarily to prevent them from being corrupted
+        const placeholders = [];
+        let formatted = text.replace(/(<[^>]+>)/g, (match) => {
+            placeholders.push(match);
+            const letterIdx = indexToLetters(placeholders.length - 1);
+            return `__HTML_TAG_${letterIdx}__`;
+        });
+        
+        // 2. Wrap Katakana words (2+ chars, like ログイン, ドライバー, プロファイル, ァイル)
+        formatted = formatted.replace(/([\u30A0-\u30FF\u30FC\u30FB]{2,})/g, '<span class="nobr">$1</span>');
+        
+        // 3. Wrap numbers and units/currencies (like ¥1.2M+, ¥24兆, 0%, 120万円〜, 3%等)
+        formatted = formatted.replace(/(¥?[0-9,.]+(兆円|万円|円|万|億|%|％|M|T|B|\+)?(〜|~)?)/g, '<span class="nobr">$1</span>');
+        
+        // 4. Wrap key phrases, verb endings, and common nouns to prevent orphans (like します。, です。, できます。)
+        const phrasesToWrap = [
+            '対処します。',
+            '解決します。',
+            'ログインします。',
+            '体験していただけます。',
+            'アクセス可能。',
+            'コストを削減。',
+            '株式を保有。',
+            '仲介させることで、',
+            '移行することで、',
+            '分配金を得つつ、',
+            '募集し、',
+            '提供し、',
+            '募り、',
+            '選択し、',
+            '選択します。',
+            '入力して',
+            '自由に',
+            '初期段階',
+            'ログイン情報',
+            'テスト用',
+            '用意された',
+            'ユーザー名',
+            'パスワード',
+            '使用できます。',
+            '対抗します。',
+            '防止します。',
+            '保護されます。',
+            'サービスです。',
+            '支援サービス',
+            '一般の方々',
+            '未経験',
+            '若手層',
+            '事前研修',
+            '物流企業',
+            '採用難',
+            '当社のシステム',
+            'どちらの',
+            '同じ'
+        ];
+        
+        phrasesToWrap.forEach(phrase => {
+            const regex = new RegExp(phrase, 'g');
+            formatted = formatted.replace(regex, `<span class="nobr">${phrase}</span>`);
+        });
+        
+        // 5. Restore HTML tags
+        placeholders.forEach((tag, index) => {
+            const letterIdx = indexToLetters(index);
+            formatted = formatted.replace(`__HTML_TAG_${letterIdx}__`, tag);
+        });
+        
+        return formatted;
+    }
+
     function setLanguage(lang) {
         langBtns.forEach(btn => {
             if(btn.dataset.lang === lang) {
@@ -520,7 +607,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.setAttribute('placeholder', translations[lang][key]);
                 } else {
-                    el.innerHTML = translations[lang][key];
+                    let textContent = translations[lang][key];
+                    if (lang === 'ja') {
+                        textContent = formatJapaneseTypography(textContent);
+                    }
+                    el.innerHTML = textContent;
                 }
             }
         });
@@ -1033,23 +1124,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     const startHeight = bodyArea.offsetHeight;
                     
                     // Temp switch to measure final height
-                    demoLockedScreen.style.display = 'none';
-                    demoUnlockedScreen.style.display = 'flex';
+                    demoLockedScreen.classList.add('hide-screen');
+                    demoUnlockedScreen.classList.remove('hide-screen');
                     demoUnlockedScreen.style.opacity = 0;
                     
                     const endHeight = bodyArea.offsetHeight;
                     
                     // Revert back for animating
-                    demoLockedScreen.style.display = 'flex';
-                    demoUnlockedScreen.style.display = 'none';
+                    demoLockedScreen.classList.remove('hide-screen');
+                    demoUnlockedScreen.classList.add('hide-screen');
+                    demoUnlockedScreen.style.opacity = 1;
                     
                     // Play timeline
                     gsap.to(demoLockedScreen, {
                         opacity: 0,
                         duration: 0.2,
                         onComplete: () => {
-                            demoLockedScreen.style.display = 'none';
-                            demoUnlockedScreen.style.display = 'flex';
+                            demoLockedScreen.classList.add('hide-screen');
+                            demoUnlockedScreen.classList.remove('hide-screen');
                             
                             // Morph height smoothly
                             gsap.fromTo(bodyArea, 
@@ -1076,9 +1168,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             // Standard fallback without GSAP
-            if (demoLockedScreen) demoLockedScreen.style.display = 'none';
+            if (demoLockedScreen) demoLockedScreen.classList.add('hide-screen');
             if (demoUnlockedScreen) {
-                demoUnlockedScreen.style.display = 'flex';
+                demoUnlockedScreen.classList.remove('hide-screen');
                 demoUnlockedScreen.style.opacity = 1;
             }
         });
@@ -1092,23 +1184,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     const startHeight = bodyArea.offsetHeight;
                     
                     // Temp switch to measure final height
-                    demoUnlockedScreen.style.display = 'none';
-                    demoLockedScreen.style.display = 'flex';
+                    demoUnlockedScreen.classList.add('hide-screen');
+                    demoLockedScreen.classList.remove('hide-screen');
                     demoLockedScreen.style.opacity = 0;
                     
                     const endHeight = bodyArea.offsetHeight;
                     
                     // Revert back for animating
-                    demoUnlockedScreen.style.display = 'flex';
-                    demoLockedScreen.style.display = 'none';
+                    demoUnlockedScreen.classList.remove('hide-screen');
+                    demoLockedScreen.classList.add('hide-screen');
+                    demoLockedScreen.style.opacity = 1;
                     
                     // Play timeline
                     gsap.to(demoUnlockedScreen, {
                         opacity: 0,
                         duration: 0.2,
                         onComplete: () => {
-                            demoUnlockedScreen.style.display = 'none';
-                            demoLockedScreen.style.display = 'flex';
+                            demoUnlockedScreen.classList.add('hide-screen');
+                            demoLockedScreen.classList.remove('hide-screen');
                             
                             // Morph height smoothly
                             gsap.fromTo(bodyArea, 
@@ -1135,9 +1228,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             // Standard fallback without GSAP
-            if (demoUnlockedScreen) demoUnlockedScreen.style.display = 'none';
+            if (demoUnlockedScreen) demoUnlockedScreen.classList.add('hide-screen');
             if (demoLockedScreen) {
-                demoLockedScreen.style.display = 'flex';
+                demoLockedScreen.classList.remove('hide-screen');
                 demoLockedScreen.style.opacity = 1;
             }
         });
