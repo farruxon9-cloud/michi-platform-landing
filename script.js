@@ -608,7 +608,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.setAttribute('placeholder', translations[lang][key]);
                 } else {
                     let textContent = translations[lang][key];
-                    if (lang === 'ja') {
+                    if (lang === 'ja' && el.tagName !== 'TITLE') {
                         textContent = formatJapaneseTypography(textContent);
                     }
                     el.innerHTML = textContent;
