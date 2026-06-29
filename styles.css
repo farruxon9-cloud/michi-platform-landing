@@ -2900,8 +2900,10 @@ body.dark-mode .channel-card:hover {
     .pillar-number-wrapper {
         flex-direction: row !important;
         align-items: center !important;
+        justify-content: flex-start !important;
         gap: 10px !important;
-        width: 100% !important;
+        width: auto !important;
+        margin-bottom: 5px !important;
     }
 
     .pillar-number-wrapper div {
@@ -3802,6 +3804,6 @@ section, main, .investor-section, .features-section, .waitlist-section, .faq-sec
 }
 @media (max-width: 800px) {
     section, main, .investor-section, .features-section, .waitlist-section, .faq-section {
-        scroll-margin-top: 85px;
+        scroll-margin-top: 120px !important;
     }
 }
